@@ -65,7 +65,7 @@ const config = {
         items: [
           {
             type: "doc",
-            docId: "basic/pos",
+            docId: "readme",
             position: "left",
             label: "笔记",
           },

@@ -6,8 +6,8 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "FE个人博客",
-  tagline: "前端个人博客",
+  title: "前端个人博客",
+  tagline: "lkzwc",
   url: "https://github.com/lkzwc/fe-ddu",
   baseUrl: "/",
   onBrokenLinks: "throw",
@@ -60,9 +60,9 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: "张文超-个人博客",
+        title: "FE-个人博客",
         logo: {
-          alt: "张文超-个人博客",
+          alt: "FE-个人博客",
           src: "img/logo.png",
         },
         items: [
@@ -115,7 +115,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} &#128278;  The fronend blog by lkzwc `,
       },
       prism: {
         theme: lightCodeTheme,

@@ -65,13 +65,13 @@ const config = {
         items: [
           {
             type: "doc",
-            docId: "intro",
+            docId: "basic/pos",
             position: "left",
             label: "笔记",
           },
           { to: "/blog", label: "博客", position: "left" },
           {
-            href: "https://github.com/facebook/docusaurus",
+            href: "https://github.com/lkzwc/fe-ddu",
             label: "GitHub",
             position: "right",
           },
@@ -85,7 +85,7 @@ const config = {
             items: [
               {
                 label: "Tutorial",
-                to: "/docs/intro",
+                to: "/docs/basic",
               },
             ],
           },
@@ -93,16 +93,8 @@ const config = {
             title: "Community",
             items: [
               {
-                label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
-              },
-              {
-                label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
-              },
-              {
-                label: "Twitter",
-                href: "https://twitter.com/docusaurus",
+                label: "Github",
+                href: "https://github.com/lkzwc/fe-ddu",
               },
             ],
           },

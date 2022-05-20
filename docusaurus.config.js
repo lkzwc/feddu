@@ -115,7 +115,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} &#128278;  The fronend blog by lkzwc `,
+        copyright: `Copyright © ${new Date().getFullYear()} &#128278;  The fronend blog design by lkzwc `,
       },
       prism: {
         theme: lightCodeTheme,

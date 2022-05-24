@@ -6,8 +6,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "前端个人博客",
-  tagline: "lkzwc",
+  title: "前端个人博客-流客",
   url: "https://github.com/lkzwc/fe-ddu",
   baseUrl: "/",
   onBrokenLinks: "throw",
@@ -60,9 +59,9 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: "FE-个人博客",
+        title: "流客-前端个人博客",
         logo: {
-          alt: "FE-个人博客",
+          alt: "流客-前端个人博客",
           src: "img/logo.png",
         },
         items: [
@@ -73,6 +72,32 @@ const config = {
             label: "笔记",
           },
           { to: "/blog", label: "博客", position: "left" },
+          {
+            label: "前端工具",
+            items: [
+              {
+                label: "What Character",
+                href: "http://www.amp-what.com/",
+              },
+              {
+                label: "Image compress and tansfer",
+                href: "https://anywebp.com/",
+              },
+            ],
+          },
+          {
+            label: "友链",
+            items: [
+              {
+                label: "前端进阶题-山月",
+                href: "https://q.shanyue.tech/",
+              },
+              {
+                label: "前端源码-若川",
+                href: "https://lxchuan12.gitee.io/",
+              },
+            ],
+          },
           {
             href: "https://github.com/lkzwc/fe-ddu",
             label: "GitHub",
@@ -108,14 +133,10 @@ const config = {
                 label: "Blog",
                 to: "/blog",
               },
-              {
-                label: "GitHub",
-                href: "https://github.com/lkzwc/fe-ddu",
-              },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} &#128278;  The fronend blog design by lkzwc `,
+        copyright: `Copyright © ${new Date().getFullYear()} &#128278;  The frontend blog by lkzwc `,
       },
       prism: {
         theme: lightCodeTheme,

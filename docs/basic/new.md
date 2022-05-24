@@ -1,4 +1,5 @@
 ---
+title: 原型实例 new
 slug: /new
 ---
 

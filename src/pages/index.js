@@ -12,13 +12,13 @@ function HomepageHeader() {
     <header className={clsx("hero hero--primary", styles.heroBanner)}>
       <div className="container">
         <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <p className="hero__subtitle">流客&#128260;流浪的行者</p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
             to="/docs/readme"
           >
-            Let`s study fronend together!
+            Let`s study frontend together!
           </Link>
         </div>
       </div>

@@ -109,7 +109,7 @@ const config = {
         style: "dark",
         links: [
           {
-            title: "Docs",
+            title: "What DDU?",
             items: [
               {
                 label: "DDU",
@@ -118,7 +118,7 @@ const config = {
             ],
           },
           {
-            title: "Community",
+            title: "Star",
             items: [
               {
                 label: "Github",
@@ -127,7 +127,7 @@ const config = {
             ],
           },
           {
-            title: "More",
+            title: "博客",
             items: [
               {
                 label: "Blog",

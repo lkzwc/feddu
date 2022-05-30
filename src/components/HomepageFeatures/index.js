@@ -15,10 +15,10 @@ const FeatureList = [
   {
     title: "博客",
     Svg: require("@site/static/img/note.svg").default,
-    description: <>记录平时的学习笔记、工作总结等等</>,
+    description: <>用最少的笔记学习最完整的知识点</>,
   },
   {
-    title: "Other",
+    title: "大神",
     Svg: require("@site/static/img/other.svg").default,
     description: <>前端工具库、前端大神博客</>,
   },

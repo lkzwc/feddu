@@ -22,9 +22,9 @@ title: AST-抽象语法树
 
 ## AST 的生成
 
-- 语法分析
-  > 将代码转化为 Token 流，维护一个关于 token 的数组，其应用主要有代码检查、语法高亮、模板
 - 词法分析
+  > 将代码转化为 Token 流，维护一个关于 token 的数组，其应用主要有代码检查、语法高亮、模板
+- 语法分析
   > 将 token 转化为 AST
 
 具体的转化可以看下https://github.com/jamiebuilds/the-super-tiny-compiler

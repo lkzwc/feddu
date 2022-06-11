@@ -16,7 +16,7 @@ function  demo2(params) {
          return "hello"
     },2000)
 }
-demo(2)
+demo2()
 ```
 
 > 实际输出是 undefine
@@ -114,7 +114,7 @@ demo1.then(res=>{
 async function demopp(){
     let a = await demo1
     let b = await demo2
-    console.log(a,b)
+    console.log(a,b)  //类似then
 }
 demopp()
 
@@ -122,4 +122,4 @@ demopp()
 
 最后，我们总结几点重要的东西，暂时就想到一点哈哈：
 
-- Promise 中的 then 的结果是由 reslove 函数返回的，我们平时使用的 fetch().then()同理
+**Promise 中的 then 的结果是由 reslove 函数返回的，即 resolve 中传出来的值是 then 的形参，我们平时使用的 fetch().then()同理**

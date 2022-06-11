@@ -16,8 +16,11 @@ function demo(){
   function add(){
     return a +b
   }
- return add();
+ return add;
 }
+
+let app = demo()
+app()
 ```
 
 ## 作用域链
@@ -48,8 +51,7 @@ function demo(){
 代码模块化封装
 
 ```
-let test =(
-  function(){
+let test =(function(){
   let a = 10;
   let b =10;
   function add(){

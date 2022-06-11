@@ -35,7 +35,7 @@ function demo(){
       console.log(c)
     }
   }
- return ad()
+ return add()
 }
 ```
 
@@ -46,3 +46,18 @@ function demo(){
 ## 应用
 
 代码模块化封装
+
+```
+let test =(
+  function(){
+  let a = 10;
+  let b =10;
+  function add(){
+    let aa = 1;
+    let bb =2
+  }
+  return {add}
+})()
+
+let a =test.add()
+```

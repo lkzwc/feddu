@@ -39,7 +39,7 @@ demo.__proto__ === Demo.Property
 const mynew =(Obj,....args)=>{
    let tem={}
    tem.__proto__ = Obj.Property;  //连接原型
-   Obj.call(tem,...args);  //绑定this指向构造
+   Obj.call(tem,...args);  //修改this指向当前新对象
    return tem;
 }
 ```

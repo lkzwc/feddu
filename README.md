@@ -4,7 +4,7 @@ https://github.com/lkzwc/fe-ddu
 
 FrontEnd day day up,前端学习打卡队伍，节假日休息喔！正常上班时间打卡
 
-> 打开目标
+> 打卡目标
 
 - 早日迎娶白富美
 - 早日开上小普桑

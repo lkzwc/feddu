@@ -25,7 +25,7 @@ slug: /event
 ## 执行栈和任务队列
 
 执行栈放的都是同步任务
-任务队列是异步任务，这里我们需要注意一点就是，**是到时候之后才放入队列，不是到时间之后去执行。**
+任务队列是异步任务，这里我们需要注意一点就是，**是到时候(异步任务有了运行结果，在任务队列中放置一个事件)之后才放入队列，不是到时间之后去执行。**
 
 ## nextTick && setImmediate
 
@@ -35,7 +35,7 @@ setImmediate 每一轮的事件循环结束之后执行
 ## 宏任务和微任务
 
 宏任务和微任务都是属于任务对列之中的
-宏任务：setTimeout、requestAnimationFrame
+宏任务：setTimeout、setImmediate、requestAnimationFrame
 微任务：Promise.then()、MutationObserver
 
 ## 小练一下
@@ -73,7 +73,16 @@ setTimeout(()=>{
 
 ```
 
-> 输出的结果为 a c d b
+1. then =>微任务 setTimeout(c)=>宏任务
+2. log(setTimeout(c)) log(a) setTimout(b)=>宏任务
+   > 输出的结果为 a c d b
+
+## 总结下事件循环
+
+- 所有同步任务在主线程上执行，形成一个执行栈
+- 主线程之外，还有一个任务队列，只要异步任务有了结果，就会将在任务队列中放置一个事件
+- 一旦执行栈中的同步任务执行完毕，系统就会读取任务队列，对应的异步任务，结束等待状态，进入执行栈执行
+- 主线程不断执行第三步
 
 ## NodeJS 事件循环
 

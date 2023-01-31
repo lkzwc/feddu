@@ -34,6 +34,6 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
           ACCESS_TOKEN: ${{ secrets.BLOG }}
-          REPOSITORY_NAME: git@github.com:lkzwc/lkzwc.github.io.git
+          REPOSITORY_NAME: lkzwc/lkzwc.github.io
           BRANCH: main
           FOLDER: build

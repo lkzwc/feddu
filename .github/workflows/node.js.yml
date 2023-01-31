@@ -35,6 +35,6 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         folder: build
-        ssh-key: ${{ secrets.BLOG }}
+        token: ${{ secrets.BLOG }}
         REPOSITORY_NAME: lkzwc/lkzwc.github.io
-        BRANCH: maste
+        BRANCH: main

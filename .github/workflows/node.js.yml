@@ -35,5 +35,5 @@ jobs:
       with:
           ACCESS_TOKEN: ${{ secrets.BLOG }}
           REPOSITORY_NAME: lkzwc/lkzwc.github.io
-          BRANCH: main
+          BRANCH: main1
           FOLDER: build

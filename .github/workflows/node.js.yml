@@ -36,6 +36,6 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         folder: build
-        token: ${{ secrets.DEPLOY_KEY }}
+        token: ${{ secrets.DEPLOY }}
         repository-name: lkzwc/lkzwc.github.io
         branch: main

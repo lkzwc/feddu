@@ -37,5 +37,5 @@ jobs:
       with:
         folder: build
         token: ${{ secrets.DEPLOY }}
-        repository-name: git@github.com:lkzwc/lkzwc.github.io.git
+        repository-name: lkzwc/lkzwc.github.io
         branch: main

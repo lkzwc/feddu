@@ -49,6 +49,9 @@ services:
 # 1.build image 2.docker run => docker-compose up --build
 ```
 
+![image](https://user-images.githubusercontent.com/84896877/216293883-a12ea375-23ed-4ca4-aed9-9b6aba5d3b85.png)
+
+
 ## 镜像推送
 
 名称规则： username/repositoryName

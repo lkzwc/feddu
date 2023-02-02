@@ -48,3 +48,14 @@ services:
 # 替代了之前构建 运行的步骤
 # 1.build image 2.docker run => docker-compose up --build
 ```
+
+## 镜像推送
+
+名称规则： username/repositoryName
+```
+docker tag imagename imagename:2.0
+
+docker tag demo liuketh/app:uat
+docker push liuketh/app:uat
+```
+

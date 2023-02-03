@@ -54,8 +54,7 @@
 
 - 是否进程级别的隔离
 
-![image.png](https://flowus.cn/preview/20f525a5-5d4f-46ec-a312-4d1283369cd6)
-
+![image](https://user-images.githubusercontent.com/84896877/216563297-d47618d6-d205-4059-bd91-585b52c17265.png)
 ## kubernetes
 
 自动化编排平台
@@ -92,7 +91,7 @@ Node上的组件（Container Runtime\Storage plugin\Network plugin\kube-proxy[�
 
 3. InitContainer:容器启动之前启动 => sideCar 抽离出来一个单独的容器，执行业务的辅助工作（代理、Adapt）
 
-![image.png](https://flowus.cn/preview/06d0fb65-4427-4f8f-9a65-de05e9967045)
+![image](https://user-images.githubusercontent.com/84896877/216563197-380a47ec-95f1-44cc-af0c-c48cc6c97569.png)
 
 ### volume
 
@@ -283,4 +282,6 @@ AddonResizer周期性查看集群系欸但数量，计算pod需要的内存CPU,�
 ### TIPS单位
 
 cpu:“30”表示30个core，100m表示0.1个core云原生架构
+![image](https://user-images.githubusercontent.com/84896877/216563103-137b9aa9-50f1-4ef3-aaaf-628008d5411c.png)
+
 

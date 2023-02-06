@@ -32,10 +32,10 @@ jobs:
     - name: Build🚀
       run: npm run build --if-present
      
-    - name: Deploy🚀🚀
-      uses: JamesIves/github-pages-deploy-action@v4
-      with:
-        folder: build
-        token: ${{ secrets.DEPLOY }}
-        repository-name: lkzwc/lkzwc.github.io
-        branch: main
+    - name: Deploy
+      uses: s0/git-publish-subdir-action@develop
+      env:
+        REPO: git@github.com:lkzwc/lkzwc.github.io.git
+        BRANCH: main
+        FOLDER: build
+        SSH_PRIVATE_KEY: ${{ secrets.DEPLOY }}

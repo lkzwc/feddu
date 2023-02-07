@@ -16,12 +16,15 @@ RUN npm install
 EXPOSE 3000
 
 CMD npm start
-```
-
-> 执行docker build -t demo . 即可打包出iamge -t 名称 打包路径
 
 ```
-docker pa -a #查看所有的容器
+> CMD 在docker run 时运行。 RUN 是在 docker build。
+如果CMD指令有多个，只有最后一个生效
+
+> 执行docker build -t demo . 即可打包出image -t 名称 打包路径
+
+```
+docker ps -a #查看所有的容器
 docker rm $(docker ps -a) #删除容器
 docker stop id #停止容器
 ```

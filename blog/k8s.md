@@ -54,34 +54,57 @@
 
 - 是否进程级别的隔离
 
-![image](https://user-images.githubusercontent.com/84896877/216563297-d47618d6-d205-4059-bd91-585b52c17265.png)
+![image.png](https://flowus.cn/preview/20f525a5-5d4f-46ec-a312-4d1283369cd6)
+
 ## kubernetes
 
-自动化编排平台
+支持自动化部署、大规模可伸缩、应用容器化管理。在k8s中，我们可以创建多个容器，每个容器运行一个实例，然后通过内置的负载均衡策略，实现对者一组应用实例的管理、发现、访问、扩展、自愈等等
 
-- 调度 将 容器调度到集群
+- 服务发现负载均衡
 
-- 自动修复 迁移
+- 存储编排
+
+- 自动部署修复 迁移
 
 - 水平伸缩 负载均衡
 
 ### 架构
 
-UI->master(APIServer\controller\scheduler)->Node
+![image](https://user-images.githubusercontent.com/84896877/221155119-33a24dbf-d00e-48db-8133-2a96d55da973.png)
 
-每个业务负载以Pod形式运行，一个pod中运行一个或者多个容器，真正运行的是Node上的kubelet通过APIServer将状态提交到container runtime上，将容器运行
 
-Node上的组件（Container Runtime\Storage plugin\Network plugin\kube-proxy[跨集群访问]）
+- Master 负责管理整个容器，通过暴露出来的API Server和Node通信
 
-![https://sm.ms/delete/HYVAR6K9Qb5zqmDr3M8pZjniGT](https://sm.ms/delete/HYVAR6K9Qb5zqmDr3M8pZjniGT)
+- 每个业务负载以Pod形式运行，一个pod中运行一个或者多个容器，真正运行的是Node上的kubelet通过APIServer将状态提交到container runtime上，将容器运行
 
-![https://i.loli.net/2021/07/28/2YboKQ7dzJnrIPh.png](https://i.loli.net/2021/07/28/2YboKQ7dzJnrIPh.png)
+- Node上的组件（Container Runtime\Storage plugin\Network plugin\kube-proxy[跨集群访问]）
+
+
+
+![image](https://user-images.githubusercontent.com/84896877/221154809-78671316-a63f-4f29-bd9a-8279f84c4bf9.png)
+
+POD创建工作流
+
+![image](https://user-images.githubusercontent.com/84896877/221155215-9f0150d9-4f05-46f2-b14f-8417759c3c25.png)
+
+### Node
+
+K8S通过将容器放入节点上运行POD来执行具体的工作负载，节点可以是一个虚拟或者物理机
+
+向API服务器添加节点的方式：1.节点上的kublet向控制面自注册 2.手动添加Node对象
+
+![image](https://user-images.githubusercontent.com/84896877/221155288-8cd1aca2-910d-4880-acfe-c670284131f2.png)
 
 ### Pod
 
-最小的调度以及资源单元,由于不能将多个进程聚集在一个单独容器，需要另外一种高级结构将容器绑定在一起，作为一个单元管理，这就是Pod背后根本原理， 一个pod中容器共享相同ip和端口空间
+最小的调度以及资源单元，包括一个或者多个容器。
 
-由一个或者多个容器组成
+由于不能将多个进程聚集在一个单独容器，需要另外一种高级结构将容器绑定在一起，作为一个单元管理，这就是Pod背后根本原理
+
+一个pod的共享上下文包括一组linux名字空间、控制组和kennel一些其他的隔离的技术，共享相同ip和端口空间
+
+![image](https://user-images.githubusercontent.com/84896877/221155339-f4adbac1-c128-4d31-b168-77db6bd5f0a0.png)
+
 定义容器运行的方式
 提供给容器共享的运行环境
 
@@ -90,8 +113,6 @@ Node上的组件（Container Runtime\Storage plugin\Network plugin\kube-proxy[�
 2. 共享存储：申明同一个volumes
 
 3. InitContainer:容器启动之前启动 => sideCar 抽离出来一个单独的容器，执行业务的辅助工作（代理、Adapt）
-
-![image](https://user-images.githubusercontent.com/84896877/216563197-380a47ec-95f1-44cc-af0c-c48cc6c97569.png)
 
 ### volume
 
@@ -108,6 +129,10 @@ Node上的组件（Container Runtime\Storage plugin\Network plugin\kube-proxy[�
 一个集群内部的逻辑隔离
 同一个NameSpace资源命名唯一
 
+### Headless Service 和普通Service
+
+类似负载均衡的中间件，而headless是干掉中间转发件之后的，其Cluster IP为None
+
 ### 资源对象
 
 > Spec期望的状态
@@ -123,6 +148,20 @@ annotations、 扩展存储非标识性信息、OwnerReference、集合类资源
 ### 控制器
 
 声明式处理，不断使系统的Status无限趋近Spec
+
+![image](https://user-images.githubusercontent.com/84896877/221155504-3118e0b6-8d01-45b8-9f26-16519ac7cc65.png)
+
+- ReplicaSet: 代用户创建指定数量的pod副本，确保pod副本数量符合预期状态，并且支持滚动式自动扩容和缩容功能
+
+- Deployment：工作在ReplicaSet之上，用于管理无状态应用，目前来说最好的控制器。支持滚动更新和回滚功能，还提供声明式配置。ReplicaSet 与Deployment 这两个资源对象逐步替换之前RC的作用。
+
+- DaemonSet：用于确保集群中的每一个节点只运行特定的pod副本，通常用于实现统级后台任务。比如日志采集（loki）服务、监控服务（promethues）特性：服务是无状态的，服务必须是守护进程
+
+- StatefulSet：管理有状态应用
+
+- Job：只要完成就立即退出，不需要重启或重建
+
+- Cronjob：周期性任务控制，不需要持续后台运行
 
 ### 调度
 
@@ -158,7 +197,7 @@ annotations、 扩展存储非标识性信息、OwnerReference、集合类资源
 
 ### 有状态无状态
 
-> 具有先后关系顺序
+> 具有先后关系顺序或者主从关系
 
 ### 负载资源（Workload）
 
@@ -195,13 +234,23 @@ annotations、 扩展存储非标识性信息、OwnerReference、集合类资源
 
 #### StateFulSets
 
-<持续服务>
+<持续服务> 热备冗灾主从关系应用
 
-10. 管理pod的部署和扩缩
+10. 管理pod的部署和扩缩，有***顺序启停***
 
-11. 并提供持久存储
+11. 并提供***持久存储***，删除POD不会删除数据
 
-12. 与Deployment区别之处是提供了一个不会改变的ID
+12. 与Deployment区别之处是提供了一个***固定的ID***(挂掉后拉起ID不变)
+
+特性：
+
+- POD启动带顺序，第一个无法启动后续也无法启动
+
+- 数据安全，删除POD不会删库
+
+- 使用headless services
+
+
 
 #### DaemonSet
 
@@ -247,8 +296,9 @@ k8s默认提供的弹性伸缩组件，主要VPA、HPA伸缩分类：
 
     > VPA定期查看pod资源使用情况， 主要从metric server中采集数据，需要重启pod,如果计算超过node可用资源，将导致pod一直pedding
 
+  ```Plain Text
 AddonResizer是一种VPA即垂直POD自动扩缩容,根据集群规格、画像策略自动设置CPU、内存的Request
-
+```
 
 
   - 水平伸缩（HPA）
@@ -281,6 +331,8 @@ AddonResizer周期性查看集群系欸但数量，计算pod需要的内存CPU,�
 ### TIPS单位
 
 cpu:“30”表示30个core，100m表示0.1个core云原生架构
-![image](https://user-images.githubusercontent.com/84896877/216563103-137b9aa9-50f1-4ef3-aaaf-628008d5411c.png)
+
+![https://i.loli.net/2021/08/02/L54aswkJr7epBIy.png](https://i.loli.net/2021/08/02/L54aswkJr7epBIy.png)
+
 
 

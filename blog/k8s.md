@@ -54,7 +54,7 @@
 
 - 是否进程级别的隔离
 
-![image.png](https://flowus.cn/preview/20f525a5-5d4f-46ec-a312-4d1283369cd6)
+![image](https://user-images.githubusercontent.com/84896877/221467124-3259047b-c8ba-40f6-ac0a-3bc3af499383.png)
 
 ## kubernetes
 

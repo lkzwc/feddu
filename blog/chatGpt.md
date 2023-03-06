@@ -1,11 +1,18 @@
+---
+title: chatGPT背后的原理
+slug: /chatgpt
+---
+
 # 语言模型
-实际上通俗来讲就是成语接龙
+实际上通俗来讲就是成语接龙,已知前n个词，预测后边几个词的原理
 # 样本分类
 
 Zero shot: 零样本
 One/Few Shot： 少量样本
 
 # 翻译模型
+![image](https://user-images.githubusercontent.com/84896877/223011503-c399d267-adc7-46ea-96ab-c5b49dd6a799.png)
+
 
 * Encoder
 > 双向解码，每一一个词都知道他之前的和后边的词
@@ -19,6 +26,9 @@ One/Few Shot： 少量样本
 
 # 微调
 > 通过大量的句式的关键词预测出语言的类型：比如情感
+
+![image](https://user-images.githubusercontent.com/84896877/223011430-fbb422d5-9e45-4d79-b57c-1c1975147ee9.png)
+
 通过Decoder 输出语言向量->Transformer->Linear->预测语言是哪一类
 
 

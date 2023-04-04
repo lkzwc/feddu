@@ -9,6 +9,7 @@ tags: [MutationObserver, 水印]
 
 > 依据 MDN 的解释，MutationObserver 主要是用来监听 dom 变化的
 
+<!-- truncate -->
 ## 简单应用下
 
 ```

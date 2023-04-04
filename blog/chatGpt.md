@@ -6,6 +6,7 @@
 Zero shot: 零样本
 One/Few Shot： 少量样本
 
+<!-- truncate -->
 # 翻译模型
 ![image](https://user-images.githubusercontent.com/84896877/223011503-c399d267-adc7-46ea-96ab-c5b49dd6a799.png)
 

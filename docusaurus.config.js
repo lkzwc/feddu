@@ -33,6 +33,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
+       
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl: "https://github.com/lkzwc/fe-ddu",
@@ -59,9 +60,9 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: "流客-前端个人博客",
+        title: "流客-个人博客",
         logo: {
-          alt: "流客-前端个人博客",
+          alt: "流客-个人博客",
           src: "img/logo.png",
         },
         items: [

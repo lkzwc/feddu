@@ -1,6 +1,6 @@
 {
-  "label": "浏览器知识",
-  "position": 2,
+  "label": "自述",
+  "position": 1,
   "link": {
     "type": "generated-index",
     "description": "5 minutes to learn the most important Docusaurus concepts."

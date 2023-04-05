@@ -7,7 +7,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "前端个人博客-流客",
-  url: "https://github.com/lkzwc/fe-ddu",
+  url: "https://github.com",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -33,16 +33,16 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-       
+
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/lkzwc/fe-ddu",
+          // editUrl: "https://github.com/lkzwc/fe-ddu",
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/lkzwc/fe-ddu",
+          // editUrl: "https://github.com/lkzwc/fe-ddu",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -58,6 +58,16 @@ const config = {
         defaultMode: "dark",
         disableSwitch: false,
         respectPrefersColorScheme: true,
+      },
+      docs: {
+        sidebar: {
+          hideable: true,
+        },
+      },
+      algolia: {
+        indexName: "blog",
+        appId: "76HJG76BKV",
+        apiKey: "ef039ab1e6a13a3e5127247be2289fb4",
       },
       navbar: {
         title: "流客-个人博客",
@@ -98,6 +108,10 @@ const config = {
                 href: "https://lxchuan12.gitee.io/",
               },
             ],
+          },
+          {
+            label: "工具链",
+            to: "/share",
           },
           {
             href: "https://github.com/lkzwc/fe-ddu",

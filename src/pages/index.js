@@ -10,6 +10,18 @@ function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   return (
     <header className={clsx("hero hero--primary", styles.heroBanner)}>
+      <link
+        rel="stylesheet"
+        href="https://unpkg.com/@waline/client@v2/dist/waline.css"
+      /><div id="waline"></div>
+      <script type="module">
+        import {init} from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+
+        init({
+          el: '#waline',
+        serverURL: 'https://preeminent-druid-33b9d0.netlify.app/.netlify/functions/comment',
+      })
+      </script>
       <div className="container">
         <h1 className="hero__title">{siteConfig.title}</h1>
         <p className="hero__subtitle">流客&#128260;流浪的行者</p>

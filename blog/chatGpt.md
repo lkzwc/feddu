@@ -1,4 +1,8 @@
-
+---
+slug: /chatgpt
+title: OpenAi
+tags: [OpenAi,ChatGPT]
+---
 # 语言模型
 实际上通俗来讲就是成语接龙,已知前n个词，预测后边几个词的原理
 # 样本分类

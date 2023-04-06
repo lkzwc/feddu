@@ -2,7 +2,7 @@
 slug: blog
 title: MutationObserver的应用
 authors: lkzwc
-tags: [MutationObserver, 水印]
+tags: [MutationObserver]
 ---
 
 ## 首先我们说下 MutationObserver 是干什么的？

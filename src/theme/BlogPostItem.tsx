@@ -1,5 +1,5 @@
 import React from "react";
-import Seo from "@theme/Seo";
+// import Seo from "@theme/Seo";
 import { useBaseUrlUtils } from "@docusaurus/useBaseUrl";
 
 export default function BlogPostItem(props) {
@@ -17,7 +17,7 @@ export default function BlogPostItem(props) {
   const { withBaseUrl } = useBaseUrlUtils();
   return (
     <div>
-      <Seo {...{ keywords, image: assets.image }} />
+      {/* <Seo {...{ keywords, image: assets.image }} /> */}
       <article>
         <meta
           itemProp="image"

@@ -14,6 +14,10 @@ function Classify(props) {
           name: "cdn",
           url: "https://cdnjs.com/libraries/font-awesome",
         },
+        {
+          name:'gif'
+          url: 'https://gifdb.com/'
+        }
       ],
     },
   ];

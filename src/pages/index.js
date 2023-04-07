@@ -55,6 +55,8 @@ function HomepageHeader() {
           ></i>
           <i class="fa-brands fa-2x fa-github"></i>
         </div>
+        <img src="https://gifdb.com/images/high/animated-man-computer-coding-nae6mec378lsg1i3.webp"/>
+        {/* <img src="https://cdn.dribbble.com/users/1292677/screenshots/6139167/media/5387dc7e035b3efe9d94516044de66a4.gif"/> */}
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"

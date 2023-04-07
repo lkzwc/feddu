@@ -9,18 +9,18 @@ function Classify(props) {
         {
           name: "cdn",
           url: "https://cdnjs.com/libraries/font-awesome",
-          desc:'简单的图标库，通过引入CDN样式以及使用简单的<i>即可实现'
+          desc: "简单的图标库，通过引入CDN样式以及使用简单的<i>即可实现",
         },
         {
-          name:'gif'
-          desc:'GIF 图片搜索'
-          url: 'https://gifdb.com/'
-        }
+          name: "gif",
+          desc: "GIF 图片搜索",
+          url: "https://gifdb.com/",
+        },
         {
-          name:'gif',
+          name: "gif",
           desc: "提供CDN链接，速度快",
-          url: 'https://dribbble.com/'
-        }
+          url: "https://dribbble.com/",
+        },
       ],
     },
   ];

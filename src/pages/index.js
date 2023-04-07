@@ -9,22 +9,52 @@ import HomepageFeatures from "@site/src/components/HomepageFeatures";
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <header className={clsx("hero hero--primary", styles.heroBanner)}>
+    <header className={clsx("hero", styles.heroBanner)}>
       <link
         rel="stylesheet"
         href="https://unpkg.com/@waline/client@v2/dist/waline.css"
-      /><div id="waline"></div>
-      <script type="module">
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      ></link>
+      <div id="waline"></div>
+      {/* <script type="module">
         import {init} from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
 
         init({
           el: '#waline',
         serverURL: 'https://preeminent-druid-33b9d0.netlify.app/.netlify/functions/comment',
       })
-      </script>
+      </script> */}
       <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">流客&#128260;流浪的行者</p>
+        <p
+          className="hero__subtitle"
+          style={{ width: "650px", textAlign: "left" }}
+        >
+          <i class="fa fa-quote-left fa-3x fa-pull-left fa-border"></i>
+          I'am a program developer who is enthusiastic about new technology and
+          believe in code change the world!
+        </p>
+        <div
+          style={{
+            display: "grid",
+            width: "max-content",
+            columnGap: "10px",
+            gridTemplateColumns: "repeat(10,1fr)",
+          }}
+        >
+          <i class="fa-brands fa-2x fa-vuejs" style={{ color: "#17e856" }}></i>
+          <i class="fa-brands fa-2x fa-react"></i>
+          <i class="fa-brands fa-2x fa-less" style={{ color: "#f0de14" }}></i>
+          <i class="fa-brands fa-2x fa-node" style={{ color: "#484a4b" }}></i>
+          <i class="fa-brands fa-2x fa-docker"></i>
+          <i
+            class="fa-brands fa-2x fa-square-js"
+            style={{ color: "#1053c6" }}
+          ></i>
+          <i class="fa-brands fa-2x fa-github"></i>
+        </div>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"

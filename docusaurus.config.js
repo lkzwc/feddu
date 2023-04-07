@@ -6,7 +6,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "前端个人博客-流客",
+  title: "流客的网站",
   url: "https://github.com",
   baseUrl: "/",
   onBrokenLinks: "throw",
@@ -70,7 +70,6 @@ const config = {
         apiKey: "ef039ab1e6a13a3e5127247be2289fb4",
       },
       navbar: {
-        title: "流客-个人博客",
         logo: {
           alt: "流客-个人博客",
           src: "img/logo.png",

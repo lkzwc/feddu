@@ -18,15 +18,6 @@ function HomepageHeader() {
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       ></link>
-      <div id="waline"></div>
-      {/* <script type="module">
-        import {init} from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
-
-        init({
-          el: '#waline',
-        serverURL: 'https://preeminent-druid-33b9d0.netlify.app/.netlify/functions/comment',
-      })
-      </script> */}
       <div
         className="container"
         style={{ display: "flex", gridTemplateColumns: "1fr 1fr" }}

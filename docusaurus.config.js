@@ -149,6 +149,22 @@ const config = {
               },
             ],
           },
+          {
+            title:'鸣谢',
+            items:[
+              {
+                html: `
+                <a href="https://www.netlify.com" target="_blank" rel="noreferrer noopener" aria-label="Deploys by Netlify">
+                  <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="114" height="51" />
+                </a>
+              `,
+              },
+              {
+
+              html: `<a href="https://docusaurus.io/zh-CN/" target="_blank"><img style="height:50px;margin-top:0.5rem" src="/img/buildwith.png" /><a/>`,
+              }
+            ]
+          }
         ],
         copyright: `Copyright © ${new Date().getFullYear()} &#128278;  The frontend blog by lkzwc `,
       },

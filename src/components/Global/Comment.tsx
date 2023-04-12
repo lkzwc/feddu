@@ -1,9 +1,9 @@
-import React, { useEffect, useRef } from 'react';
-import { init } from '@waline/client';
+import React, { useEffect, useRef } from "react";
+import { init } from "@waline/client";
 
-import type { WalineInstance, WalineInitOptions } from '@waline/client';
+import type { WalineInstance, WalineInitOptions } from "@waline/client";
 
-export type WalineOptions = Omit<WalineInitOptions, 'el'> & { path: string };
+export type WalineOptions = Omit<WalineInitOptions, "el"> & { path: string };
 
 export const Comment = (props: WalineOptions) => {
   const walineInstanceRef = useRef<WalineInstance | null>(null);

@@ -123,7 +123,7 @@ const config = {
         style: "dark",
         links: [
           {
-            title: "What DDU?",
+            title: "What's  DDU?",
             items: [
               {
                 label: "DDU",
@@ -150,8 +150,8 @@ const config = {
             ],
           },
           {
-            title:'鸣谢',
-            items:[
+            title: "鸣谢",
+            items: [
               {
                 html: `
                 <a href="https://www.netlify.com" target="_blank" rel="noreferrer noopener" aria-label="Deploys by Netlify">
@@ -160,13 +160,15 @@ const config = {
               `,
               },
               {
-
-              html: `<a href="https://docusaurus.io/zh-CN/" target="_blank"><img style="height:50px;margin-top:0.5rem" src="/img/buildwith.png" /><a/>`,
-              }
-            ]
-          }
+                html: `<a href="https://docusaurus.io/zh-CN/" target="_blank" rel="noreferrer noopener"><img style="height:50px;margin-top:0.5rem" src="https://www.docusaurus.cn/img/docusaurus_keytar.png" /><a/>`,
+              },
+              {
+                html: `<a href="https://docusaurus.io/zh-CN/" target="_blank" rel="noreferrer noopener"><img style="height:50px;margin-top:0.5rem" src="https://waline.js.org/logo.png"/><a/>`,
+              },
+            ],
+          },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} &#128278;  The frontend blog by lkzwc `,
+        copyright: `Copyright © ${new Date().getFullYear()} &#128278;  by lkzwc `,
       },
       prism: {
         theme: lightCodeTheme,

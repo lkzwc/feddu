@@ -1,7 +1,6 @@
 import React from "react";
 import Layout from "@theme/Layout";
 import { Comment } from "../../components/Global/Comment";
-
 function Classify(props) {
   const classify = [
     {
@@ -61,8 +60,13 @@ function Classify(props) {
 function Share(props) {
   return (
     <Layout>
+      <Comment
+        path={"/"}
+        serverURL={
+          "https://lkzwc-comment.netlify.app/.netlify/functions/comment"
+        }
+      />
       <Classify />
-      <Comment path={"/"} serverURL={"https://lkzwc-comment.netlify.app/.netlify/functions/comment"}/>
     </Layout>
   );
 }

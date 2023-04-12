@@ -16,11 +16,8 @@
   }
 }
 
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-right: 6px;
+.button {
+  --border-right: 6px;
   --text-stroke-color: rgba(255, 255, 255, 0.6);
   --animation-color: #37ff8b;
   --fs-size: 2em;
@@ -33,7 +30,8 @@
   color: transparent;
   -webkit-text-stroke: 1px var(--text-stroke-color);
 }
-.buttons:hover {
-  width: 100%;
-  filter: drop-shadow(0 0 23px var(--animation-color));
+.button:hover {
+  background-color: rgb(252, 70, 100);
+  transform: translateX(-100%);
+  transition: all 0.3s;
 }

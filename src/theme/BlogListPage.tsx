@@ -33,7 +33,14 @@ export default function BlogListPage(props) {
           truncated={infos.metadata.truncated}
         />
       ))}
-      <div><Comment path={"/"} serverURL={"https://lkzwc-comment.netlify.app/.netlify/functions/comment"} /></div>
+      <div>
+        <Comment
+          path={"/"}
+          serverURL={
+            "https://lkzwc-comment.netlify.app/.netlify/functions/comment"
+          }
+        />
+      </div>
     </Layout>
   );
 }

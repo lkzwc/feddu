@@ -5,6 +5,7 @@ import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import styles from "./index.module.css";
 import HomepageFeatures from "@site/src/components/HomepageFeatures";
+import { Comment } from "../components/Global/Comment";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -23,7 +24,8 @@ function HomepageHeader() {
         style={{
           display: "grid",
           textAlign: "left",
-          gridTemplateColumns: "1fr 1fr",
+          columnGap: "20px",
+          gridTemplateColumns: "2fr 1fr",
           gridTemplateRows: "1fr 50px",
         }}
       >
@@ -41,9 +43,12 @@ function HomepageHeader() {
           >
             <i
               class="fa-brands fa-2x fa-vuejs"
-              style={{ color: "#17e856" }}
+              style={{ color: "#42B883" }}
             ></i>
-            <i class="fa-brands fa-2x fa-react"></i>
+            <i
+              class="fa-brands fa-2x fa-react"
+              style={{ color: "#149ECA" }}
+            ></i>
             <i class="fa-brands fa-2x fa-less" style={{ color: "#f0de14" }}></i>
             <i class="fa-brands fa-2x fa-node" style={{ color: "#484a4b" }}></i>
             <i class="fa-brands fa-2x fa-docker"></i>
@@ -68,14 +73,7 @@ function HomepageHeader() {
             src="https://cdn.dribbble.com/users/1292677/screenshots/6139167/media/5387dc7e035b3efe9d94516044de66a4.gif"
           />
         </div>
-        <div
-          className={styles.buttons}
-          style={{ textAlign: "left", gridColumn: "1" }}
-        >
-          <span class="actual-text">&nbsp;uiverse&nbsp;</span>
-          <span class="hover-text" aria-hidden="true">
-            &nbsp;uiverse&nbsp;
-          </span>
+        <div style={{ gridRow: 2, gridColumn: 1 / 15 }}>
           <Link
             className="button button--secondary button--lg"
             to="/docs/readme"

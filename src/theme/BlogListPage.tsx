@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "@theme/Layout";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import BlogPostItem from "./BlogPostItem";
+import { Comment } from "../components/Global/Comment";
 
 export default function BlogListPage(props) {
   const { metadata, items } = props;
@@ -32,6 +33,7 @@ export default function BlogListPage(props) {
           truncated={infos.metadata.truncated}
         />
       ))}
+      <div><Comment path={"/"} serverURL={"https://lkzwc-comment.netlify.app/.netlify/functions/comment"} /></div>
     </Layout>
   );
 }

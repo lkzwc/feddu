@@ -7,7 +7,7 @@ function Classify(props) {
       name: "工具",
       items: [
         {
-          name: "cdn",
+          name: "图标库",
           url: "https://cdnjs.com/libraries/font-awesome",
           desc: "简单的图标库，通过引入CDN样式以及使用简单的<i>即可实现",
         },
@@ -17,20 +17,42 @@ function Classify(props) {
           url: "https://gifdb.com/",
         },
         {
-          name: "gif",
+          name: "Gif CDN",
           desc: "提供CDN链接，速度快",
           url: "https://dribbble.com/",
+        },
+        {
+          name: "What Character",
+          desc: "字符表情",
+          url: "http://www.amp-what.com/",
+        },
+        {
+          name: "Image compress and tansfer",
+          desc: "图片压缩",
+          url: "https://anywebp.com/",
+        },
+      ],
+    },
+    {
+      name: "大神博客",
+      items: [
+        {
+          name: "前端进阶题-山月",
+          url: "https://q.shanyue.tech/",
+        },
+        {
+          name: "前端源码-若川",
+          url: "https://lxchuan12.gitee.io/",
         },
       ],
     },
   ];
   return (
-    <div style={{ margin: "30px" }}>
+    <div>
       {classify.map((item) => (
-        <div>
+        <div style={{ margin: "30px" }}>
           <span
             style={{
-              writingMode: "vertical-rl",
               borderBlock: "5px dashed blue",
             }}
           >
@@ -38,7 +60,7 @@ function Classify(props) {
           </span>
           <span
             style={{
-              border: "2px solid",
+              border: "1px solid",
               margin: "20px",
             }}
           >
@@ -47,7 +69,7 @@ function Classify(props) {
                 href={one.url}
                 style={{ marginLeft: "10px", marginTop: "-20px" }}
               >
-                {one.name}
+                {one.name} |
               </a>
             ))}
           </span>
@@ -60,12 +82,6 @@ function Classify(props) {
 function Share(props) {
   return (
     <Layout>
-      <Comment
-        path={"/"}
-        serverURL={
-          "https://lkzwc-comment.netlify.app/.netlify/functions/comment"
-        }
-      />
       <Classify />
     </Layout>
   );

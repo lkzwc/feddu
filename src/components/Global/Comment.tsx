@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { init } from "@waline/client";
-
+import "@waline/client/waline-meta.css";
 import type { WalineInstance, WalineInitOptions } from "@waline/client";
 
 export type WalineOptions = Omit<WalineInitOptions, "el"> & { path: string };

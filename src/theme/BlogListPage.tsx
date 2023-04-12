@@ -6,6 +6,10 @@ import { Comment } from "../components/Global/Comment";
 
 export default function BlogListPage(props) {
   const { metadata, items } = props;
+
+  console.log("====================================");
+  console.log("items", items, metadata);
+  console.log("====================================");
   const {
     siteConfig: { title: siteTitle },
   } = useDocusaurusContext();
@@ -24,22 +28,39 @@ export default function BlogListPage(props) {
         tag: "blog_posts_list",
       }}
     >
-      {items.map(({ content: infos }) => (
-        <BlogPostItem
-          key={infos.metadata.permalink}
-          frontMatter={infos.frontMatter}
-          assets={infos.assets}
-          metadata={infos.metadata}
-          truncated={infos.metadata.truncated}
-        />
-      ))}
-      <div>
-        <Comment
-          path={"/"}
-          serverURL={
-            "https://lkzwc-comment.netlify.app/.netlify/functions/comment"
-          }
-        />
+      <div
+        style={{
+          display: "flex",
+          margin: "30px 100px",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        {items.map(({ content }) => (
+          <article
+            style={{ width: "300px", margin: "10px" }}
+            key={content?.frontMatter?.title}
+          >
+            <img
+              // src={withBaseUrl(assets.image, { absolute: true })}
+              src="https://mdn.github.io/css-examples/css-cookbook/balloons.jpg"
+              alt="Hot air balloons"
+              style={{
+                objectFit: "cover",
+                width: "100%",
+                height: "100%",
+              }}
+            />
+            <div>
+              <BlogPostItem data={content} />
+            </div>
+            <header>
+              <h3>{content?.frontMatter?.title}</h3>
+            </header>
+            <footer>{content?.metadata?.description}</footer>
+            <a href={content?.metadata?.permalink}>阅读原文</a>
+          </article>
+        ))}
       </div>
     </Layout>
   );

@@ -73,7 +73,7 @@ function HomepageHeader() {
             src="https://cdn.dribbble.com/users/1292677/screenshots/6139167/media/5387dc7e035b3efe9d94516044de66a4.gif"
           />
         </div>
-        <div style={{ gridRow: 2, gridColumn: 1 / 15 }}>
+        <div style={{ gridRowStart: 2, gridColumnStart: 1, gridColumnEnd: 3 }}>
           <Link
             className="button button--secondary button--lg"
             to="/docs/readme"

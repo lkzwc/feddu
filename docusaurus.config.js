@@ -83,32 +83,6 @@ const config = {
           },
           { to: "/blog", label: "博客", position: "left" },
           {
-            label: "前端工具",
-            items: [
-              {
-                label: "What Character",
-                href: "http://www.amp-what.com/",
-              },
-              {
-                label: "Image compress and tansfer",
-                href: "https://anywebp.com/",
-              },
-            ],
-          },
-          {
-            label: "友链",
-            items: [
-              {
-                label: "前端进阶题-山月",
-                href: "https://q.shanyue.tech/",
-              },
-              {
-                label: "前端源码-若川",
-                href: "https://lxchuan12.gitee.io/",
-              },
-            ],
-          },
-          {
             label: "工具链",
             to: "/share",
           },

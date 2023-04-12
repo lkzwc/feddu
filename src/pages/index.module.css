@@ -20,4 +20,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  border-right: 6px;
+  --text-stroke-color: rgba(255, 255, 255, 0.6);
+  --animation-color: #37ff8b;
+  --fs-size: 2em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+.buttons:hover {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color));
 }

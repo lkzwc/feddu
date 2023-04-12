@@ -29,12 +29,14 @@ function HomepageHeader() {
       </script> */}
       <div
         className="container"
-        style={{ display: "flex", gridTemplateColumns: "1fr 1fr" }}
+        style={{
+          display: "grid",
+          textAlign: "left",
+          gridTemplateColumns: "1fr 1fr",
+          gridTemplateRows: "1fr 50px",
+        }}
       >
-        <div
-          className="hero__subtitle"
-          style={{ width: "650px", textAlign: "left" }}
-        >
+        <div className="hero__subtitle">
           <i class="fa fa-quote-left fa-3x fa-pull-left fa-border"></i>
           I'am a program developer who is enthusiastic about new technology and
           believe in code change the world!
@@ -63,10 +65,26 @@ function HomepageHeader() {
         </div>
 
         {/* <img src="https://gifdb.com/images/high/animated-man-computer-coding-nae6mec378lsg1i3.webp" /> */}
-        <div>
-          <img src="https://cdn.dribbble.com/users/1292677/screenshots/6139167/media/5387dc7e035b3efe9d94516044de66a4.gif" />
+        <div
+          style={{
+            gridRow: 1,
+            gridColumn: 2,
+          }}
+        >
+          <img
+            width="500"
+            height="300"
+            src="https://cdn.dribbble.com/users/1292677/screenshots/6139167/media/5387dc7e035b3efe9d94516044de66a4.gif"
+          />
         </div>
-        <div className={styles.buttons}>
+        <div
+          className={styles.buttons}
+          style={{ textAlign: "left", gridColumn: "1" }}
+        >
+          <span class="actual-text">&nbsp;uiverse&nbsp;</span>
+          <span class="hover-text" aria-hidden="true">
+            &nbsp;uiverse&nbsp;
+          </span>
           <Link
             className="button button--secondary button--lg"
             to="/docs/readme"

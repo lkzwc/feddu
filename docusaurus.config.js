@@ -65,9 +65,9 @@ const config = {
         },
       },
       algolia: {
-        indexName: "blog",
-        appId: "76HJG76BKV",
-        apiKey: "ef039ab1e6a13a3e5127247be2289fb4",
+        indexName: "blog_data",
+        appId: "N0P0MBUWP4",
+        apiKey: "7bae6c5f49a157bfc92e4bef759f0166",
       },
       navbar: {
         logo: {

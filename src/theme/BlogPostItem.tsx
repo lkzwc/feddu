@@ -1,10 +1,6 @@
 import React from "react";
-// import Seo from "@theme/Seo";
-import { useBaseUrlUtils } from "@docusaurus/useBaseUrl";
+// import BlogPostItem from "@theme-original/BlogPostItem";
 
-export default function BlogPostItem(props) {
-  // const { date, formattedDate, permalink, tags, readingTime, title, authors } =
-  //   metadata;
-  const { withBaseUrl } = useBaseUrlUtils();
-  return <div style={{ width: "300px" }}>{11}</div>;
+export default function BlogPostItemWrapper(props) {
+  return <>{/* <BlogPostItem {...props} /> */}</>;
 }

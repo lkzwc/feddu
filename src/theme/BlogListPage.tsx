@@ -2,7 +2,8 @@ import React from "react";
 import Layout from "@theme/Layout";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import BlogPostItem from "./BlogPostItem";
-import { Comment } from "../components/Global/Comment";
+import dayjs from "dayjs";
+// import { Comment } from "../components/Global/Comment";
 
 export default function BlogListPage(props) {
   const { metadata, items } = props;
@@ -30,17 +31,27 @@ export default function BlogListPage(props) {
     >
       <div
         style={{
-          display: "flex",
-          margin: "30px 100px",
-          justifyContent: "center",
-          alignItems: "center",
+          margin: "50px",
+          display: "grid",
+          gridTemplateColumns: "repeat(3, 1fr)",
         }}
       >
         {items.map(({ content }) => (
           <article
-            style={{ width: "300px", margin: "10px" }}
+            style={{ width: "350px", margin: "10px", borderRadius: "10px" }}
             key={content?.frontMatter?.title}
           >
+            <header
+              style={{
+                background: "#FEDDDD",
+                height: "40px",
+                padding: "5px",
+              }}
+            >
+              <a href={content?.metadata?.permalink}>
+                <h3>{content?.frontMatter?.title}</h3>
+              </a>
+            </header>
             <img
               // src={withBaseUrl(assets.image, { absolute: true })}
               src="https://mdn.github.io/css-examples/css-cookbook/balloons.jpg"
@@ -48,17 +59,14 @@ export default function BlogListPage(props) {
               style={{
                 objectFit: "cover",
                 width: "100%",
-                height: "100%",
+                height: "70%",
               }}
             />
             <div>
               <BlogPostItem data={content} />
             </div>
-            <header>
-              <h3>{content?.frontMatter?.title}</h3>
-            </header>
-            <footer>{content?.metadata?.description}</footer>
-            <a href={content?.metadata?.permalink}>阅读原文</a>
+
+            <footer>{dayjs(content.metadata.date).format("YYYY/MM/DD")}</footer>
           </article>
         ))}
       </div>

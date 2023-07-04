@@ -42,15 +42,15 @@ function HomepageHeader() {
             }}
           >
             <i
-              class="fa-brands fa-2x fa-vuejs"
-              style={{ color: "#42B883" }}
-            ></i>
-            <i
               class="fa-brands fa-2x fa-react"
               style={{ color: "#149ECA" }}
             ></i>
+            <i
+              class="fa-brands fa-2x fa-vuejs"
+              style={{ color: "#42B883" }}
+            ></i>
             <i class="fa-brands fa-2x fa-less" style={{ color: "#f0de14" }}></i>
-            <i class="fa-brands fa-2x fa-node" style={{ color: "#484a4b" }}></i>
+            <i class="fa-brands fa-2x fa-node" style={{ color: "#dfdfdf" }}></i>
             <i class="fa-brands fa-2x fa-docker"></i>
             <i
               class="fa-brands fa-2x fa-square-js"

@@ -139,6 +139,9 @@ const config = {
               {
                 html: `<a href="https://docusaurus.io/zh-CN/" target="_blank" rel="noreferrer noopener"><img style="height:50px;margin-top:0.5rem" src="https://waline.js.org/logo.png"/><a/>`,
               },
+              {
+                html: `[![Netlify Status](https://api.netlify.com/api/v1/badges/d08c148a-e70a-4c69-86a4-2b0eb8684459/deploy-status)](https://app.netlify.com/sites/lkzwc/deploys)`,
+              },
             ],
           },
         ],

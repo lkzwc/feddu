@@ -18,4 +18,15 @@ title: Deployment
 
 5. **_具体负责管理的是 ReplicaSet,而 ReplicaSet 去管理具体的 Pod_**
 
+6. 更新策略：
+  rollingupdate：滚动更新
+  recreate: 开始更新时，先进行删除再创建
+
 核心【Replicas】期望的终态数量
+
+## replicaset
+
+* 确保pod数量
+* 确保pod健康
+* 弹性伸缩，滚动升级 
+

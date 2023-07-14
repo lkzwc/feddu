@@ -8,9 +8,6 @@ import dayjs from "dayjs";
 export default function BlogListPage(props) {
   const { metadata, items } = props;
 
-  console.log("====================================");
-  console.log("items", items, metadata);
-  console.log("====================================");
   const {
     siteConfig: { title: siteTitle },
   } = useDocusaurusContext();

@@ -301,7 +301,7 @@ k8s默认提供的弹性伸缩组件，主要VPA、HPA伸缩分类：
 
     > VPA定期查看pod资源使用情况， 主要从metric server中采集数据，需要重启pod,如果计算超过node可用资源，将导致pod一直pedding
 
-  ```Plain Text
+```Plain Text
 AddonResizer是一种VPA即垂直POD自动扩缩容,根据集群规格、画像策略自动设置CPU、内存的Request
 ```
 
@@ -309,8 +309,6 @@ AddonResizer是一种VPA即垂直POD自动扩缩容,根据集群规格、画像�
   - 水平伸缩（HPA）
 
     > 根据cpu的使用率自动缩放 replication 控制器，deployment，副本集或状态集中的 pod 数量
-
-AddonResizer周期性查看集群系欸但数量，计算pod需要的内存CPU,如果低于或者高于阈值，则会修改deployment触发生成新的pod
 
 #### 节点伸缩
 

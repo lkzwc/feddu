@@ -19,7 +19,7 @@ hide_table_of_contents: false
 
 
 
- ## ClusterIP 
+ ### ClusterIP 
  ```
  kubectl expose deploy my-dep --port=8000 --target-port=80 //暴露mydep 创建的pod
 
@@ -28,7 +28,7 @@ serviceIP:8000
 service域名：8000  服务名.所在名称空间.svc
  ```
 
- ## NodePort
+ ### NodePort
 
 ```
  kubectl expose deploy my-dep --port=8000 --target-port=80  --type=NodePort

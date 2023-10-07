@@ -136,9 +136,6 @@ const config = {
               {
                 html: `<a href="https://docusaurus.io/zh-CN/" target="_blank" rel="noreferrer noopener"><img style="height:50px;margin-top:0.5rem" src="https://www.docusaurus.cn/img/docusaurus_keytar.png" /><a/>`,
               },
-              {
-                html: `<a href="https://docusaurus.io/zh-CN/" target="_blank" rel="noreferrer noopener"><img style="height:50px;margin-top:0.5rem" src="https://waline.js.org/logo.png"/><a/>`,
-              },
             ],
           },
         ],

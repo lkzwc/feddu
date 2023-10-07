@@ -59,10 +59,7 @@ export default function BlogListPage(props) {
                 height: "70%",
               }}
             />
-            <div>
-              <BlogPostItem data={content} />
-            </div>
-
+            <span>{content?.metadata?.description}</span>
             <footer>{dayjs(content.metadata.date).format("YYYY/MM/DD")}</footer>
           </article>
         ))}

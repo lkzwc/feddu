@@ -18,10 +18,7 @@ export default function BlogLayout(props) {
           >
             {children}
           </main>
-          <div className="col col--3">
-            <BlogSidebar sidebar={sidebar} />
-            {toc && toc}
-          </div>
+          <div className="col col--4">{toc && toc}</div>
         </div>
       </div>
     </Layout>

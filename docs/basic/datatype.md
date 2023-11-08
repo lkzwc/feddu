@@ -6,7 +6,7 @@ title: JS数据类型
 ## 数据类型分类
 
 - 基本类型
-  > string,number,boolean,null,undefine,symbol
+  > string,number,boolean,null,undefine,symbol,BigInt（es10 新增）
   > 一般大小固定，存储在栈内存当中
 - 引用类型
   > Array,Date,Math,Function
@@ -25,3 +25,9 @@ title: JS数据类型
 Object.prototype.toString.call(1)    // "[object Number]"
 Object.prototype.toString.call('1')  // "[object String]"
 ```
+
+## 存储位置
+​
+原始数据类型：直接存储在**栈**（stack）中，占据空间小、大小固定，属于被频繁使用数据，所以放入栈中存储。
+​
+引用数据类型：同时存储在**栈**（stack）和**堆**（heap）中，占据空间大、大小不固定。引用数据类型在栈中存储了指针，该指针指向堆中该实体的起始地址。当解释器寻找引用值时，会首先检索其在栈中的地址，取得地址后从堆中获得实体。

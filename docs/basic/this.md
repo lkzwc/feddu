@@ -3,7 +3,7 @@ title: 执行上下文this
 slug: /this
 ---
 
-# 今天我们的打卡的内容是执行上下文
+# 执行上下文
 
 JS 中的 this 指的就是一种执行上下文，是一种抽象的执行环境
 
@@ -76,5 +76,7 @@ app.fun()
   参数形式：(this,[p1,p2])
 - bind
   bind 函数会创建一个新的绑定函数,第一个参数为 this,其余参数作为新函数的参数
+
   参数形式: (this,p1,p2)
+  
   bind(this,p1,p2,p2)()=call(this,p1,p2,p2)

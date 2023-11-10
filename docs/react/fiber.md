@@ -4,18 +4,8 @@ slug: /fiber
 title: fiber
 ---
 
-## 为什么要有
-首先我们都知道JS是单线程的，而在最初版本中，react的stack reconciler使用的是递归深度遍历，这就意味着如果遇到大批量的DOM，整个过程是非常耗时的，为了解决此问题，于是就有了更新的版本
-
-## Fiber
-
-React Fiber是对核心算法的一次重新实现 Fiber reconciler 从v16.x开始底层使用Fiber reconciler替换stack reconciler。将之前的不可打断的更新逻辑修改为可中断的小任务
-
-整个过程可以分为两部分，一部分是diff，一部分只commit，而其中的commit是不可中断的
-
-## 流程
-通过shouldYield函数（idleDeadline.timeRemaining()）判读时间是否用完，用完则把时间还给主线程等待下次requestIdleCallback的唤起，否则继续执行任务
-
+## 为什么需要Fiber
+diff算法采用深度遍历，react的Stack reconciler是一种递归执行的过程，
 
 ## 架构
 Schedule(调度)->reconciler(找不同TAG)->rerender(渲染)
@@ -45,10 +35,10 @@ function workloop(deadline){
 
 ```
 
-###  Schedule优先级
+## Schedule优先级
 如果一个任务的过期时间很短，那么其优先级会很高，如果过期时间很长，则优先级很低。在timerQueue中，以小顶锥排放
 
-###  Lane模型
+## Lane模型
 react中的饥饿问题，低优先级的任务如果被高优先级的任务一直打断，到了它的过期时间，它也会变成高优先级
 
 ## Reconciler

@@ -6,12 +6,12 @@ tags:
   - 简介
 ---
 
-# fe-ddu——FrontEnd Day Day Up
+e-ddu——FrontEnd Day Day Up
 
 Github 地址：https://github.com/lkzwc/fe-ddu [欢迎 star]
 
 FrontEnd day day up,前端学习打卡队伍，节假日休息喔！正常上班时间打卡
-[![Netlify Status](https://api.netlify.com/api/v1/badges/d08c148a-e70a-4c69-86a4-2b0eb8684459/deploy-status)](https://app.netlify.com/sites/lkzwc/deploys)
+[![Ne# ftlify Status](https://api.netlify.com/api/v1/badges/d08c148a-e70a-4c69-86a4-2b0eb8684459/deploy-status)](https://app.netlify.com/sites/lkzwc/deploys)
 
 > 打卡目标
 

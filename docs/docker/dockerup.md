@@ -61,5 +61,6 @@ docker build -t yys:v1 .  //.当前目录
 
 docker tag image_name YOUR_DOCKERHUB_NAME/image_name
 
-
+docker-compse up //编译启动容器组
+docker system prune //删除缓存
 ```

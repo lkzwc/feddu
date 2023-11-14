@@ -166,6 +166,13 @@ EXPOSE 3000
 CMD npm run start
 ```
 
+## CMD 和RUN的区别
+* RUN
+每一次执行叠加一层镜像，用于安装软件包、运行脚本、配置环境
+* CMD
+用于容器启动时候要执行的默认命令，在DockerFile文件中，只能有一个CMD指令
+
+
 ## Docker 高级命令
 ```
 docker run [option] images [command] [args]

@@ -4,6 +4,13 @@ slug: /hmr
 tags: ['热更新','Webpack']
 ---
 
+## Webpack的原理
+> 使用webpack启动项目时，webpack会根据我们配置文件（webpack.config.js） 中的入口文件（entry），分析出项目项目所有依赖关系，然后打包成一个文件（bundle.js），交给浏览器去加载渲染。
+
+
+由于基于nodejs运行，无法利用多核CPU的优势
+
+
 ## HMR 原理
 Hot Module Replacement
 * web-packdev-server WDS托管静态资源，同时以RunTime方式注入

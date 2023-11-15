@@ -168,7 +168,7 @@ CMD npm run start
 
 ## CMD 和RUN的区别
 * RUN
-每一次执行叠加一层镜像，用于安装软件包、运行脚本、配置环境
+由于ufs文件系统，每一次执行叠加一层镜像，用于安装软件包、运行脚本、配置环境
 * CMD
 用于容器启动时候要执行的默认命令，在DockerFile文件中，只能有一个CMD指令
 
@@ -181,6 +181,7 @@ docker run --name=demo -d nginx  // -d后台运行 --name 名称
 
 docker ps //查看运行的 -a 查看所有的
 docker stop id //
+docker stats id //
 docker start id 
 docker run --restart='always' nginx //开机自启
 

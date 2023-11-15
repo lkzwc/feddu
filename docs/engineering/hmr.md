@@ -11,3 +11,30 @@ Hot Module Replacement
 * webpack监听文件变化后，增量构建，并通过websocket发送hash事件
 * 浏览器接收到hash事件之后，请求资源文件，加载变更的增量模块
 * webpack触发回调，将最新的代码替换到运行环境中
+
+## 加快速度
+> 在webpack中耗时最久的当属负责AST转化的loader
+* 使用更快的swc-loader
+* cache开启缓存 type: filesystem
+* 多进程 thread-loader 替代4中的happypack
+
+```
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        use: [
+          {
+            loader: "thread-loader",
+            options: {
+              workers: 8,
+            },
+          },
+          "babel-loader",
+        ],
+      },
+    ],
+  },
+};
+```

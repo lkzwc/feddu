@@ -139,7 +139,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} &#128278;  by lkzwc `,
+        copyright: `Copyright ©️ ${new Date().getFullYear()} &#128278;  by lkzwc `,
       },
       prism: {
         theme: lightCodeTheme,

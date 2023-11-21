@@ -1,6 +1,6 @@
 ---
 slug: /iterator
-title: instanceof源码实现
+title: 迭代器源码实现
 ---
 
 首先我们来说说什么是迭代器？

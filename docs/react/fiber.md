@@ -5,7 +5,7 @@ title: fiber
 ---
 
 ## 为什么需要Fiber
-diff算法采用深度遍历，react的Stack reconciler是一种递归执行的过程，
+diff算法采用深度遍历，react的Stack reconciler是一种递归执行的过程，使用Fiber把更新过程碎片化，变成异步可中断的操作
 
 ## 架构
 Schedule(调度)->reconciler(找不同TAG)->rerender(渲染)

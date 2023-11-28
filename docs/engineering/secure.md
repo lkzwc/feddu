@@ -14,7 +14,7 @@ tags: ["xss", "点击劫持","pnpm"]
 ```
 ### 预防
 * 输入验证过滤
-* httpOnly
+* 设置httpOnly
 * 进行特殊转义
 * 设置http头部 XSS-Protection
 

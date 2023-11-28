@@ -5,7 +5,8 @@ title: fiber
 ---
 
 ## 为什么需要Fiber
-diff算法采用深度遍历，react的Stack reconciler是一种递归执行的过程，使用Fiber把更新过程碎片化，变成异步可中断的操作
+Fiber是一种React 新的协调机制，主要是为了改进React的更新渲染机制
+传统过程中，react的Stack reconciler是一种递归执行的过程，diff算法采用深度遍历，使用Fiber把更新过程碎片化，变成异步可中断的操作
 
 ## 架构
 Schedule(调度)->reconciler(找不同TAG)->rerender(渲染)
@@ -36,6 +37,9 @@ function workloop(deadline){
 ```
 
 ## Lane模型
+> 目的就是计算更新的优先级 其中有两种方式 Lane模型和Expiration Time两种
+
+Lane 是一个32位的二进制，可以指定不同的更新
 react中的饥饿问题，低优先级的任务如果被高优先级的任务一直打断，到了它的过期时间，它也会变成高优先级
 
 

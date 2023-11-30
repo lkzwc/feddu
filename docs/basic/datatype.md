@@ -26,6 +26,13 @@ Object.prototype.toString.call(1)    // "[object Number]"
 Object.prototype.toString.call('1')  // "[object String]"
 ```
 
+## for in / for of区别
+* for in
+> ES5就已经出现，用于遍历对象的可枚举的属性，不含Symbol
+
+* for of
+> 遍历可迭代对象的属性，可以使用的范围包括数组、Set、Map、字符串等实现【Symbol.iterator】的对象
+
 ## 存储位置
 ​
 * 原始数据类型

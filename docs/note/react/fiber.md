@@ -1,8 +1,4 @@
----
-id: fiber
-slug: /fiber
-title: fiber
----
+# fiber
 
 ## 为什么需要Fiber
 Fiber是一种React 新的协调机制，主要是为了改进React的更新渲染机制

@@ -1,7 +1,4 @@
----
-title: JS引擎如何执行JS代码
-slug: /jsrun
----
+# JS引擎如何执行JS代码
 
 ## 编译性语言（C++\java）
 

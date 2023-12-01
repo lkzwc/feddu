@@ -1,7 +1,4 @@
----
-title: POST为什么会请求两次
-slug: /post
----
+# POST为什么会请求两次
 
 ## POST为什么会请求两次
 

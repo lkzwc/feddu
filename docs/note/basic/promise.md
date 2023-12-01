@@ -1,8 +1,4 @@
----
-slug: /promise
-title: 异步回调
-tags: ["promise", "async", "await"]
----
+# 异步回调
 
 ## 回调地狱？
 

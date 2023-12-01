@@ -1,8 +1,4 @@
----
-id: react
-slug: /reactdiff
-title: react如何diff的
----
+# react如何diff的
 
 ## 应该认识的
 * current fiber 

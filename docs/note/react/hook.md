@@ -1,8 +1,4 @@
----
-id: hook
-slug: /hook
-title: hook
----
+# hook
 
 ## hooks的动机
 

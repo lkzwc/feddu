@@ -1,7 +1,4 @@
----
-title: 网络模型
-slug: /netmode
----
+# 网络模型
 
 网络实际模型：物理层、数据链路层、网络层、传输层、应用层！
 ![image](https://user-images.githubusercontent.com/84896877/168201127-efe68fbb-de43-453e-8f8c-d9de8e965873.png)

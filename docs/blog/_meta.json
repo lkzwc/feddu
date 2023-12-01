@@ -1,1 +1,5 @@
-["index"]
+[
+    "chatGpt",
+    "microService",
+    "mutationobserver"
+]

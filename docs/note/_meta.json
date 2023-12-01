@@ -4,7 +4,70 @@
         "type": "dir",
         "name": "basic",
         "label": "JS基础",
+        "collapsible": false,
+        "collapsed": false
+    },
+    {
+        "type": "dir",
+        "name": "chrome",
+        "label": "浏览器",
         "collapsible": true,
-        "collapsed": true
+        "collapsed": false
+    },
+    {
+        "type": "dir",
+        "name": "design",
+        "label": "设计模式",
+        "collapsible": true,
+        "collapsed": false
+    },
+    {
+        "type": "dir",
+        "name": "docker",
+        "label": "Docker",
+        "collapsible": true,
+        "collapsed": false
+    },
+    {
+        "type": "dir",
+        "name": "engineering",
+        "label": "工程化",
+        "collapsible": true,
+        "collapsed": false
+    },
+    {
+        "type": "dir",
+        "name": "k8s",
+        "label": "K8s",
+        "collapsible": true,
+        "collapsed": false
+    },
+    {
+        "type": "dir",
+        "name": "react",
+        "label": "React",
+        "collapsible": true,
+        "collapsed": false
+    },
+    {
+        "type": "dir",
+        "name": "source-read",
+        "label": "源码阅读",
+        "collapsible": true,
+        "collapsed": false
+    },
+    {
+        "type": "dir",
+        "name": "source-realize",
+        "label": "源码实现",
+        "collapsible": true,
+        "collapsed": false
+    },
+    {
+        "type": "dir",
+        "name": "Vue",
+        "label": "vue",
+        "collapsible": true,
+        "collapsed": false
     }
 ]

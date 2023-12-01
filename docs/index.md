@@ -2,9 +2,10 @@
 pageType: home
 
 hero:
-  name: Rspress
-  text: Rspack-based Static Site Generator
-  tagline: Rspress tagline
+  name: lkzwc
+  text: 
+  tagline: I'am a program developer who is enthusiastic about new technology and
+          believe in code change the world!
   actions:
     - theme: brand
       text: Quick Start
@@ -13,8 +14,8 @@ hero:
       text: Github
       link: https://github.com/lkzwc/feddu
   image:
-    src: /rspress-icon.png
-    alt: Rspress Logo
+    src: https://cdn.dribbble.com/users/1292677/screenshots/6139167/media/5387dc7e035b3efe9d94516044de66a4.gif
+    alt: web developer
 features:
   - title: Blazing fast build speed
     details: The core compilation module is based on the Rust front-end toolchain, providing a more ultimate development experience.

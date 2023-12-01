@@ -1,0 +1,16 @@
+[
+  {
+    "text": "笔记",
+    "link": "/note/",
+    "activeMatch": "/note/"
+  },
+  {
+    "text": "博客",
+    "link": "/blog/",
+    "activeMatch": "/blog/"
+  },
+  {
+    "text": "API",
+    "link": "https://rspress.dev/api/index.html"
+  }
+]

@@ -1,0 +1,10 @@
+[
+    "index",
+    {
+        "type": "dir",
+        "name": "basic",
+        "label": "JS基础",
+        "collapsible": true,
+        "collapsed": true
+    }
+]

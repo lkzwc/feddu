@@ -3,5 +3,6 @@
     "bfc",
     "cjs",
     "closure",
-    "copy"
+    "copy",
+    "delegate"
 ]

@@ -1,7 +1,4 @@
----
-slug: /inject
-title: 依赖注入
----
+# 依赖注入
 ```
 class Log{
     print(xx) {

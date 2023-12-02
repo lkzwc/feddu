@@ -1,7 +1,4 @@
----
-slug: /instanceof
-title: instanceof源码实现
----
+# instanceof源码实现
 
 ```
 // mm instanceof Array

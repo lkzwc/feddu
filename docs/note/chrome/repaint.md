@@ -1,8 +1,4 @@
----
-slug: /repaint
-title: 重排重绘以及绘制的关键路径
-tags: ["repaint", "reflow", "await"]
----
+# 重排重绘以及绘制的关键路径
 
 ## 关键路径
 

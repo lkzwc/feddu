@@ -7,10 +7,6 @@
   {
     "text": "博客",
     "link": "/blog/",
-    "activeMatch": "/blog/"
-  },
-  {
-    "text": "API",
-    "link": "https://github.com/lkzwc/feddu"
+    "activeMatch": "/blog/chatGpt"
   }
 ]

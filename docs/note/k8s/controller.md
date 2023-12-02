@@ -1,16 +1,4 @@
----
-title: Controller of k8s
-authors:
-  - lkzwc
-  - name: lkzwc
-    title: lkzwc
-    url: https://github.com/JoelMarcey
-    image_url: https://github.com/JoelMarcey.png
-tags: [hello, docusaurus-v2]
-description: k8s中的Controller
-image: https://i.imgur.com/mErPwqL.png
-hide_table_of_contents: false
----
+# Controller of k8s
 
 ## 概述
 

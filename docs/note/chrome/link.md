@@ -1,9 +1,4 @@
----
-slug: /link
-title: 从URL输入到界面展示发生了什么
-tags: ["URL输入", "垃圾回收"]
----
-
+# 从URL输入到界面展示发生了什么
 ![image](https://github.com/lkzwc/fe-ddu/assets/84896877/48470369-48b1-4854-8d6e-701990c47a9b)
 ## URL输入到看见界面发生了什么
 > 首先我们从大的方面说一下吧，后边细节在补充

@@ -1,10 +1,4 @@
----
-slug: /dockerup
-title: Docker高级
-tags:
-  - label: docker高级
-    permalink: docker
----
+# Docker高级
 
 ## 高级指令
 

@@ -1,8 +1,4 @@
----
-id: concept
-title: 你不知道的JS单例、工厂、重载
-slug: /concept
----
+#  你不知道的JS单例、工厂、重载
 
 ## 单例模式
 

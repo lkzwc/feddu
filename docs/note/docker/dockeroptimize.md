@@ -1,10 +1,4 @@
----
-slug: /dockeroptimize
-title: Docker优化
-tags:
-  - label: docker优化
-    permalink: docker
----
+# Docker优化
 
 ## DockerFile时间优化
 > 在Dockerfile 文件中，对于ADD指令来讲，如果添加文件的checksum没有发生改变，则可以利用构建缓存

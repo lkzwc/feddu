@@ -7,8 +7,8 @@ export default defineConfig({
   description: '前端开发者流客的博客',
   icon: '/logo.png',
   logo: {
-    light: '/rspress-light-logo.png',
-    dark: '/rspress-dark-logo.png',
+    light: '/logo.png',
+    dark: '/logo.png',
   },
   themeConfig: {
     socialLinks: [

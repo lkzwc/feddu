@@ -1,8 +1,4 @@
----
-slug: /npm 
-title: 前端包管理器
-tags: ["npm", "yarn","pnpm"]
----
+# 前端包管理器
 
 ## npm
 * 递归依赖树

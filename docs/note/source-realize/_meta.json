@@ -1,3 +1,7 @@
 [
-    "vue"
+    "concurrency",
+    "debounce",
+    "inject",
+    "instanceof",
+    "iterator"
 ]

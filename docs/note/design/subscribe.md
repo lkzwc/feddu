@@ -1,8 +1,4 @@
----
-id: subscribe
-title: 发布订阅和观察者
-slug: /subscribe
----
+#  发布订阅和观察者
 
 ## 观察者
 > 观察者、被观察者

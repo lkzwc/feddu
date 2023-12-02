@@ -1,8 +1,4 @@
----
-slug: /secure 
-title: 前端涉及到的安全
-tags: ["xss", "点击劫持","pnpm"]
----
+# 前端涉及到的安全
 
 ## XSS
 

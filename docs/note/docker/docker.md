@@ -1,10 +1,4 @@
----
-slug: /docker
-title: Docker基础
-tags:
- - label: docker基础
-   permalink: docker
----
+# Docker基础
 
 ## 什么是容器
 > 简单的来说就是包含一个完整的的运行时环境，除了应用程序本身之外，还包括这个应用所需的全部依赖、类库、二进制文件、配置文件等比如Linxu、JVM等

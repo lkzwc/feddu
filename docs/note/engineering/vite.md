@@ -1,8 +1,4 @@
----
-title: vite为什么快
-slug: /vite
-tags: ['vite','Webpack']
----
+#  vite为什么快
 
 ## ESM 
 首先在说vite之前，我们看下ESM，目前大多数浏览器已经支持ESM，只需要在script中加入type="module",就可以使用ESM了。

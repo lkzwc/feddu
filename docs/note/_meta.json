@@ -3,15 +3,15 @@
     {
         "type": "dir",
         "name": "basic",
-        "label": "JS基础",
-        "collapsible": true,
-        "collapsed": true
+        "label": "basic",
+        "collapsible": false,
+        "collapsed": false
     },
     {
         "type": "dir",
         "name": "chrome",
         "label": "浏览器",
-        "collapsible": true,
+        "collapsible": false,
         "collapsed": true
     },
     {
@@ -19,7 +19,7 @@
         "name": "design",
         "label": "设计模式",
         "collapsible": true,
-        "collapsed": true
+        "collapsed": false
     },
     {
         "type": "dir",

@@ -52,10 +52,48 @@ const HomeLayout = () => <div style={{ display: 'grid', gridTemplateRows: 'auto 
     </div>
     <div>
 
+
     </div>
   </main>
+
   <footer style={{ gridRow: 3, textAlign: 'center' }} >
-    <div>
+    <hr style={{ margin: '10px 20px' }} />
+    <div style={{ columnCount: 3, gap: '100px', margin: '10px 150px' }}>
+      <div>
+        <div style={{ display: 'inline-grid', gap: '10px' }}>
+          <h2>特别鸣谢</h2>
+          <a href="https://www.netlify.com" target="_blank" rel="noreferrer noopener" aria-label="Deploys by Netlify">
+            <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" width="114" height="51" />
+          </a>
+          <a href="https://rspress.dev/zh/" target="_blank" rel="noreferrer noopener">
+            <img src="https://lf3-static.bytednsdoc.com/obj/eden-cn/rjhwzy/ljhwZthlaukjlkulzlp/rspress/rspress-navbar-logo-dark-0904.png" alt="Deploys by Netlify" width="114" height="51" />
+          </a>
+        </div>
+      </div>
+      <div >
+        <div style={{ display: 'inline-grid', gap: '10px' }}>
+          <h2>特别鸣谢</h2>
+          <a href="https://www.netlify.com" target="_blank" rel="noreferrer noopener" aria-label="Deploys by Netlify">
+            <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" width="114" height="51" />
+          </a>
+          <a href="https://rspress.dev/zh/" target="_blank" rel="noreferrer noopener">
+            <img src="https://lf3-static.bytednsdoc.com/obj/eden-cn/rjhwzy/ljhwZthlaukjlkulzlp/rspress/rspress-navbar-logo-dark-0904.png" alt="Deploys by Netlify" width="114" height="51" />
+          </a>
+        </div>
+      </div>
+      <div >
+        <div style={{ display: 'inline-grid', gap: '10px' }}>
+          <h2>特别鸣谢</h2>
+          <a href="https://www.netlify.com" target="_blank" rel="noreferrer noopener" aria-label="Deploys by Netlify">
+            <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" width="114" height="51" />
+          </a>
+          <a href="https://rspress.dev/zh/" target="_blank" rel="noreferrer noopener">
+            <img src="https://lf3-static.bytednsdoc.com/obj/eden-cn/rjhwzy/ljhwZthlaukjlkulzlp/rspress/rspress-navbar-logo-dark-0904.png" alt="Deploys by Netlify" width="114" height="51" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div style={{ padding: '10px' }}>
       {`Copyright ©️ ${new Date().getFullYear()} design by lkzwc `}
     </div>
   </footer>

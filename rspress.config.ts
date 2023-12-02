@@ -10,6 +10,7 @@ export default defineConfig({
     light: '/logo.png',
     dark: '/logo.png',
   },
+  lang:'zh',
   themeConfig: {
     socialLinks: [
       { icon: 'github', mode: 'link', content: 'https://github.com/lkzwc/feddu' },

@@ -3,15 +3,15 @@
     {
         "type": "dir",
         "name": "basic",
-        "label": "basic",
-        "collapsible": false,
-        "collapsed": false
+        "label": "Basic",
+        "collapsible": true,
+        "collapsed": true
     },
     {
         "type": "dir",
         "name": "chrome",
         "label": "浏览器",
-        "collapsible": false,
+        "collapsible": true,
         "collapsed": true
     },
     {
@@ -19,7 +19,7 @@
         "name": "design",
         "label": "设计模式",
         "collapsible": true,
-        "collapsed": false
+        "collapsed": true
     },
     {
         "type": "dir",
@@ -55,7 +55,7 @@
         "label": "Vue",
         "collapsible": true,
         "collapsed": true
-    }
+    },
     {
         "type": "dir",
         "name": "source-read",

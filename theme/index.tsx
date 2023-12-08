@@ -6,6 +6,7 @@ const HomeLayout = () => <div style={{ display: 'grid', gridTemplateRows: 'auto 
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     ></link>
+    <link href="./output.css" rel="stylesheet"></link>
   </header>
   <main style={{ gridRow: 2 }}>
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: "80px 120px", fontSize: 'x-large' }}>

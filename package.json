@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "rspress dev",
     "build": "rspress build",
+    "genestyle": "npx tailwindcss -i ./theme/input.css -o ./theme/output.css --watch",
     "preview": "rspress preview"
   },
   "dependencies": {

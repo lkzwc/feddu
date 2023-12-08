@@ -13,6 +13,7 @@ export default defineConfig({
   },
   lang:'zh',
   themeConfig: {
+    lastUpdated: true,
     socialLinks: [
       { icon: 'github', mode: 'link', content: 'https://github.com/lkzwc/feddu' },
     ],

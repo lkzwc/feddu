@@ -7,11 +7,11 @@ export default function Blog() {
   const info = usePageData();
   console.log("info", info);
   return (
-    <div className="flex justify-center p-10 bg-pink-300">
+    <div className="flex justify-center p-8 w-4/5">
       <div className="grid grid-cols-1 divide-y"></div>
       {info?.siteData?.pages
         ?.filter(
-          (item) => item.routePath.includes("/blog/") && item?.title !== ""
+          (item) => item.routePath.includes("/blog/") && item.routePath !== '/blog/'
         )
         .map((item) => (
           <BlogItem item={item} />

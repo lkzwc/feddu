@@ -1,12 +1,12 @@
 [
   {
     "text": "笔记",
-    "link": "/note/basic/bfc",
-    "activeMatch": "/note/"
+    "link": "/note",
+    "activeMatch": "/note"
   },
   {
     "text": "博客",
-    "link": "/blog/",
+    "link": "/blog",
     "activeMatch": "/blog/chatGpt"
   },
   {

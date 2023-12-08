@@ -72,7 +72,7 @@ const HomeLayout = () => <div style={{ display: 'grid', gridTemplateRows: 'auto 
       </div>
       <div >
         <div style={{ display: 'inline-grid', gap: '10px' }}>
-          <h2>特别鸣谢</h2>
+          <h2>其他</h2>
           <a href="https://www.netlify.com" target="_blank" rel="noreferrer noopener" aria-label="Deploys by Netlify">
             <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" width="114" height="51" />
           </a>
@@ -83,9 +83,9 @@ const HomeLayout = () => <div style={{ display: 'grid', gridTemplateRows: 'auto 
       </div>
       <div >
         <div style={{ display: 'inline-grid', gap: '10px' }}>
-          <h2>特别鸣谢</h2>
-          <a href="https://www.netlify.com" target="_blank" rel="noreferrer noopener" aria-label="Deploys by Netlify">
-            <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" width="114" height="51" />
+          <h2>Github</h2>
+          <a href="https://github.com/lkzwc" target="_blank" rel="noreferrer noopener" aria-label="Deploys by Netlify">
+            About me
           </a>
           <a href="https://rspress.dev/zh/" target="_blank" rel="noreferrer noopener">
             <img src="https://lf3-static.bytednsdoc.com/obj/eden-cn/rjhwzy/ljhwZthlaukjlkulzlp/rspress/rspress-navbar-logo-dark-0904.png" alt="Deploys by Netlify" width="114" height="51" />

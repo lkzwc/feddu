@@ -10,8 +10,8 @@
     "activeMatch": "/blog/chatGpt"
   },
   {
-    "text": "自定义界面",
-    "link": "/hello",
-    "activeMatch": "/hello"
+    "text": "系统发布",
+    "link": "/system",
+    "activeMatch": "/system"
   }
 ]

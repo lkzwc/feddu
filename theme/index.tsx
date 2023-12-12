@@ -1,4 +1,5 @@
 import Theme from 'rspress/theme';
+import Comment from '../src/components/comment/Comment'
 
 const HomeLayout = () => <div style={{ display: 'grid', gridTemplateRows: 'auto 1fr 100px', minHeight: '90vh' }}>
   <header>
@@ -103,7 +104,7 @@ const HomeLayout = () => <div style={{ display: 'grid', gridTemplateRows: 'auto 
 const Layout = () => (
   <Theme.Layout
     /* 正文页 Footer 部分之前 */
-    beforeDocFooter={<div>beforeDocFooter</div>}
+    beforeDocFooter={<div><Comment /></div>}
   // bottom={<div>bottom</div>}
   />
 );

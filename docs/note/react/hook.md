@@ -13,6 +13,10 @@
 
 可以看下dan的介绍https://overreacted.io/zh-hans/algebraic-effects-for-the-rest-of-us/
 
+## 什么关系呢
+ * React hook的发明者[Sebastian Markbåge](https://github.com/sebmarkbage/)曾说过，我们在react hook中做的就是践行代数效应。
+ * hook当中的useState等，我们不需要考虑状态具体是如何保存的，我们只需要假设useState返回的就是我们想要的东西
+
 ## hooks的动机
 
 > 主要目的还是为了加持函数组件

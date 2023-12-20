@@ -3,5 +3,6 @@
     "fiber",
     "hook",
     "setState",
-    "virtualdom"
+    "virtualdom",
+    "performanceopt"
 ]

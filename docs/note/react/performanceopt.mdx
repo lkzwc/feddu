@@ -1,0 +1,163 @@
+# React的性能优化
+## 优化原则
+> 将变的和不变的分离(父组件),当父组件满足性能优化的条件时，子孙组件可能命中性能优化
+* props　
+* state
+* contenx
+
+
+## Props
+> react 在组件当中，默认的props比较方式是全等比较，一般代码很难命中，比如以下：
+
+```
+function Son1() {
+  useEffect(() => {
+    console.log("Son1");
+  });
+  const [count1, setCount1] = useState(0);
+  return <div onClick={() => setCount(count1 + 1)}>Son1:{count1}</div>;
+}
+
+function Son2() {
+  useEffect(() => {
+    console.log("Son2");
+  });
+  const [count2, setCount2] = useState(0);
+  return <div onClick={() => setCount2(count2 + 1)}>Son2:{count2}</div>;
+}
+function Middle() {
+  return (
+    <div>
+      <Son1 />
+      <Son2 />
+    </div>
+  );
+}
+
+export default function App() {
+  const [count, setCount] = useState(0);
+  return (
+    <div>
+      <Middle />
+      <div onClick={() => setCount(count + 1)}>{count}</div>
+    </div>
+  );
+}
+```
+
+代码中Son1、Son2中会正常打印，虽然我们写的代码没有问题，但是没有命中性能优化，默认是全等比较
+
+:::tip 优化后
+优化后 使用momo将其改变为浅比较 
+
+```
+const Middle = React.memo(() => {
+  return (
+    <div>
+      <Son1 />
+      <Son2 />
+    </div>
+  );
+});
+
+```
+:::
+
+## state
+> 以下优化前的代码 Demo Render会一直打印
+```
+function Demo() {
+  console.log("Demo Render");
+  return <div>DIV</div>;
+}
+
+export default function App() {
+  const [count, setCount] = useState(0);
+  return (
+    <div>
+      {/* <Middle /> */}
+      <Demo />
+      <div onClick={() => setCount(count + 1)}>{count}</div>
+    </div>
+  );
+}
+```
+
+:::tip 优化后
+```
+function Demo() {
+  console.log("Demo Render");
+  return <div>DIV</div>;
+}
+
+function Demo1() {
+  const [count, setCount] = useState(0);
+  return <div onClick={() => setCount(count + 1)}>{count}</div>;
+}
+
+export default function App() {
+  return (
+    <div>
+      <Demo />
+      <Demo1 />
+    </div>
+  );
+}
+```
+:::
+
+再看一个变形
+
+```
+function Demo() {
+  console.log("Demo Render");
+  return <div>DIV</div>;
+}
+
+export default function App() {
+  const [count, setCount] = useState(0);
+  return (
+    <div count={count}>
+      <Demo />
+      <div onClick={() => setCount(count + 1)}>{count}</div>
+    </div>
+  );
+}
+```
+
+:::tip 优化后
+```
+function Demo() {
+  console.log("Demo Render");
+  return <div>DIV</div>;
+}
+
+function Demo1({ child }) {
+  const [count, setCount] = useState(0);
+  return (
+    <div count={count}>
+      {child}
+      <div onClick={() => setCount(count + 1)}>{count}</div>
+    </div>
+  );
+}
+
+export default function App() {
+  // APP 中没有state content props  是一个不变的组件
+  return <Demo1 child={<Demo />} />;
+}
+
+```
+:::
+
+
+## ⚠️注意点
+
+* 根节点（即React.createRoot创建的节点）是默认满足性能优化条件（因为根节点不会变），所以根节点的子节点（即App）满足props全等。 App本身又满足state、context不变，所以App满足性能优化条件，所以App的子节点ExpensiveCpn满足props全等，ExpensiveCpn本身又满足state、context不变，所以这条链路都命中性能优化
+* 加入memo之后 Button接受到的props时memo优化过的，所以也是全等的 
+* useMemo、useCallback起作用的前提的组件是浅比较props才有用
+
+
+
+
+

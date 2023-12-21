@@ -4,7 +4,7 @@
 
 ### 概念
 
-创建一个对象，接受重新赋值的对象，如果该值是基本类型，则复制其值，如果是引用类型，则复制其地址
+创建一个对象，接受重新赋值的对象，如果该值是基本类型，则复制其值，如果是引用类型，则复制其地址，新旧共用同一个
 
 ### 方式
 
@@ -28,6 +28,25 @@
    对象中含有 NaN、Infinity 以及 -Infinity，JSON 序列化的结果会变成 null；
    无法拷贝对象的循环应用，即对象成环 (obj[key] = obj)。
 2. 手写递归实现
+3. 结构化克隆算法
+```
+// 结构化克隆算法
+function structuredClone(obj) {
+  return new Promise(resolve => {
+    const { port1, port2 } = new MessageChannel();
+    port2.onmessage = ev => resolve(ev.data);
+    port1.postMessage(obj);
+  });
+}
+
+// 使用异步函数调用
+(async () => {
+  const original = { a: 1, b: { c: 2 }};
+  const copy = await structuredClone(original);
+  console.log(copy);
+})();
+
+```
 
 ```
 function deepClone(obj){

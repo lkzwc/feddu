@@ -1,4 +1,5 @@
 # 依赖注入
+> 函数柯粒化
 ```
 class Log{
     print(xx) {
@@ -6,7 +7,7 @@ class Log{
     }
 }
 
-const deco = x=>(target,property)=>{
+const deco = x =>(target,property)=>{
     const old = target[property]
     //保存原来的print
     target[property] = (mes)=>{

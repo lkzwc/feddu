@@ -11,7 +11,7 @@
 在函数式编程中有一个理念叫做代数效应（目的把副作用从函数调用中剥离出去），它的出现是为了解决函数式编程中的问题，在有代数效应的系统中，函数可以“抛出”一个效应，即申明一个可能产生的效应，并将效应执行退至到调用者或者环境处理，这个效应可以像异常一样在调用栈中被捕获，并由调用者处理。这种方式允许你写出看起来像是纯函数的代码，同时仍然能够执行那些通常会产生副作用的操作
 其常见的应用有：异常恢复、hooks(目标是让函数更加的接近纯函数)
 
-可以看下dan的介绍https://overreacted.io/zh-hans/algebraic-effects-for-the-rest-of-us/
+可以看下dan的介绍[代数效应](https://overreacted.io/zh-hans/algebraic-effects-for-the-rest-of-us/)
 
 ## 什么关系呢
  * React hook的发明者[Sebastian Markbåge](https://github.com/sebmarkbage/)曾说过，我们在react hook中做的就是践行代数效应。

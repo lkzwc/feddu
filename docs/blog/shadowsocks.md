@@ -1,3 +1,6 @@
+---
+sidebar: false
+---
 # Shadowsocks搭建以及加速
 
 ## 服务器选购
@@ -13,7 +16,11 @@
 ## 服务器
 连接到服务器之后，安装Docker,根据自己的服务器类型选择最合适的安装，参考[详见](https://docs.docker.com/engine/install/centos/)
 
-
+## 一键安装脚本
+> 脚本底层使用的是shadowsockGO的版本 速度较快，支持长期更新
+```
+wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ss-go.sh && chmod +x ss-go.sh && bash ss-go.sh
+```
 ## 运行环境
 ### docker-compose.yml
 ```

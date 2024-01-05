@@ -1,11 +1,14 @@
+---
+sidebar: false
+---
 # MutationObserver的应用
 
-## 首先我们说下 MutationObserver 是干什么的？
+## For What？
 
 > 依据 MDN 的解释，MutationObserver 主要是用来监听 dom 变化的
 
 <!-- truncate -->
-## 简单应用下
+## 应用
 
 ```
 import { useEffect, useState } from 'react';

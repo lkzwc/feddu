@@ -20,9 +20,9 @@ BFC 属于普通流，是一个独立的区域，不会影响其他区域，其�
 
 - float 不是 none
 - 绝对定位 position 为 absolute 或者 fixed
-- dispaly 为 table\inline-block 等
+- dispaly 为 table\inline-block\flex 等
 - overflow 不为 visible
-  应用：
-- div 塌陷（marginTop\marginBottom 合并）
-- 清除浮动
+  
+应用：
 - 阻止被浮动元素覆盖
+- 阻止高度塌陷，清除内部浮动，如果容器内部都是浮动元素，那么整个高度会坍塌，通过创建BFC包含内部浮动元素而清除浮动，这样高度就是OK的

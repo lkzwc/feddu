@@ -14,7 +14,7 @@ export default function Comment() {
        repoId="R_kgDOHUkdvQ"
        category="Announcements"
        categoryId="DIC_kwDOHUkdvc4CYeiv"
-       mapping="title"
+       mapping="pathname"
        term="Welcome to @giscus/react component!"
        reactionsEnabled="1"
        emitMetadata="0"

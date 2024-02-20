@@ -21,19 +21,24 @@ Function.prototype.mycall=(ctx,...args)=>{
 
 
 //版本2
-Function.prototype.mycall=(ctx,...args)=>{
-  ctx = !ctx ? globalThis : Object(ctx) //null undefine
-  let tem = Symbol('tem')  //防止重复
-  Object.defineProperty(ctx,tem,{
-     enumerable: false,
-     writable: false,
-     value:this
-  })
-  let res = ctx[tem](...args)
-  delete ctx.tem
-  return res
+Function.prototype.myCall =function(context,...args){
+    const ctxMain = !context ? globalThis : Object(context); //null undefine
+    const key = Symbol();  //防止重复
+
+    //ctxMain.key = this
+    Object.defineProperty(ctxMain, key, {
+        enumerable: false,
+        writable: false,
+        value: this
+    })
+    const result = ctxMain[key](...args);
+    delete ctxMain[key];
+    return result;
 }
 
+function fn(a, b, c) {
+    console.log(this, a, b, c);
+}
 
-method.mycall({},1,2)
+fn.myCall({}, 1, 2, 3);
 ```

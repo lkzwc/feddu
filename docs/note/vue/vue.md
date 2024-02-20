@@ -52,7 +52,7 @@ function reactive(obj){
 
 
 ## Ref 和 Reactive
-* ref底层也是依赖于reactivde ,[参见源码](https://github.com/vuejs/core/blob/main/packages/reactivity/src/ref.ts#L148)
+* ref底层也是依赖于reactive的 ,[参见源码](https://github.com/vuejs/core/blob/main/packages/reactivity/src/ref.ts#L148)
 * reactive 只能使对象或数组变成响应式 [参见源码](https://github.com/vuejs/core/blob/main/packages/reactivity/src/reactive.ts)
 * 响应式的需要
 ⚠️ reactive 可以跟踪对象内部属性的变化，但在替换整个对象时，你需要使用 ref 来保持响应性

@@ -3,18 +3,21 @@ sidebar: false
 ---
 
 # 客户端渲染和服务端渲染
+
 ## CSR
-![image](https://github.com/lkzwc/feddu/assets/84896877/54b73763-edab-4a54-8881-3c9474560a7c)
+![image](https://github.com/lkzwc/feddu/assets/84896877/6f19c17a-ac5c-4e8d-9527-c26e89306186)
 
 
 ## CSR的缺点
+
 * SEO不理想
 * 计算UI 获取数据会减慢速度，随着js包大小的增加，带来的问题日益增多
 
 
 ## SSR
-![image](https://github.com/lkzwc/feddu/assets/84896877/ddecf6e7-cd03-4ff1-a427-d4c76181419c)
-本质上是一种全有或者全无的事务！
+
+![image](https://github.com/lkzwc/feddu/assets/84896877/585679f5-b2be-45e2-b5da-3f91596e529b)
+适合社交美女动态个性化的内容，本质上是一种全有或者全无的事务！
 
 ## SSR的缺点
 > 在JS包（react以及特定代码）下载之前，页面交互处于等待状态 这就是水合
@@ -40,4 +43,4 @@ sidebar: false
 ## React Server Components(RSC) 新的架构
 * 客户端组件
 * 服务端组件
-> 保存在服务器上，直接访问资源，安全 ，改进数据获取，FCP更快
+> 保存在服务器上，直接访问资源，安全 ，改进数据获取，缓存，FCP更快

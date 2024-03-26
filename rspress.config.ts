@@ -4,7 +4,7 @@ import { pluginTest } from './src/plugin/plugin';
 
 export default defineConfig({
   root: path.join(__dirname, 'docs'),
-  title: '流客的网站',
+  title: '博客网站｜流客',
   description: '前端开发者流客的博客',
   icon: '/logo.png',
   logo: {

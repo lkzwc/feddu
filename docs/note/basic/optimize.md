@@ -8,11 +8,9 @@
 * 延迟加载
 * cdn
 * 服务端渲染
-
-### 请求
 * http缓存
 * http2启用
-* 图像格式优化
+* webp
 
 
 ### 渲染性能
@@ -22,6 +20,8 @@
 * 虚拟dom
 * JS 动画转CSS
 
-## 其他
+### 代码
+* Tree Shaking
+* 懒加载 预加载
 * pnpm
 * webpack本地cache优化

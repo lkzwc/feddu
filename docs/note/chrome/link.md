@@ -32,7 +32,13 @@
   *  location.hash + iframe
   *  window.postMessage()
   *  跨域资源共享 CORS  (XMLHttpRequest请求  )
-   * Websockets
+  *  Websockets
+  *  JSONP(JSON with Pading)
+      * 客户端定义回调 demo
+      * 定义URL <script src="http://xxxx.com?callback='demo'"></script>
+      * 服务端响应 返回结果demo({"data":[]})
+      * 客户端执行函数
+
 ![image](https://user-images.githubusercontent.com/84896877/179012013-780903d8-604a-4381-be76-4c2b723906d9.png)
 
 ## TCP 连接
@@ -68,6 +74,15 @@ http1.0，1.0中，每一对 http请求都会打开一个TCP连接，
 * 头部二进制编码，语义不可读
 * 向客户端推送,目前谷歌已经放弃[详见](https://developer.chrome.com/blog/removing-push/)
 * 优先级
+
+#### HTTP2帧结构
+* http2 header（固定长度）
+  1.length：24无符号整数
+  2.type ---【header、data、priority、RST_Stream、Settings、PING....】
+  3.flags
+  4.stream 
+* payload（不固定长度）
+  > 根据type不同而又不同的结构 
 
 ### HTTP3
 UDP+QUIC协议（处理错误）实现更快更可靠的传输

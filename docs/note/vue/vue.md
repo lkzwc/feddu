@@ -46,10 +46,74 @@ function reactive(obj){
 
 ## 性能优化
 * 静态标记
+
+使用静态标记是指，对后期可能会修改的节点进行标记，在生成虚拟节点的阶段，可以将动态子节点提取出来保存到dynamicChildren数组中，这样渲染器在更新节点的时候回直接查找dynamicChildren更新
+```
+<div>
+<div>foo</div>
+<p>{{bar}}</p>
+</div>
+
+
+const vnode={
+    tag:"div",
+    children:[
+        {
+            tag:'div',child:'foo'
+        },
+        {
+            tag:'p',children:ctx.bar
+        }
+    ]
+}
+
+// 静态标记之后
+
+const vnode={
+    tag:"div",
+    children:[
+        {
+            tag:'div',child:'foo'
+        },
+        {
+            tag:'p',children:ctx.bar，patchflag:1
+        }
+    ]
+}
+
+```
 * 静态提升，只会被创建一次
+> 对共有的节点在一个提升
+```
+
+function render(){
+    return (openBlock(),createBlock('div',null,[
+        createVNode('p',null,'static'),
+        createVNode('p',null,ctx.title)
+    ]))
+}
+
+// 提升之后
+const host=createVNode('p',null,'text')
+
+function render(){
+    return (openBlock(),createBlock('div',null,[
+        host,
+        createVNode('p',null,ctx.title,)
+    ]))
+}
+```
+* 预字符串
+> 比如我们在渲染20个p元素的时候，会直接使用字符串生成一个静态的VNode
+
+createStaticVNode('<p></p><p></p><p></p><p></p>.....<p></p><p></p>')
+
 * SSR优化
 > 当静态内容大到一定量级时候，会用createStaticVNode方法在客户端去生成一个static node，这些静态node，会被直接innerHtml，就不需要创建对象，然后根据对象渲染
 
+
+## V-once
+v-once包裹的节点不会被父级的Block手机，因此在组件更新的时候，自然不会参与diff
 
 ## Ref 和 Reactive
 * ref底层也是依赖于reactive的 ,[参见源码](https://github.com/vuejs/core/blob/main/packages/reactivity/src/ref.ts#L148)

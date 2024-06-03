@@ -25,3 +25,6 @@
 * 懒加载 预加载
 * pnpm
 * webpack本地cache优化
+
+
+> Script脚本的Async和defer都是延迟执行脚本，他们都是在HTML解析的时候一部去下载脚本，区别在于Async实在下载完立即执行，defer是在下载之后HTML文档完全解析之后执行

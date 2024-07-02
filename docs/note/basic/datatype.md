@@ -6,7 +6,7 @@
   > string,number,boolean,null,undefine,symbol,BigInt（es10 新增）
   > 一般大小固定，存储在栈内存当中
 - 引用类型
-  > Array,Date,Math,Function
+  > Array,Date,Object,Math,Function
   > 一般大小不固定，存储在堆内存当中，多个引用指向同一个地址，直到没有任何引用的时候才会释放掉
 
 ## 数据类型检测

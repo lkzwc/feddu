@@ -129,3 +129,6 @@ user = { name: 'Bob', age: 30 };
 
 ```
 
+## nextTick
+让回调在下次刷新DOM之前执行，底层主要通过Promise +　ＭutationObserver实现
+

@@ -9,6 +9,11 @@
     "link": "/blog",
     "activeMatch": "/blog/chatGpt"
   },
+   {
+    "text": "在线简历",
+    "link": "/resume",
+    "activeMatch": "/resume"
+  },
   {
     "text": "系统发布",
     "link": "/system",

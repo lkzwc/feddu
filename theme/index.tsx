@@ -1,5 +1,6 @@
 import Theme from 'rspress/theme';
 import Comment from '../src/components/comment/Comment'
+import './output.css';
 
 const HomeLayout = () => <div className="min-h-screen bg-gradient-hero">
   <header>

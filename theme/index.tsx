@@ -1,8 +1,8 @@
 import Theme from 'rspress/theme';
-import Comment from '../src/components/comment/Comment'
-import './output.css';
+import Comment from '../src/components/comment/Comment';
+import './global.css';
 
-const HomeLayout = () => <div className="min-h-screen bg-gradient-hero">
+const HomeLayout = () => <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
   <header>
     <link
       rel="stylesheet"
@@ -13,18 +13,18 @@ const HomeLayout = () => <div className="min-h-screen bg-gradient-hero">
   </header>
 
   {/* Hero Section */}
-  <main className="container-custom py-12 md:py-20">
+  <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
     <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
       {/* Left Content */}
-      <div className="space-y-6 md:space-y-8 animate-slide-up order-2 lg:order-1">
+      <div className="space-y-6 md:space-y-8 animate-pulse order-2 lg:order-1">
         <div className="relative">
-          <i className="fa fa-quote-left text-2xl md:text-4xl text-primary-400 absolute -left-2 md:-left-4 -top-1 md:-top-2 opacity-50"></i>
+          <i className="fa fa-quote-left text-2xl md:text-4xl text-blue-400 absolute -left-2 md:-left-4 -top-1 md:-top-2 opacity-50"></i>
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight ml-4 md:ml-8">
-            <span className="text-gradient">I'm a program developer</span>
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">I'm a program developer</span>
             <br />
             <span className="text-gray-700">who is enthusiastic about</span>
             <br />
-            <span className="text-gradient-accent">new technology</span>
+            <span className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">new technology</span>
           </h1>
         </div>
 
@@ -36,25 +36,25 @@ const HomeLayout = () => <div className="min-h-screen bg-gradient-hero">
         <div className="ml-4 md:ml-8">
           <h3 className="text-base md:text-lg font-semibold text-gray-700 mb-3 md:mb-4">Tech Stack</h3>
           <div className="flex flex-wrap gap-3 md:gap-4">
-            <div className="icon-tech text-blue-500 hover:text-blue-600 icon-float animate-delay-100 text-xl md:text-2xl">
+            <div className="text-xl md:text-2xl text-blue-500 hover:text-blue-600 transition-all duration-300 hover:scale-110 hover:drop-shadow-lg animate-bounce">
               <i className="fa-brands fa-react"></i>
             </div>
-            <div className="icon-tech text-green-500 hover:text-green-600 icon-float animate-delay-200 text-xl md:text-2xl">
+            <div className="text-xl md:text-2xl text-green-500 hover:text-green-600 transition-all duration-300 hover:scale-110 hover:drop-shadow-lg animate-bounce" style={{animationDelay: '200ms'}}>
               <i className="fa-brands fa-vuejs"></i>
             </div>
-            <div className="icon-tech text-yellow-500 hover:text-yellow-600 icon-float animate-delay-300 text-xl md:text-2xl">
+            <div className="text-xl md:text-2xl text-yellow-500 hover:text-yellow-600 transition-all duration-300 hover:scale-110 hover:drop-shadow-lg animate-bounce" style={{animationDelay: '300ms'}}>
               <i className="fa-brands fa-js-square"></i>
             </div>
-            <div className="icon-tech text-green-600 hover:text-green-700 icon-float animate-delay-500 text-xl md:text-2xl">
+            <div className="text-xl md:text-2xl text-green-600 hover:text-green-700 transition-all duration-300 hover:scale-110 hover:drop-shadow-lg animate-bounce" style={{animationDelay: '500ms'}}>
               <i className="fa-brands fa-node"></i>
             </div>
-            <div className="icon-tech text-blue-600 hover:text-blue-700 icon-float text-xl md:text-2xl">
+            <div className="text-xl md:text-2xl text-blue-600 hover:text-blue-700 transition-all duration-300 hover:scale-110 hover:drop-shadow-lg animate-bounce">
               <i className="fa-brands fa-docker"></i>
             </div>
-            <div className="icon-tech text-gray-800 hover:text-gray-900 icon-float animate-delay-100 text-xl md:text-2xl">
+            <div className="text-xl md:text-2xl text-gray-800 hover:text-gray-900 transition-all duration-300 hover:scale-110 hover:drop-shadow-lg animate-bounce" style={{animationDelay: '100ms'}}>
               <i className="fa-brands fa-github"></i>
             </div>
-            <div className="icon-tech text-yellow-400 hover:text-yellow-500 icon-float animate-delay-200 text-xl md:text-2xl">
+            <div className="text-xl md:text-2xl text-yellow-400 hover:text-yellow-500 transition-all duration-300 hover:scale-110 hover:drop-shadow-lg animate-bounce" style={{animationDelay: '200ms'}}>
               <i className="fa-brands fa-less"></i>
             </div>
           </div>
@@ -62,11 +62,11 @@ const HomeLayout = () => <div className="min-h-screen bg-gradient-hero">
 
         {/* CTA Buttons */}
         <div className="ml-4 md:ml-8 flex flex-col sm:flex-row gap-3 md:gap-4">
-          <a href="/note" className="btn-primary text-center">
+          <a href="/note" className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500 shadow-lg hover:shadow-xl text-center">
             <i className="fa fa-book mr-2"></i>
             Start Learning
           </a>
-          <a href="/blog" className="btn-secondary text-center">
+          <a href="/blog" className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-gray-100 text-gray-900 hover:bg-gray-200 focus:ring-gray-500 border border-gray-300 text-center">
             <i className="fa fa-blog mr-2"></i>
             Read Blog
           </a>
@@ -74,8 +74,8 @@ const HomeLayout = () => <div className="min-h-screen bg-gradient-hero">
       </div>
 
       {/* Right Content - Image */}
-      <div className="relative animate-slide-up animate-delay-300 order-1 lg:order-2">
-        <div className="relative overflow-hidden rounded-2xl shadow-large max-w-md mx-auto lg:max-w-none">
+      <div className="relative animate-pulse order-1 lg:order-2" style={{animationDelay: '300ms'}}>
+        <div className="relative overflow-hidden rounded-2xl shadow-2xl max-w-md mx-auto lg:max-w-none">
           <img
             className="w-full h-auto object-cover"
             src="https://cdn.dribbble.com/users/1292677/screenshots/6139167/media/5387dc7e035b3efe9d94516044de66a4.gif"
@@ -85,16 +85,16 @@ const HomeLayout = () => <div className="min-h-screen bg-gradient-hero">
         </div>
 
         {/* Floating Cards - Hidden on mobile */}
-        <div className="hidden md:block absolute -top-4 -right-4 card glass p-3 md:p-4 animate-float">
+        <div className="hidden md:block absolute -top-4 -right-4 bg-white/80 backdrop-blur-md border border-white/20 rounded-xl shadow-lg p-3 md:p-4 animate-bounce">
           <div className="flex items-center space-x-2">
             <div className="w-2 h-2 md:w-3 md:h-3 bg-green-400 rounded-full animate-pulse"></div>
             <span className="text-xs md:text-sm font-medium">Available for work</span>
           </div>
         </div>
 
-        <div className="hidden md:block absolute -bottom-4 -left-4 card glass p-3 md:p-4 animate-float animate-delay-500">
+        <div className="hidden md:block absolute -bottom-4 -left-4 bg-white/80 backdrop-blur-md border border-white/20 rounded-xl shadow-lg p-3 md:p-4 animate-bounce" style={{animationDelay: '500ms'}}>
           <div className="flex items-center space-x-2">
-            <i className="fa fa-code text-primary-500 text-sm md:text-base"></i>
+            <i className="fa fa-code text-blue-500 text-sm md:text-base"></i>
             <span className="text-xs md:text-sm font-medium">Full Stack Developer</span>
           </div>
         </div>
@@ -103,10 +103,10 @@ const HomeLayout = () => <div className="min-h-screen bg-gradient-hero">
 
     {/* Features Section */}
     <section className="py-12 md:py-20 bg-white">
-      <div className="container-custom">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-            What I <span className="text-gradient">Offer</span>
+            What I <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Offer</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto px-4">
             Explore my learning journey, blog posts, and curated resources for frontend development
@@ -115,9 +115,9 @@ const HomeLayout = () => <div className="min-h-screen bg-gradient-hero">
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {/* FE-DDU Card */}
-          <div className="card-hover group animate-slide-up">
+          <div className="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group animate-pulse">
             <div className="p-8">
-              <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 <i className="fa fa-calendar-check text-2xl text-white"></i>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">FE-DDU</h3>
@@ -125,7 +125,7 @@ const HomeLayout = () => <div className="min-h-screen bg-gradient-hero">
                 个人学习打卡，工作日必打，大家可以一起参与进来。通过持续学习和分享，共同进步。
               </p>
               <div className="mt-6">
-                <a href="/note" className="text-primary-600 hover:text-primary-700 font-medium inline-flex items-center">
+                <a href="/note" className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center">
                   开始学习 <i className="fa fa-arrow-right ml-2"></i>
                 </a>
               </div>
@@ -133,9 +133,9 @@ const HomeLayout = () => <div className="min-h-screen bg-gradient-hero">
           </div>
 
           {/* Blog Card */}
-          <div className="card-hover group animate-slide-up animate-delay-200">
+          <div className="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group animate-pulse" style={{animationDelay: '200ms'}}>
             <div className="p-8">
-              <div className="w-16 h-16 bg-gradient-to-br from-secondary-500 to-secondary-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 <i className="fa fa-blog text-2xl text-white"></i>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">博客</h3>
@@ -143,7 +143,7 @@ const HomeLayout = () => <div className="min-h-screen bg-gradient-hero">
                 用最少的笔记学习最完整的知识点。精心整理的技术文章，帮助你快速掌握核心概念。
               </p>
               <div className="mt-6">
-                <a href="/blog" className="text-secondary-600 hover:text-secondary-700 font-medium inline-flex items-center">
+                <a href="/blog" className="text-purple-600 hover:text-purple-700 font-medium inline-flex items-center">
                   阅读博客 <i className="fa fa-arrow-right ml-2"></i>
                 </a>
               </div>
@@ -151,9 +151,9 @@ const HomeLayout = () => <div className="min-h-screen bg-gradient-hero">
           </div>
 
           {/* Resources Card */}
-          <div className="card-hover group animate-slide-up animate-delay-300">
+          <div className="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group animate-pulse" style={{animationDelay: '300ms'}}>
             <div className="p-8">
-              <div className="w-16 h-16 bg-gradient-to-br from-accent-500 to-accent-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 <i className="fa fa-star text-2xl text-white"></i>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">大神资源</h3>
@@ -161,7 +161,7 @@ const HomeLayout = () => <div className="min-h-screen bg-gradient-hero">
                 前端工具库、前端大神博客。精选的开发工具和学习资源，助力你的技术成长。
               </p>
               <div className="mt-6">
-                <a href="/system" className="text-accent-600 hover:text-accent-700 font-medium inline-flex items-center">
+                <a href="/system" className="text-pink-600 hover:text-pink-700 font-medium inline-flex items-center">
                   探索资源 <i className="fa fa-arrow-right ml-2"></i>
                 </a>
               </div>
@@ -173,12 +173,12 @@ const HomeLayout = () => <div className="min-h-screen bg-gradient-hero">
   </main>
 
   {/* Footer */}
-  <footer className="bg-dark-900 text-white py-12 md:py-16">
-    <div className="container-custom">
+  <footer className="bg-gray-900 text-white py-12 md:py-16">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
         {/* About Section */}
         <div className="space-y-4">
-          <h3 className="text-xl font-bold text-gradient-accent">特别鸣谢</h3>
+          <h3 className="text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">特别鸣谢</h3>
           <p className="text-gray-300 leading-relaxed">
             感谢以下平台和工具为本站提供支持
           </p>
@@ -209,29 +209,10 @@ const HomeLayout = () => <div className="min-h-screen bg-gradient-hero">
             </a>
           </div>
         </div>
-
-        {/* Quick Links */}
-        <div className="space-y-4">
-          <h3 className="text-xl font-bold text-gradient">快速链接</h3>
-          <div className="space-y-2">
-            <a href="/note" className="block text-gray-300 hover:text-white transition-colors">
-              <i className="fa fa-book mr-2"></i>学习笔记
-            </a>
-            <a href="/blog" className="block text-gray-300 hover:text-white transition-colors">
-              <i className="fa fa-blog mr-2"></i>技术博客
-            </a>
-            <a href="/resume" className="block text-gray-300 hover:text-white transition-colors">
-              <i className="fa fa-user mr-2"></i>在线简历
-            </a>
-            <a href="/system" className="block text-gray-300 hover:text-white transition-colors">
-              <i className="fa fa-tools mr-2"></i>系统发布
-            </a>
-          </div>
-        </div>
-
+ 
         {/* Contact & Social */}
         <div className="space-y-4">
-          <h3 className="text-xl font-bold text-gradient">联系我</h3>
+          <h3 className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">联系我</h3>
           <div className="space-y-3">
             <a
               href="https://github.com/lkzwc"
@@ -258,7 +239,7 @@ const HomeLayout = () => <div className="min-h-screen bg-gradient-hero">
       <div className="border-t border-gray-700 mt-12 pt-8 text-center">
         <p className="text-gray-400">
           Copyright © {new Date().getFullYear()} Design by{' '}
-          <span className="text-gradient font-medium">lkzwc</span>
+          <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent font-medium">lkzwc</span>
           {' '}with ❤️
         </p>
       </div>
@@ -271,7 +252,6 @@ const Layout = () => (
   <Theme.Layout
     /* 正文页 Footer 部分之前 */
     beforeDocFooter={<div><Comment /></div>}
-  // bottom={<div>bottom</div>}
   />
 );
 

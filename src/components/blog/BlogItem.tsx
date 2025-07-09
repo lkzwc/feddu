@@ -1,4 +1,3 @@
-import "../../../theme/output.css";
 export function BlogItem(props) {
   const {
     item: { title, routePath, lastUpdatedTime },

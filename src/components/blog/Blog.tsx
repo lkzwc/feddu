@@ -1,7 +1,6 @@
 import React from "react";
 import { usePageData } from "rspress/runtime";
 import { BlogItem } from "./BlogItem";
-import "../../../theme/output.css";
 
 export default function Blog() {
   const info = usePageData();

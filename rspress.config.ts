@@ -1,6 +1,5 @@
 import * as path from 'path';
 import { defineConfig } from 'rspress/config';
-import { pluginTest } from './src/plugin/plugin';
 
 export default defineConfig({
   root: path.join(__dirname, 'docs'),
@@ -13,32 +12,47 @@ export default defineConfig({
   },
   lang:'zh',
   head: [
-    ['link', { rel: 'stylesheet', href: '/theme/output.css' }],
     ['link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
     ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap' }],
   ],
+  builderConfig: {
+    tools: {
+      postcss: (_, { addPlugins }) => {
+        addPlugins([require('tailwindcss')]);
+      },
+    },
+  },
   themeConfig: {
     lastUpdated: true,
+    nav: [
+      {
+        text: '学习笔记',
+        link: '/note/',
+        activeMatch: '^/note/'
+      },
+      {
+        text: '技术博客',
+        link: '/blog/',
+        activeMatch: '^/blog/'
+      },
+      {
+        text: '在线简历',
+        link: '/resume',
+        activeMatch: '^/resume'
+      },
+      {
+        text: '系统发布',
+        link: '/system',
+        activeMatch: '^/system'
+      }
+    ],
     socialLinks: [
       { icon: 'github', mode: 'link', content: 'https://github.com/lkzwc/feddu' },
     ],
-    // footer:{
-    //     title: "鸣谢",
-    //     items: [
-    //       {
-    //         html: `
-    //         <a href="https://www.netlify.com" target="_blank" rel="noreferrer noopener" aria-label="Deploys by Netlify">
-    //           <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="114" height="51" />
-    //         </a>
-    //       `,
-    //       },
-    //       {
-    //         html: `<a href="https://docusaurus.io/zh-CN/" target="_blank" rel="noreferrer noopener"><img style="height:50px;margin-top:0.5rem" src="https://www.docusaurus.cn/img/docusaurus_keytar.png" /><a/>`,
-    //       },
-    //     ],
-    // }
-  },
-  plugin:[pluginTest("hello")]
+    footer: {
+      message: 'Copyright © 2024 Design by lkzwc with ❤️'
+    }
+  }
 });

@@ -26,6 +26,125 @@ export default defineConfig({
   },
   themeConfig: {
     lastUpdated: true,
+    sidebar: {
+      '/note/': [
+        {
+          text: '学习笔记',
+          items: [
+            '/note/',
+            {
+              text: 'Basic',
+              collapsed: true,
+              items: [
+                '/note/basic/ast',
+                '/note/basic/bfc',
+                '/note/basic/cjs',
+                '/note/basic/closure',
+                '/note/basic/copy',
+                '/note/basic/datatype',
+                '/note/basic/delegate',
+                '/note/basic/event',
+                '/note/basic/extends',
+                '/note/basic/iterator',
+                '/note/basic/netmode',
+                '/note/basic/new',
+                '/note/basic/optimize',
+                '/note/basic/post',
+                '/note/basic/programtype',
+                '/note/basic/promise',
+                '/note/basic/running',
+                '/note/basic/this'
+              ]
+            },
+            {
+              text: '浏览器',
+              collapsed: true,
+              items: [
+                '/note/chrome/architecture',
+                '/note/chrome/gc',
+                '/note/chrome/link',
+                '/note/chrome/repaint'
+              ]
+            },
+            {
+              text: '设计模式',
+              collapsed: true,
+              items: [
+                '/note/design/concept',
+                '/note/design/subscribe'
+              ]
+            },
+            {
+              text: 'Docker',
+              collapsed: true,
+              items: [
+                '/note/docker/docker',
+                '/note/docker/dockeroptimize',
+                '/note/docker/dockerup'
+              ]
+            },
+            {
+              text: '工程化',
+              collapsed: true,
+              items: [
+                '/note/engineering/hmr',
+                '/note/engineering/npm',
+                '/note/engineering/secure',
+                '/note/engineering/vite'
+              ]
+            },
+            {
+              text: 'K8s',
+              collapsed: true,
+              items: [
+                '/note/k8s/controller',
+                '/note/k8s/k8s',
+                '/note/k8s/service'
+              ]
+            },
+            {
+              text: 'React',
+              collapsed: true,
+              items: [
+                '/note/react/diff',
+                '/note/react/fiber',
+                '/note/react/hook',
+                '/note/react/performanceopt',
+                '/note/react/setState',
+                '/note/react/virtualdom'
+              ]
+            },
+            {
+              text: 'Vue',
+              collapsed: true,
+              items: [
+                '/note/vue/vue'
+              ]
+            },
+            {
+              text: '源码阅读',
+              collapsed: true,
+              items: [
+                '/note/source-read/koa'
+              ]
+            },
+            {
+              text: '源码实现',
+              collapsed: true,
+              items: [
+                '/note/source-realize/call',
+                '/note/source-realize/concurrency',
+                '/note/source-realize/debounce',
+                '/note/source-realize/inject',
+                '/note/source-realize/instanceof',
+                '/note/source-realize/iterator',
+                '/note/source-realize/promise'
+              ]
+            }
+          ]
+        }
+      ]
+    },
     nav: [
       {
         text: '学习笔记',

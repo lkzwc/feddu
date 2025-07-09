@@ -5,11 +5,12 @@ export default defineConfig({
   root: path.join(__dirname, 'docs'),
   title: '博客网站｜流客',
   description: '前端开发者流客的博客',
-  icon: '/logo.png',
+  icon: '/logo-new.svg',
   logo: {
-    light: '/logo.png',
-    dark: '/logo.png',
+    light: '/logo-new.svg',
+    dark: '/logo-dark.svg',
   },
+  logoText: '流客博客',
   lang:'zh',
   head: [
     ['link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css' }],

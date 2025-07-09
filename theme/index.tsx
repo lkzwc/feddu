@@ -1,8 +1,10 @@
 import Theme from 'rspress/theme';
 import Comment from '../src/components/comment/Comment';
+import PasswordProtector from '../src/components/block/PasswordProtector';
+import { usePageData } from 'rspress/runtime';
 import './global.css';
 
-const HomeLayout = () => <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+const HomeLayout = () => <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
   <header>
     <link
       rel="stylesheet"
@@ -22,19 +24,19 @@ const HomeLayout = () => <div className="min-h-screen bg-gradient-to-br from-blu
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight ml-4 md:ml-8">
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">I'm a program developer</span>
             <br />
-            <span className="text-gray-700">who is enthusiastic about</span>
+            <span className="text-gray-700 dark:text-gray-300">who is enthusiastic about</span>
             <br />
             <span className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">new technology</span>
           </h1>
         </div>
 
-        <p className="text-lg md:text-xl text-gray-600 ml-4 md:ml-8 max-w-lg">
+        <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 ml-4 md:ml-8 max-w-lg">
           I believe in code change the world! Let's build amazing things together.
         </p>
 
         {/* Tech Stack Icons */}
         <div className="ml-4 md:ml-8">
-          <h3 className="text-base md:text-lg font-semibold text-gray-700 mb-3 md:mb-4">Tech Stack</h3>
+          <h3 className="text-base md:text-lg font-semibold text-gray-700 dark:text-gray-300 mb-3 md:mb-4">Tech Stack</h3>
           <div className="flex flex-wrap gap-3 md:gap-4">
             <div className="text-xl md:text-2xl text-blue-500 hover:text-blue-600 transition-all duration-300 hover:scale-110 hover:drop-shadow-lg animate-bounce">
               <i className="fa-brands fa-react"></i>
@@ -102,30 +104,30 @@ const HomeLayout = () => <div className="min-h-screen bg-gradient-to-br from-blu
     </div>
 
     {/* Features Section */}
-    <section className="py-12 md:py-20 bg-white">
+    <section className="py-12 md:py-20 bg-white dark:bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4">
             What I <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Offer</span>
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto px-4">
+          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto px-4">
             Explore my learning journey, blog posts, and curated resources for frontend development
           </p>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {/* FE-DDU Card */}
-          <div className="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group animate-pulse">
+          <div className="bg-white dark:bg-gray-700 rounded-xl shadow-lg border border-gray-100 dark:border-gray-600 overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group animate-pulse">
             <div className="p-8">
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 <i className="fa fa-calendar-check text-2xl text-white"></i>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">FE-DDU</h3>
-              <p className="text-gray-600 leading-relaxed">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">FE-DDU</h3>
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                 个人学习打卡，工作日必打，大家可以一起参与进来。通过持续学习和分享，共同进步。
               </p>
               <div className="mt-6">
-                <a href="/note" className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center">
+                <a href="/note" className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium inline-flex items-center">
                   开始学习 <i className="fa fa-arrow-right ml-2"></i>
                 </a>
               </div>
@@ -133,17 +135,17 @@ const HomeLayout = () => <div className="min-h-screen bg-gradient-to-br from-blu
           </div>
 
           {/* Blog Card */}
-          <div className="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group animate-pulse" style={{animationDelay: '200ms'}}>
+          <div className="bg-white dark:bg-gray-700 rounded-xl shadow-lg border border-gray-100 dark:border-gray-600 overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group animate-pulse" style={{animationDelay: '200ms'}}>
             <div className="p-8">
               <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 <i className="fa fa-blog text-2xl text-white"></i>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">博客</h3>
-              <p className="text-gray-600 leading-relaxed">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">博客</h3>
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                 用最少的笔记学习最完整的知识点。精心整理的技术文章，帮助你快速掌握核心概念。
               </p>
               <div className="mt-6">
-                <a href="/blog" className="text-purple-600 hover:text-purple-700 font-medium inline-flex items-center">
+                <a href="/blog" className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 font-medium inline-flex items-center">
                   阅读博客 <i className="fa fa-arrow-right ml-2"></i>
                 </a>
               </div>
@@ -151,17 +153,17 @@ const HomeLayout = () => <div className="min-h-screen bg-gradient-to-br from-blu
           </div>
 
           {/* Resources Card */}
-          <div className="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group animate-pulse" style={{animationDelay: '300ms'}}>
+          <div className="bg-white dark:bg-gray-700 rounded-xl shadow-lg border border-gray-100 dark:border-gray-600 overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group animate-pulse" style={{animationDelay: '300ms'}}>
             <div className="p-8">
               <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 <i className="fa fa-star text-2xl text-white"></i>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">大神资源</h3>
-              <p className="text-gray-600 leading-relaxed">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">大神资源</h3>
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                 前端工具库、前端大神博客。精选的开发工具和学习资源，助力你的技术成长。
               </p>
               <div className="mt-6">
-                <a href="/system" className="text-pink-600 hover:text-pink-700 font-medium inline-flex items-center">
+                <a href="/system" className="text-pink-600 dark:text-pink-400 hover:text-pink-700 dark:hover:text-pink-300 font-medium inline-flex items-center">
                   探索资源 <i className="fa fa-arrow-right ml-2"></i>
                 </a>
               </div>
@@ -173,91 +175,156 @@ const HomeLayout = () => <div className="min-h-screen bg-gradient-to-br from-blu
   </main>
 
   {/* Footer */}
-  <footer className="bg-gray-900 text-white py-12 md:py-16">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
-        {/* About Section */}
+  <footer className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden">
+    {/* 背景装饰 */}
+    <div className="absolute inset-0 opacity-10">
+      <div className="absolute top-0 left-0 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
+      <div className="absolute top-0 right-0 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse" style={{animationDelay: '2s'}}></div>
+      <div className="absolute bottom-0 left-1/2 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse" style={{animationDelay: '4s'}}></div>
+    </div>
+
+    <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+
+        {/* 关于我 */}
         <div className="space-y-4">
-          <h3 className="text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">特别鸣谢</h3>
-          <p className="text-gray-300 leading-relaxed">
-            感谢以下平台和工具为本站提供支持
+          <div className="flex items-center space-x-3 mb-6">
+            <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+              <i className="fa fa-user text-white text-lg"></i>
+            </div>
+            <h3 className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">关于我</h3>
+          </div>
+          <p className="text-gray-300 leading-relaxed text-sm">
+            前端开发工程师，专注于现代 Web 技术栈。热爱分享技术心得，致力于构建优雅的用户体验。
           </p>
-          <div className="space-y-3">
-            <a
-              href="https://www.netlify.com"
-              target="_blank"
-              rel="noreferrer noopener"
-              className="block hover:opacity-80 transition-opacity"
-            >
-              <img
-                src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg"
-                alt="Deploys by Netlify"
-                className="h-12 w-auto"
-              />
+          <div className="flex space-x-4 pt-2">
+            <a href="https://github.com/lkzwc" target="_blank" rel="noreferrer" className="w-8 h-8 bg-gray-700 hover:bg-gray-600 rounded-full flex items-center justify-center transition-colors">
+              <i className="fa-brands fa-github text-sm"></i>
             </a>
-            <a
-              href="https://rspress.dev/zh/"
-              target="_blank"
-              rel="noreferrer noopener"
-              className="block hover:opacity-80 transition-opacity"
-            >
-              <img
-                src="https://lf3-static.bytednsdoc.com/obj/eden-cn/rjhwzy/ljhwZthlaukjlkulzlp/rspress/rspress-navbar-logo-dark-0904.png"
-                alt="RSPress"
-                className="h-12 w-auto"
-              />
+            <a href="#" className="w-8 h-8 bg-gray-700 hover:bg-gray-600 rounded-full flex items-center justify-center transition-colors">
+              <i className="fa fa-envelope text-sm"></i>
+            </a>
+            <a href="#" className="w-8 h-8 bg-gray-700 hover:bg-gray-600 rounded-full flex items-center justify-center transition-colors">
+              <i className="fa-brands fa-twitter text-sm"></i>
             </a>
           </div>
         </div>
- 
-        {/* Contact & Social */}
+
+        {/* 快速导航 */}
         <div className="space-y-4">
-          <h3 className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">联系我</h3>
+          <div className="flex items-center space-x-3 mb-6">
+            <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-blue-600 rounded-lg flex items-center justify-center">
+              <i className="fa fa-compass text-white text-lg"></i>
+            </div>
+            <h3 className="text-xl font-bold bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">快速导航</h3>
+          </div>
           <div className="space-y-3">
-            <a
-              href="https://github.com/lkzwc"
-              target="_blank"
-              rel="noreferrer noopener"
-              className="flex items-center text-gray-300 hover:text-white transition-colors"
-            >
-              <i className="fa-brands fa-github text-xl mr-3"></i>
-              <span>GitHub</span>
+            <a href="/note/" className="block text-gray-300 hover:text-white transition-colors text-sm hover:translate-x-1 transform duration-200">
+              <i className="fa fa-book mr-2 text-blue-400"></i>学习笔记
             </a>
-            <div className="flex items-center text-gray-300">
-              <i className="fa fa-envelope text-xl mr-3"></i>
-              <span>联系邮箱</span>
+            <a href="/blog/" className="block text-gray-300 hover:text-white transition-colors text-sm hover:translate-x-1 transform duration-200">
+              <i className="fa fa-blog mr-2 text-green-400"></i>技术博客
+            </a>
+            <a href="/resume" className="block text-gray-300 hover:text-white transition-colors text-sm hover:translate-x-1 transform duration-200">
+              <i className="fa fa-user-tie mr-2 text-purple-400"></i>在线简历
+            </a>
+            <a href="/system" className="block text-gray-300 hover:text-white transition-colors text-sm hover:translate-x-1 transform duration-200">
+              <i className="fa fa-rocket mr-2 text-pink-400"></i>系统发布
+            </a>
+          </div>
+        </div>
+
+        {/* 技术栈 */}
+        <div className="space-y-4">
+          <div className="flex items-center space-x-3 mb-6">
+            <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center">
+              <i className="fa fa-code text-white text-lg"></i>
             </div>
-            <div className="flex items-center text-gray-300">
-              <i className="fa fa-map-marker-alt text-xl mr-3"></i>
-              <span>中国</span>
+            <h3 className="text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">技术栈</h3>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {['React', 'Vue', 'TypeScript', 'Node.js', 'Docker', 'K8s'].map((tech) => (
+              <span key={tech} className="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-xs hover:bg-gray-600 transition-colors">
+                {tech}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* 特别鸣谢 */}
+        <div className="space-y-4">
+          <div className="flex items-center space-x-3 mb-6">
+            <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg flex items-center justify-center">
+              <i className="fa fa-heart text-white text-lg"></i>
             </div>
+            <h3 className="text-xl font-bold bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">特别鸣谢</h3>
+          </div>
+          <div className="space-y-3">
+            <a href="https://rspress.dev/zh/" target="_blank" rel="noreferrer" className="block group">
+              <div className="bg-gray-800 rounded-lg p-3 hover:bg-gray-700 transition-colors">
+                <div className="flex items-center space-x-3">
+                  <img src="https://lf3-static.bytednsdoc.com/obj/eden-cn/rjhwzy/ljhwZthlaukjlkulzlp/rspress/rspress-navbar-logo-dark-0904.png" alt="RSPress" className="h-6 w-auto" />
+                  <span className="text-sm text-gray-300 group-hover:text-white">RSPress</span>
+                </div>
+              </div>
+            </a>
+            <a href="https://www.netlify.com" target="_blank" rel="noreferrer" className="block group">
+              <div className="bg-gray-800 rounded-lg p-3 hover:bg-gray-700 transition-colors">
+                <div className="flex items-center space-x-3">
+                  <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Netlify" className="h-6 w-auto" />
+                  <span className="text-sm text-gray-300 group-hover:text-white">Netlify</span>
+                </div>
+              </div>
+            </a>
           </div>
         </div>
       </div>
 
-      {/* Copyright */}
-      <div className="border-t border-gray-700 mt-12 pt-8 text-center">
-        <p className="text-gray-400">
-          Copyright © {new Date().getFullYear()} Design by{' '}
-          <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent font-medium">lkzwc</span>
-          {' '}with ❤️
-        </p>
+      {/* 分割线 */}
+      <div className="border-t border-gray-700 pt-8">
+        <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+          <div className="flex items-center space-x-4">
+            <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+              <i className="fa fa-code text-white text-sm"></i>
+            </div>
+            <span className="text-gray-400 text-sm">
+              Made with <span className="text-red-400">❤️</span> by{' '}
+              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent font-medium">lkzwc</span>
+            </span>
+          </div>
+
+          <div className="flex items-center space-x-6 text-sm text-gray-400">
+            <span>© {new Date().getFullYear()} 流客博客</span>
+            <span className="hidden md:block">|</span>
+            <span>Built with RSPress</span>
+          </div>
+        </div>
       </div>
     </div>
   </footer>
 </div>;
 
-// 以下展示所有的 Props
-const Layout = () => (
-  <Theme.Layout
-    /* 正文页 Footer 部分之前 */
-    beforeDocFooter={<div><Comment /></div>}
-  />
-);
+// 自定义 Layout 组件，支持密码保护
+const CustomLayout = (props: any) => {
+  const { page } = usePageData();
+  const pagePassword = page.frontmatter?.password as string;
+
+  // 如果页面需要密码保护
+  if (pagePassword) {
+    return (
+      <PasswordProtector password={pagePassword}>
+        <Theme.Layout {...props} beforeDocFooter={<div><Comment /></div>} />
+      </PasswordProtector>
+    );
+  }
+
+  // 普通页面
+  return <Theme.Layout {...props} beforeDocFooter={<div><Comment /></div>} />;
+};
 
 export default {
   ...Theme,
-  Layout,
+  Layout: CustomLayout,
   HomeLayout
 };
 

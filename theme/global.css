@@ -12,6 +12,12 @@
     @apply font-sans text-gray-900 bg-white;
     font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
   }
+
+  /* 暗黑模式下的 body */
+  .dark body {
+    color: rgb(243 244 246);
+    background-color: rgb(17 24 39);
+  }
 }
 
 /* 自定义组件样式 */
@@ -60,5 +66,312 @@
   /* 毛玻璃效果 */
   .glass {
     @apply backdrop-blur-md bg-white/80 border border-white/20;
+  }
+
+  /* 密码保护页面动画 */
+  .animate-shake {
+    animation: shake 0.5s ease-in-out;
+  }
+
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+  }
+
+  /* 渐入动画 */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Logo 优化 */
+  .rspress-nav-logo img {
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    max-height: 32px;
+    width: auto;
+  }
+
+  .rspress-nav-logo img:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+  }
+
+  /* 导航栏优化 - 亮色模式 */
+  .rspress-nav {
+    backdrop-filter: blur(12px);
+    background-color: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid rgba(229, 231, 235, 0.5);
+  }
+
+  /* 导航栏优化 - 暗色模式 */
+  .dark .rspress-nav {
+    background-color: rgba(17, 24, 39, 0.9);
+    border-bottom: 1px solid rgba(75, 85, 99, 0.5);
+  }
+
+  /* 侧边栏优化 - 亮色模式 */
+  .rspress-sidebar {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(4px);
+  }
+
+  /* 侧边栏优化 - 暗色模式 */
+  .dark .rspress-sidebar {
+    background-color: rgba(17, 24, 39, 0.95);
+    backdrop-filter: blur(4px);
+  }
+
+  /* 内容区域优化 - 亮色模式 */
+  .rspress-doc-content {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(4px);
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  }
+
+  /* 内容区域优化 - 暗色模式 */
+  .dark .rspress-doc-content {
+    background-color: rgba(17, 24, 39, 0.8);
+    backdrop-filter: blur(4px);
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  /* 暗黑模式下的页面背景 */
+  .dark {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+  }
+
+  /* 暗黑模式下的导航链接 */
+  .dark .rspress-nav-item {
+    color: rgba(229, 231, 235, 0.9);
+  }
+
+  .dark .rspress-nav-item:hover {
+    color: rgba(147, 197, 253, 1);
+  }
+
+  /* 暗黑模式下的侧边栏链接 */
+  .dark .rspress-sidebar-item {
+    color: rgba(229, 231, 235, 0.8);
+  }
+
+  .dark .rspress-sidebar-item:hover {
+    color: rgba(147, 197, 253, 1);
+    background-color: rgba(59, 130, 246, 0.1);
+  }
+
+  /* 暗黑模式下的文档内容 */
+  .dark .rspress-doc h1,
+  .dark .rspress-doc h2,
+  .dark .rspress-doc h3,
+  .dark .rspress-doc h4,
+  .dark .rspress-doc h5,
+  .dark .rspress-doc h6 {
+    color: rgba(243, 244, 246, 1);
+  }
+
+  .dark .rspress-doc p,
+  .dark .rspress-doc li {
+    color: rgba(209, 213, 219, 0.9);
+  }
+
+  /* 暗黑模式下的代码块 */
+  .dark .rspress-doc pre {
+    background-color: rgba(17, 24, 39, 0.9);
+    border: 1px solid rgba(75, 85, 99, 0.3);
+  }
+
+  .dark .rspress-doc code {
+    background-color: rgba(31, 41, 55, 0.8);
+    color: rgba(147, 197, 253, 1);
+  }
+
+  /* 暗黑模式下的表格 */
+  .dark .rspress-doc table {
+    border-color: rgba(75, 85, 99, 0.5);
+  }
+
+  .dark .rspress-doc th,
+  .dark .rspress-doc td {
+    border-color: rgba(75, 85, 99, 0.3);
+    color: rgba(209, 213, 219, 0.9);
+  }
+
+  .dark .rspress-doc th {
+    background-color: rgba(31, 41, 55, 0.5);
+  }
+
+  /* 强制修复暗黑模式下的导航栏 */
+  .dark .rspress-nav {
+    background-color: rgba(17, 24, 39, 0.95) !important;
+    border-bottom: 1px solid rgba(75, 85, 99, 0.5) !important;
+    backdrop-filter: blur(12px);
+  }
+
+  .dark .rspress-nav .rspress-nav-title {
+    color: rgb(243 244 246) !important;
+  }
+
+  .dark .rspress-nav .rspress-nav-menu-item {
+    color: rgba(229, 231, 235, 0.9) !important;
+  }
+
+  .dark .rspress-nav .rspress-nav-menu-item:hover {
+    color: rgb(147 197 253) !important;
+  }
+
+  /* 强制修复暗黑模式下的侧边栏 */
+  .dark .rspress-sidebar {
+    background-color: rgba(17, 24, 39, 0.95) !important;
+    border-right: 1px solid rgba(75, 85, 99, 0.3) !important;
+  }
+
+  .dark .rspress-sidebar .rspress-sidebar-group-title {
+    color: rgb(243 244 246) !important;
+  }
+
+  .dark .rspress-sidebar .rspress-sidebar-item {
+    color: rgba(209, 213, 219, 0.9) !important;
+  }
+
+  .dark .rspress-sidebar .rspress-sidebar-item:hover {
+    color: rgb(147 197 253) !important;
+    background-color: rgba(59, 130, 246, 0.1) !important;
+  }
+
+  .dark .rspress-sidebar .rspress-sidebar-item.active {
+    color: rgb(147 197 253) !important;
+    background-color: rgba(59, 130, 246, 0.2) !important;
+  }
+
+  /* 强制修复暗黑模式下的文档内容 */
+  .dark .rspress-doc-container {
+    background-color: rgba(17, 24, 39, 0.8) !important;
+    color: rgb(209 213 219) !important;
+  }
+
+  .dark .rspress-doc-content {
+    background-color: rgba(17, 24, 39, 0.9) !important;
+    color: rgb(209 213 219) !important;
+  }
+
+  .dark .rspress-doc-content h1,
+  .dark .rspress-doc-content h2,
+  .dark .rspress-doc-content h3,
+  .dark .rspress-doc-content h4,
+  .dark .rspress-doc-content h5,
+  .dark .rspress-doc-content h6 {
+    color: rgb(243 244 246) !important;
+  }
+
+  .dark .rspress-doc-content p,
+  .dark .rspress-doc-content li,
+  .dark .rspress-doc-content span {
+    color: rgb(209 213 219) !important;
+  }
+
+  .dark .rspress-doc-content a {
+    color: rgb(147 197 253) !important;
+  }
+
+  .dark .rspress-doc-content a:hover {
+    color: rgb(96 165 250) !important;
+  }
+
+  /* 强制修复暗黑模式下的代码块 */
+  .dark .rspress-doc-content pre {
+    background-color: rgba(17, 24, 39, 0.9) !important;
+    border: 1px solid rgba(75, 85, 99, 0.3) !important;
+  }
+
+  .dark .rspress-doc-content code {
+    background-color: rgba(31, 41, 55, 0.8) !important;
+    color: rgb(147 197 253) !important;
+  }
+
+  /* 修复暗黑模式下的表格 */
+  .dark .rspress-doc-content table {
+    border-color: rgba(75, 85, 99, 0.5) !important;
+  }
+
+  .dark .rspress-doc-content th,
+  .dark .rspress-doc-content td {
+    border-color: rgba(75, 85, 99, 0.3) !important;
+    color: rgb(209 213 219) !important;
+  }
+
+  .dark .rspress-doc-content th {
+    background-color: rgba(31, 41, 55, 0.5) !important;
+  }
+
+  /* 修复暗黑模式下的搜索框 */
+  .dark .rspress-search-input {
+    background-color: rgba(31, 41, 55, 0.8) !important;
+    color: rgb(243 244 246) !important;
+    border-color: rgba(75, 85, 99, 0.5) !important;
+  }
+
+  /* 修复暗黑模式下的按钮 */
+  .dark .rspress-button {
+    background-color: rgba(31, 41, 55, 0.8) !important;
+    color: rgb(243 244 246) !important;
+    border-color: rgba(75, 85, 99, 0.5) !important;
+  }
+
+  /* 修复暗黑模式下的页面背景 */
+  .dark .rspress-layout {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%) !important;
+  }
+
+  /* 修复暗黑模式下的主要内容区域 */
+  .dark .rspress-main {
+    background-color: transparent !important;
+  }
+
+  /* 通用暗黑模式修复 */
+  .dark * {
+    border-color: rgba(75, 85, 99, 0.3);
+  }
+
+  .dark .rspress-doc-content blockquote {
+    background-color: rgba(31, 41, 55, 0.5) !important;
+    border-left-color: rgb(147 197 253) !important;
+    color: rgb(209 213 219) !important;
+  }
+
+  .dark .rspress-doc-content hr {
+    border-color: rgba(75, 85, 99, 0.5) !important;
+  }
+
+  /* 修复暗黑模式下的内联代码 */
+  .dark .rspress-doc-content :not(pre) > code {
+    background-color: rgba(31, 41, 55, 0.8) !important;
+    color: rgb(147 197 253) !important;
+    border: 1px solid rgba(75, 85, 99, 0.3) !important;
+  }
+
+  /* 修复暗黑模式下的列表 */
+  .dark .rspress-doc-content ul,
+  .dark .rspress-doc-content ol {
+    color: rgb(209 213 219) !important;
+  }
+
+  /* 修复暗黑模式下的强调文本 */
+  .dark .rspress-doc-content strong,
+  .dark .rspress-doc-content b {
+    color: rgb(243 244 246) !important;
+  }
+
+  .dark .rspress-doc-content em,
+  .dark .rspress-doc-content i {
+    color: rgb(209 213 219) !important;
   }
 }

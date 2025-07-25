@@ -1,4 +1,21 @@
 ---
-slug:/wechatLogin
+sidebar: false
 ---
-微信登录
+# 微信登录
+微信登录基本方式会有四种、这一期我们给大家讲讲
+* 微信开放平台 (备案、个人申请、门槛比较高)
+* 微信服务号（300元）
+* 微信小程序 (300元)
+* 微信公众号
+
+## 实现过程
+> 本来网站最开始是使用服务号的方式实现的，但是后期又考虑要花钱，且就获取个用户信息，好像作用也不大，于是乎就使用微信公众号去实现了，这里我们简单提一下登录的原理，首先前端给出公众号的二维码，然后生成一个随机的验证码，用户向公众号发送消息，公众号收到消息之后通知，这就是基本的流程
+
+[<img width="2850" height="1756" alt="Image" src="https://github.com/user-attachments/assets/0271a4b4-9906-4217-b212-2707a178cb4d" />](https://excalidraw.com/#json=0uG3vJ5ulIFdC9pjGBikc,Y76CO3IOl8OaDvOhcPqmig)
+
+## 关键点总结
+* 主要是用ScentSTR或者code去关联openID以及Token
+* 通过轮训Token判断是否登录
+
+
+

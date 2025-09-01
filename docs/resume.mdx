@@ -2,68 +2,225 @@
 password: "my123"
 ---
 
-<div style={{
-  maxWidth: '800px', 
-  margin: '0 auto', 
-  padding: '20px',
-  fontFamily: "'Segoe UI', 'Helvetica Neue', sans-serif",
-  backgroundColor: '#f8f9fa',
-  fontSize: '14px'
-}}>
-
-  <div style={{
-    background: 'linear-gradient(135deg, #1a2980 0%, #26d0ce 100%)',
-    color: 'white',
-    padding: '20px 25px',
-    borderRadius: '6px',
-    marginBottom: '20px',
-    boxShadow: '0 3px 10px rgba(0,0,0,0.15)'
-  }}>
-    <h1 style={{ 
-      margin: '0 0 8px 0', 
-      fontSize: '1.8rem',
-      fontWeight: 600,
-      letterSpacing: '0.3px'
-    }}>张三</h1>
+{(() => {
+  const resumeData = {
+    // 基本信息
+    basicInfo: {
+      name: "张文超",
+      phone: "13149182182",
+      email: "lxxxc@outlook.com",
+      github: "github.com/lkzwc"
+    },
     
-    <div style={{
-      display: 'flex',
-      flexWrap: 'wrap',
-      gap: '12px',
-      fontSize: '0.95rem'
-    }}>
-      <span style={{ display: 'flex', alignItems: 'center' }}>
-        📱 1314xxxx
-      </span>
-      <span style={{ display: 'flex', alignItems: 'center' }}>
-        ✉️ lxxxc@outlook.com
-      </span>
-      <span style={{ display: 'flex', alignItems: 'center' }}>
-        <svg width="14" height="14" viewBox="0 0 16 16" style={{ marginRight: '4px' }}>
-          <path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
-        </svg>
-        github.com/username
-      </span>
-    </div>
-  </div>
+    // 工作经历
+    workExperience: [
+      {
+        company: "菜鸟网络",
+        position: "高级前端工程师",
+        duration: "2022.06-至今",
+        tags: ["核心开发","架构设计"],
+        achievements: [
+          "主导微信小程序性能优化，首屏加载速度提升40%",
+          "设计React组件库，覆盖20+业务模块，提升团队开发效率30%",
+          "日均处理千万级用户请求系统架构设计"
+        ]
+      },
+      {
+        company: "阿里巴巴",
+        position: "前端开发工程师",
+        duration: "2021.06-2024.05",
+        tags: ["核心开发","架构设计"],
+        achievements: [
+          "参与支付宝H5页面开发，使用Vue3实现动态表单系统",
+          "编写自动化测试脚本，Bug率降低35%"
+        ]
+      },
+      {
+        company: "上海汉得信息技术股份有限公司",
+        position: "前端开发工程师",
+        duration: "2020.06-2021.06",
+        tags: ["核心开发"],
+        achievements: [
+          "参与支付宝H5页面开发，使用Vue3实现动态表单系统",
+          "编写自动化测试脚本，Bug率降低35%"
+        ]
+      },
+      {
+        company: "北京交大思诺科技股份有限公司",
+        position: "软件开发工程师",
+        duration: "2017.06-2020.06",
+        tags: ["技术组长", "架构设计","全栈开发"],
+        achievements: [
+          "参与支付宝H5页面开发，使用Vue3实现动态表单系统",
+          "编写自动化测试脚本，Bug率降低35%"
+        ]
+      }
+    ],
+    
+    // 项目经验
+    projects: [
+      {
+        name: "国际快递服务",
+        type: "重点项目",
+        tags: ["技术组长", "架构设计", "性能优化"],
+        description: "解决国际快递各方CP与菜鸟系统之间的对接，处理各种物流信息以及周边生态的问题，促进物流各模块之间的协作，保证物流包裹的时效性以及准确性",
+        techStack: "React、低代码",
+        achievements: [
+          "独立承担负责对接业务、对需求进行沟通，设计具体的落地方案并完成开发",
+          "独立梳理源码工程、设计迁移方案，将源码界面迁移到低码中实现、统一展示格式并优化交互路径，降低系统操作复杂程度，减少业务成本20%、缩短交互流程10%",
+          "分析梳理源码通用组件、设计低码组件并完成基础配套开发，并沉淀通用规则以及文档，解决部分开发效能问题，提高产能效率近乎30%"
+        ]
+      },
+        {
+        name: "ACS容器计算服务",
+        type: "重点项目",
+        tags: ["技术组长", "架构设计", "性能优化"],
+        description: "阿里云容器计算服务平台ACS，根据业务发展需求，扩展原有ACK技术，弹性化控制成本，实现降本提效",
+        techStack: "React、TS、XConsole、Alfa",
+        achievements: [
+          "独立完成前端规范体系的搭建，解决CI/CD阻断问题，提高团队效率30%",
+          "合理拆分项目模块，使用Alfa微服务开发单独模块，支持多项目、多场景、定制化部署，保证后期其他的项目的正常上线",
+          "合理抽离业务逻辑，设计前后端规范，编写统一校验逻辑，全场景覆盖业务需求，减少40%的代码量",
+          "开发并引入低代码组件，重构界面展示，解决产品上线后频繁修改的问题，增强项目的可维护性",
+          "优化国际化以及状态管理方案，形成容错方案，保证多项目正常使用"
+        ]
+      },
+        {
+        name: "ESP容器调度平台",
+        type: "重点项目",
+        tags: ["技术组长", "架构设计", "性能优化"],
+        description: "基于ASI容器平台调度服务，重新调研，学习运维相关流程、沟通体验交互，设计开发内部容器调度平台",
+        techStack: "React、TechUI、Ahook、Umi、Antd",
+        achievements: [
+          "引入DOne、Swagger、CICD保证从设计开发无碍推进，开发效率提高100%结合外部调度规范，优化并开发整个调度流程，节省运维成本近50%",
+          "设计开发TechUIHelper库，解决非其前端人员开发的问题，组内效率大幅提高",
+          "大规模React14到React18技术重构，优化项目体验，项目架构，缩短FCP从5s至1s，Lighthouse各项达到95左右",
+          "系统加入调度流程化模块，降低调度时延，保证大促双11无感迁移，正常运行封装通用组件hook，优化代码结构，提供多模块使用"
+        ]
+      },
+      {
+        name: "LEU远程监测 & 机车信号通用平台",
+        type: "个人项目",
+        tags: ["全栈开发", "产品设计"],
+        techStack: "Linux 、Bugzilla、 Escript 、AutoTest、Java、Mysql",
+        description: "集成应答器硬件的系统，客户端通过s1服务登陆，通过can口采集通信，发送至s2服务器，s2推送至客户端显示。通用平台主要是对本地以及远程的数据采集分析，通过图形化的方式展现给用户！",
+        github: "https://github.com/xxx",
+        achievements: [
+          "主导制定严格的项目管理流程，规范各阶段的产出成果，保证最终的交付",
+          "分析系统和数据的架构，完成对单元测试的方案制定，保证项目流程正常推进",
+          "引入BugZilla等系统，赋能整个团队，完成流水化作业建设，团队效能提高100%",
+          "使用python，搭建部分测试环境，验证大数据问题，提高测试效率25%优化测试的方案和流程，提高团队效率"
+        ]
+      },
+      {
+        name: "MD2Writer",
+        type: "个人项目",
+        tags: ["全栈开发", "产品设计"],
+        techStack: "Nextjs 、Typescript 、Mysql",
+        description: "微信公众号编辑器，通过Markdown快速实现微信公众号文章的编辑、发布",
+        github: "https://github.com/MD2Writer",
+        achievements: [
+          "手动实现MDX样式的转化以及主题的映射"
+        ]
+      }
+    ],
+    
+    // 技术能力
+    skills: {
+      "前端技术": ["JavaScript","React", "Vue3", "TypeScript", "Next.js","Uni-app",],
+      "开发工具": ["Linux","K8S", "Docker","Webpack","Vite","GoLang"],
+      "专业认证": ["英语四级"]
+    },
+    
+    // 教育背景
+    education: {
+      school: "咸阳师范学院",
+      major: "软件工程",
+      duration: "2013-2017",
+      details: " 主修课程：数据结构、算法分析、操作系统、计算机网络"
+    },
+    
+    // 自我评价
+    selfEvaluation: "GitHub的常客，开源贡献者，React的忠实粉丝，Vue3 的偏爱者， K8S的爱好者，Go的暗恋者！喜欢技术，热爱科技，畅享科技生活！前端数余年行业经验，从模型到框架到开发有丰富经验，All In AI大前端！使用行业先进技术，最大程度降低成本，优化用户体验，用技术赋能业务！实现产品价值增长，带来数据产值腾飞！"
+  };
 
-
-  <section style={{
-    backgroundColor: '#ffffff',
-    padding: '18px 22px',
-    borderRadius: '6px',
-    marginBottom: '18px',
-    boxShadow: '0 2px 8px rgba(30, 60, 90, 0.1)',
-   
-  }}>
-    <h2 style={{
+  // 样式配置
+  const styles = {
+    container: {
+      maxWidth: '800px', 
+      margin: '0 auto', 
+      padding: '20px',
+      fontFamily: "'Segoe UI', 'Helvetica Neue', sans-serif",
+      backgroundColor: '#f8f9fa',
+      fontSize: '14px'
+    },
+    header: {
+      background: 'linear-gradient(135deg, #1a2980 0%, #26d0ce 100%)',
+      color: 'white',
+      padding: '20px 25px',
+      borderRadius: '6px',
+      marginBottom: '20px',
+      boxShadow: '0 3px 10px rgba(0,0,0,0.15)'
+    },
+    section: {
+      backgroundColor: '#ffffff',
+      padding: '18px 22px',
+      borderRadius: '6px',
+      marginBottom: '18px',
+      boxShadow: '0 2px 8px rgba(30, 60, 90, 0.1)',
+      borderLeft: '3px solid #1a2980'
+    },
+    sectionTitle: {
       color: '#1a2980',
       fontSize: '1.25rem',
       paddingBottom: '6px',
       marginTop: 0,
       display: 'flex',
       alignItems: 'center'
-    }}>
+    },
+    tag: {
+      padding: '2px 8px',
+      borderRadius: '12px',
+      fontSize: '0.8rem',
+      fontWeight: 500
+    }
+  };
+
+  return (
+    <div style={styles.container}>
+      {/* 头部基本信息 */}
+      <div style={styles.header}>
+        <h1 style={{ 
+          margin: '0 0 8px 0', 
+          fontSize: '1.8rem',
+          fontWeight: 600,
+          letterSpacing: '0.3px'
+        }}>{resumeData.basicInfo.name}</h1>
+        
+        <div style={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          gap: '12px',
+          fontSize: '0.95rem'
+        }}>
+          <span style={{ display: 'flex', alignItems: 'center' }}>
+            📱 {resumeData.basicInfo.phone}
+          </span>
+          <span style={{ display: 'flex', alignItems: 'center' }}>
+            ✉️ {resumeData.basicInfo.email}
+          </span>
+          <span style={{ display: 'flex', alignItems: 'center' }}>
+            <svg width="14" height="14" viewBox="0 0 16 16" style={{ marginRight: '4px' }}>
+              <path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+            </svg>
+            {resumeData.basicInfo.github}
+          </span>
+        </div>
+      </div>
+
+  {/* 工作经历 */}
+  <section style={styles.section}>
+    <h2 style={styles.sectionTitle}>
       <span style={{
         display: 'inline-block',
         width: '5px',
@@ -75,103 +232,55 @@ password: "my123"
       工作经历
     </h2>
     
- 
-    <div style={{ position: 'relative', paddingLeft: '18px', marginBottom: '20px' }}>
-      <div style={{
-        position: 'absolute',
-        left: 0,
-        top: '6px',
-        width: '9px',
-        height: '9px',
-        borderRadius: '50%',
-        backgroundColor: '#26d0ce'
-      }}></div>
-      <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '5px' }}>
-        <strong style={{ fontSize: '1.05rem', color: '#1e3c72' }}>腾讯科技 | 高级前端工程师</strong>
-        <span style={{ color: '#7f8c8d', fontWeight: 500, fontSize: '0.9rem' }}>2022.06-至今</span>
-      </div>
-      <div style={{ display: 'flex', gap: '8px', marginBottom: '5px', flexWrap: 'wrap' }}>
-        <span style={{
-          backgroundColor: '#e3f7ff',
-          color: '#1070a1',
-          padding: '2px 8px',
-          borderRadius: '12px',
-          fontSize: '0.8rem',
-          fontWeight: 500
-        }}>技术组长</span>
-        <span style={{
-          backgroundColor: '#e6f9e6',
-          color: '#0c7b3d',
-          padding: '2px 8px',
-          borderRadius: '12px',
-          fontSize: '0.8rem',
-          fontWeight: 500
-        }}>架构设计</span>
-      </div>
-      <ul style={{ 
+    {resumeData.workExperience.map((work, index) => (
+      <div key={index} style={{ 
+        position: 'relative', 
         paddingLeft: '18px', 
-        margin: '8px 0',
-        listStyleType: 'circle',
-        color: '#2c3e50',
-        fontSize: '0.95rem'
+        marginBottom: index < resumeData.workExperience.length - 1 ? '20px' : '0'
       }}>
-        <li>主导微信小程序性能优化，首屏加载速度提升40%</li>
-        <li>设计React组件库，覆盖20+业务模块，提升团队开发效率30%</li>
-        <li>日均处理千万级用户请求系统架构设计</li>
-      </ul>
-    </div>
-    
-    <div style={{ position: 'relative', paddingLeft: '18px' }}>
-      <div style={{
-        position: 'absolute',
-        left: 0,
-        top: '6px',
-        width: '9px',
-        height: '9px',
-        borderRadius: '50%',
-        backgroundColor: '#26d0ce'
-      }}></div>
-      <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '5px' }}>
-        <strong style={{ fontSize: '1.05rem', color: '#1e3c72' }}>阿里巴巴 | 前端开发工程师</strong>
-        <span style={{ color: '#7f8c8d', fontWeight: 500, fontSize: '0.9rem' }}>2021.07-2021.12</span>
+        <div style={{
+          position: 'absolute',
+          left: 0,
+          top: '6px',
+          width: '9px',
+          height: '9px',
+          borderRadius: '50%',
+          backgroundColor: '#26d0ce'
+        }}></div>
+        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '5px' }}>
+          <strong style={{ fontSize: '1.05rem', color: '#1e3c72' }}>
+            {work.company} | {work.position}
+          </strong>
+          <span style={{ color: '#7f8c8d', fontWeight: 500, fontSize: '0.9rem' }}>
+            {work.duration}
+          </span>
+        </div>
+        <div style={{ display: 'flex', gap: '8px', marginBottom: '5px', flexWrap: 'wrap' }}>
+          {work.tags.map((tag, tagIndex) => (
+            <span key={tagIndex} style={{
+              ...styles.tag,
+              backgroundColor: tagIndex % 2 === 0 ? '#e3f7ff' : '#e6f9e6',
+              color: tagIndex % 2 === 0 ? '#1070a1' : '#0c7b3d'
+            }}>{tag}</span>
+          ))}
+        </div>
+        <ul style={{ 
+          paddingLeft: '18px', 
+          margin: '8px 0',
+          listStyleType: 'circle',
+          color: '#2c3e50',
+          fontSize: '0.95rem'
+        }}>
+          {work.achievements.map((achievement, achIndex) => (
+            <li key={achIndex}>{achievement}</li>
+          ))}
+        </ul>
       </div>
-      <div style={{ display: 'flex', gap: '8px', marginBottom: '5px', flexWrap: 'wrap' }}>
-        <span style={{
-          backgroundColor: '#e3f7ff',
-          color: '#1070a1',
-          padding: '2px 8px',
-          borderRadius: '12px',
-          fontSize: '0.8rem',
-          fontWeight: 500
-        }}>核心开发</span>
-      </div>
-      <ul style={{ 
-        paddingLeft: '18px', 
-        margin: '8px 0',
-        listStyleType: 'circle',
-        color: '#2c3e50',
-        fontSize: '0.95rem'
-      }}>
-        <li>参与支付宝H5页面开发，使用Vue3实现动态表单系统</li>
-        <li>编写自动化测试脚本，Bug率降低35%</li>
-      </ul>
-    </div>
+    ))}
   </section>
-
-  <section style={{
-    backgroundColor: '#ffffff',
-    padding: '18px 22px',
-    borderRadius: '6px',
-    marginBottom: '18px',
-  }}>
-    <h2 style={{
-      color: '#1a2980',
-      fontSize: '1.25rem',
-      paddingBottom: '6px',
-      marginTop: 0,
-      display: 'flex',
-      alignItems: 'center'
-    }}>
+  {/* 项目经验 */}
+  <section style={styles.section}>
+    <h2 style={styles.sectionTitle}>
       <span style={{
         display: 'inline-block',
         width: '5px',
@@ -183,188 +292,104 @@ password: "my123"
       项目经验
     </h2>
     
-
-    <div style={{ 
-      marginBottom: '25px',
-      paddingBottom: '15px',
-      borderBottom: '1px dashed #e0e6ed'
-    }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap' }}>
-        <h3 style={{ 
-          margin: '0 10px 8px 0', 
-          color: '#1e3c72',
-          fontSize: '1.1rem'
-        }}>电商平台重构</h3>
-        <span style={{
-          backgroundColor: '#1a2980',
-          color: 'white',
-          padding: '3px 10px',
-          borderRadius: '4px',
-          fontSize: '0.85rem',
-          fontWeight: 500
-        }}>重点项目</span>
-      </div>
-            <div style={{ display: 'flex', gap: '8px', marginBottom: '8px', flexWrap: 'wrap' }}>
-        <span style={{
-          backgroundColor: '#e3f7ff',
-          color: '#1070a1',
-          padding: '2px 8px',
-          borderRadius: '12px',
-          fontSize: '0.8rem',
-          fontWeight: 500
-        }}>技术组长</span>
-        <span style={{
-          backgroundColor: '#f0e6ff',
-          color: '#6c42f5',
-          padding: '2px 8px',
-          borderRadius: '12px',
-          fontSize: '0.8rem',
-          fontWeight: 500
-        }}>架构设计</span>
-        <span style={{
-          backgroundColor: '#fff4e6',
-          color: '#e67e22',
-          padding: '2px 8px',
-          borderRadius: '12px',
-          fontSize: '0.8rem',
-          fontWeight: 500
-        }}>性能优化</span>
-      </div>
-      
-      <div style={{ 
-        backgroundColor: '#f8fbfe',
-        padding: '10px 15px',
-        borderRadius: '6px',
-        marginBottom: '10px',
-        borderLeft: '3px solid #26d0ce'
+    {resumeData.projects.map((project, index) => (
+      <div key={index} style={{ 
+        marginBottom: index < resumeData.projects.length - 1 ? '25px' : '0',
+        paddingBottom: index < resumeData.projects.length - 1 ? '15px' : '0',
+        borderBottom: index < resumeData.projects.length - 1 ? '1px dashed #e0e6ed' : 'none'
       }}>
-        <p style={{ 
-          margin: 0,
-          color: '#485e74',
-          fontSize: '0.92rem',
-          lineHeight: 1.5
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap' }}>
+          <h3 style={{ 
+            margin: '0 10px 8px 0', 
+            color: '#1e3c72',
+            fontSize: '1.1rem'
+          }}>{project.name}</h3>
+          <span style={{
+            backgroundColor: project.type === '重点项目' ? '#1a2980' : '#26d0ce',
+            color: 'white',
+            padding: '3px 10px',
+            borderRadius: '4px',
+            fontSize: '0.85rem',
+            fontWeight: 500
+          }}>{project.type}</span>
+        </div>
+        
+        <div style={{ display: 'flex', gap: '8px', marginBottom: '8px', flexWrap: 'wrap' }}>
+          {project.tags.map((tag, tagIndex) => {
+            const tagStyles = [
+              { backgroundColor: '#e3f7ff', color: '#1070a1' },
+              { backgroundColor: '#f0e6ff', color: '#6c42f5' },
+              { backgroundColor: '#fff4e6', color: '#e67e22' },
+              { backgroundColor: '#e6f9e6', color: '#0c7b3d' }
+            ];
+            return (
+              <span key={tagIndex} style={{
+                ...styles.tag,
+                ...tagStyles[tagIndex % tagStyles.length]
+              }}>{tag}</span>
+            );
+          })}
+        </div>
+        
+        <div style={{ 
+          backgroundColor: '#f8fbfe',
+          padding: '10px 15px',
+          borderRadius: '6px',
+          marginBottom: '10px',
+          borderLeft: '3px solid #26d0ce'
         }}>
-          重构千万级用户电商平台，解决原有系统性能瓶颈和可维护性问题，
-          通过技术升级和架构优化提升用户体验和开发效率。
-        </p>
-      </div>
-      
-      <p style={{ 
-        margin: '8px 0',
-        color: '#1a2980',
-        fontWeight: 500,
-        fontSize: '0.9rem'
-      }}>
-        <span style={{ fontWeight: 600 }}>技术栈：</span>Next.js + Node.js + MongoDB
-      </p>
-      
-      <ul style={{ 
-        paddingLeft: '18px', 
-        margin: '8px 0',
-        listStyleType: 'circle',
-        color: '#2c3e50',
-        fontSize: '0.95rem'
-      }}>
-        <li>实现SSR渲染方案，SEO评分从70提升至98/100</li>
-        <li>集成CI/CD自动化流程，部署效率提升60%</li>
-        <li>设计微前端架构，支持5个独立子应用协同开发</li>
-      </ul>
-    </div>
-    
-    <div>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap' }}>
-        <h3 style={{ 
-          margin: '0 10px 8px 0', 
-          color: '#1e3c72',
-          fontSize: '1.1rem'
-        }}>开源简历生成器</h3>
-        <span style={{
-          backgroundColor: '#26d0ce',
-          color: 'white',
-          padding: '3px 10px',
-          borderRadius: '4px',
-          fontSize: '0.85rem',
-          fontWeight: 500
-        }}>个人项目</span>
-      </div>
-      
-      <div style={{ display: 'flex', gap: '8px', marginBottom: '8px', flexWrap: 'wrap' }}>
-        <span style={{
-          backgroundColor: '#e3f7ff',
-          color: '#1070a1',
-          padding: '2px 8px',
-          borderRadius: '12px',
-          fontSize: '0.8rem',
-          fontWeight: 500
-        }}>全栈开发</span>
-        <span style={{
-          backgroundColor: '#e6f9e6',
-          color: '#0c7b3d',
-          padding: '2px 8px',
-          borderRadius: '12px',
-          fontSize: '0.8rem',
-          fontWeight: 500
-        }}>产品设计</span>
-      </div>
-      
-      <div style={{ 
-        backgroundColor: '#f8fbfe',
-        padding: '10px 15px',
-        borderRadius: '6px',
-        marginBottom: '10px',
-        borderLeft: '3px solid #26d0ce'
-      }}>
-        <p style={{ 
-          margin: 0,
-          color: '#485e74',
-          fontSize: '0.92rem',
-          lineHeight: 1.5
+          <p style={{ 
+            margin: 0,
+            color: '#485e74',
+            fontSize: '0.92rem',
+            lineHeight: 1.5
+          }}>
+            {project.description}
+          </p>
+        </div>
+        
+        {project.techStack && (
+          <p style={{ 
+            margin: '8px 0',
+            color: '#1a2980',
+            fontWeight: 500,
+            fontSize: '0.9rem'
+          }}>
+            <span style={{ fontWeight: 600 }}>技术栈：</span>{project.techStack}
+          </p>
+        )}
+        
+        {project.github && (
+          <p style={{ 
+            margin: '0 0 8px 0',
+            color: '#1a2980',
+            fontWeight: 500,
+            fontSize: '0.9rem'
+          }}>
+            <span style={{ fontWeight: 600 }}>GitHub：</span> 
+            <a href={project.github} style={{ color: '#1a2980', textDecoration: 'underline' }}>
+              {project.github}
+            </a>
+          </p>
+        )}
+        
+        <ul style={{ 
+          paddingLeft: '18px', 
+          margin: '8px 0',
+          listStyleType: 'circle',
+          color: '#2c3e50',
+          fontSize: '0.95rem'
         }}>
-          基于MDX的现代化简历生成工具，提供实时预览、PDF导出和多模板支持，
-          帮助开发者快速创建专业的技术简历。
-        </p>
+          {project.achievements.map((achievement, achIndex) => (
+            <li key={achIndex}>{achievement}</li>
+          ))}
+        </ul>
       </div>
-      
-      <p style={{ 
-        margin: '0 0 8px 0',
-        color: '#1a2980',
-        fontWeight: 500,
-        fontSize: '0.9rem'
-      }}>
-        <span style={{ fontWeight: 600 }}>GitHub：</span> 
-        <a href="https://github.com/xxx" style={{ color: '#1a2980', textDecoration: 'underline' }}>https://github.com/xxx</a>
-      </p>
-      
-      <ul style={{ 
-        paddingLeft: '18px', 
-        margin: '8px 0',
-        listStyleType: 'circle',
-        color: '#2c3e50',
-        fontSize: '0.95rem'
-      }}>
-        <li>开发MDX驱动的模板系统，支持实时预览和PDF导出</li>
-        <li>月活跃用户5000+，GitHub Star 1200+</li>
-        <li>实现多主题切换和AI智能内容建议功能</li>
-      </ul>
-    </div>
+    ))}
   </section>
-
-  <section style={{
-    backgroundColor: '#ffffff',
-    padding: '18px 22px',
-    borderRadius: '6px',
-    marginBottom: '18px',
-    boxShadow: '0 2px 8px rgba(30, 60, 90, 0.1)',
-    borderLeft: '3px solid #1a2980'
-  }}>
-    <h2 style={{
-      color: '#1a2980',
-      fontSize: '1.25rem',
-      paddingBottom: '6px',
-      marginTop: 0,
-      display: 'flex',
-      alignItems: 'center'
-    }}>
+  {/* 技术能力 */}
+  <section style={styles.section}>
+    <h2 style={styles.sectionTitle}>
       <span style={{
         display: 'inline-block',
         width: '5px',
@@ -382,153 +407,48 @@ password: "my123"
       gap: '16px',
       marginTop: '12px'
     }}>
-      <div>
-        <h3 style={{
-          color: '#1a2980',
-          margin: '0 0 8px 0',
-          paddingBottom: '4px',
-          borderBottom: '1px solid #e0e6ed',
-          fontSize: '1rem'
-        }}>前端技术</h3>
-        <div style={{
-          display: 'flex',
-          flexWrap: 'wrap',
-          gap: '6px'
-        }}>
-          <span style={{
-            background: 'linear-gradient(to right, #e3f7ff, #d1ecff)',
-            color: '#1070a1',
-            padding: '4px 10px',
-            borderRadius: '14px',
-            fontSize: '0.85rem',
-            fontWeight: 500,
-            border: '1px solid #c2e3ff'
-          }}>React</span>
-          <span style={{
-            background: 'linear-gradient(to right, #e3f7ff, #d1ecff)',
-            color: '#1070a1',
-            padding: '4px 10px',
-            borderRadius: '14px',
-            fontSize: '0.85rem',
-            fontWeight: 500,
-            border: '1px solid #c2e3ff'
-          }}>Vue3</span>
-          <span style={{
-            background: 'linear-gradient(to right, #e3f7ff, #d1ecff)',
-            color: '#1070a1',
-            padding: '4px 10px',
-            borderRadius: '14px',
-            fontSize: '0.85rem',
-            fontWeight: 500,
-            border: '1px solid #c2e3ff'
-          }}>TypeScript</span>
-          <span style={{
-            background: 'linear-gradient(to right, #e3f7ff, #d1ecff)',
-            color: '#1070a1',
-            padding: '4px 10px',
-            borderRadius: '14px',
-            fontSize: '0.85rem',
-            fontWeight: 500,
-            border: '1px solid #c2e3ff'
-          }}>Next.js</span>
-        </div>
-      </div>
-      
-      <div>
-        <h3 style={{
-          color: '#1a2980',
-          margin: '0 0 8px 0',
-          paddingBottom: '4px',
-          borderBottom: '1px solid #e0e6ed',
-          fontSize: '1rem'
-        }}>开发工具</h3>
-        <div style={{
-          display: 'flex',
-          flexWrap: 'wrap',
-          gap: '6px'
-        }}>
-          <span style={{
-            background: 'linear-gradient(to right, #e6f9e6, #d4f3d4)',
-            color: '#0c7b3d',
-            padding: '4px 10px',
-            borderRadius: '14px',
-            fontSize: '0.85rem',
-            fontWeight: 500,
-            border: '1px solid #c2e9c2'
-          }}>Webpack</span>
-          <span style={{
-            background: 'linear-gradient(to right, #e6f9e6, #d4f3d4)',
-            color: '#0c7b3d',
-            padding: '4px 10px',
-            borderRadius: '14px',
-            fontSize: '0.85rem',
-            fontWeight: 500,
-            border: '1px solid #c2e9c2'
-          }}>Git</span>
-          <span style={{
-            background: 'linear-gradient(to right, #e6f9e6, #d4f3d4)',
-            color: '#0c7b3d',
-            padding: '4px 10px',
-            borderRadius: '14px',
-            fontSize: '0.85rem',
-            fontWeight: 500,
-            border: '1px solid #c2e9c2'
-          }}>Docker</span>
-        </div>
-      </div>
-      
-      <div>
-        <h3 style={{
-          color: '#1a2980',
-          margin: '0 0 8px 0',
-          paddingBottom: '4px',
-          borderBottom: '1px solid #e0e6ed',
-          fontSize: '1rem'
-        }}>专业认证</h3>
-        <div style={{
-          display: 'flex',
-          flexWrap: 'wrap',
-          gap: '6px'
-        }}>
-          <span style={{
-            background: 'linear-gradient(to right, #fff4e6, #ffe8cc)',
-            color: '#e67e22',
-            padding: '4px 10px',
-            borderRadius: '14px',
-            fontSize: '0.85rem',
-            fontWeight: 500,
-            border: '1px solid #ffd8a6'
-          }}>AWS认证</span>
-          <span style={{
-            background: 'linear-gradient(to right, #fff4e6, #ffe8cc)',
-            color: '#e67e22',
-            padding: '4px 10px',
-            borderRadius: '14px',
-            fontSize: '0.85rem',
-            fontWeight: 500,
-            border: '1px solid #ffd8a6'
-          }}>PMP</span>
-        </div>
-      </div>
+      {Object.entries(resumeData.skills).map(([category, skills], index) => {
+        const skillStyles = [
+          { bg: 'linear-gradient(to right, #e3f7ff, #d1ecff)', color: '#1070a1', border: '#c2e3ff' },
+          { bg: 'linear-gradient(to right, #e6f9e6, #d4f3d4)', color: '#0c7b3d', border: '#c2e9c2' },
+          { bg: 'linear-gradient(to right, #fff4e6, #ffe8cc)', color: '#e67e22', border: '#ffd8a6' }
+        ];
+        const currentStyle = skillStyles[index % skillStyles.length];
+        
+        return (
+          <div key={category}>
+            <h3 style={{
+              color: '#1a2980',
+              margin: '0 0 8px 0',
+              paddingBottom: '4px',
+              borderBottom: '1px solid #e0e6ed',
+              fontSize: '1rem'
+            }}>{category}</h3>
+            <div style={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              gap: '6px'
+            }}>
+              {skills.map((skill, skillIndex) => (
+                <span key={skillIndex} style={{
+                  background: currentStyle.bg,
+                  color: currentStyle.color,
+                  padding: '4px 10px',
+                  borderRadius: '14px',
+                  fontSize: '0.85rem',
+                  fontWeight: 500,
+                  border: `1px solid ${currentStyle.border}`
+                }}>{skill}</span>
+              ))}
+            </div>
+          </div>
+        );
+      })}
     </div>
   </section>
-
-  <section style={{
-    backgroundColor: '#ffffff',
-    padding: '18px 22px',
-    borderRadius: '6px',
-    marginBottom: '18px',
-    boxShadow: '0 2px 8px rgba(30, 60, 90, 0.1)',
-    borderLeft: '3px solid #1a2980'
-  }}>
-    <h2 style={{
-      color: '#1a2980',
-      fontSize: '1.25rem',
-      paddingBottom: '6px',
-      marginTop: 0,
-      display: 'flex',
-      alignItems: 'center'
-    }}>
+  {/* 教育背景 */}
+  <section style={styles.section}>
+    <h2 style={styles.sectionTitle}>
       <span style={{
         display: 'inline-block',
         width: '5px',
@@ -551,34 +471,26 @@ password: "my123"
         backgroundColor: '#26d0ce'
       }}></div>
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-        <strong style={{ fontSize: '1.05rem', color: '#1e3c72' }}>北京大学 | 计算机科学与技术（本科）</strong>
-        <span style={{ color: '#7f8c8d', fontWeight: 500, fontSize: '0.9rem' }}>2018-2022</span>
+        <strong style={{ fontSize: '1.05rem', color: '#1e3c72' }}>
+          {resumeData.education.school} | {resumeData.education.major}
+        </strong>
+        <span style={{ color: '#7f8c8d', fontWeight: 500, fontSize: '0.9rem' }}>
+          {resumeData.education.duration}
+        </span>
       </div>
       <p style={{ 
         margin: '6px 0 0 0', 
         color: '#34495e',
         fontSize: '0.95rem'
       }}>
-        GPA: 3.8/4.0 | 主修课程：数据结构、算法分析、操作系统、计算机网络
+        {resumeData.education.details}
       </p>
     </div>
   </section>
 
-  <section style={{
-    backgroundColor: '#ffffff',
-    padding: '18px 22px',
-    borderRadius: '6px',
-    boxShadow: '0 2px 8px rgba(30, 60, 90, 0.1)',
-    borderLeft: '3px solid #1a2980'
-  }}>
-    <h2 style={{
-      color: '#1a2980',
-      fontSize: '1.25rem',
-      paddingBottom: '6px',
-      marginTop: 0,
-      display: 'flex',
-      alignItems: 'center'
-    }}>
+  {/* 自我评价 */}
+  <section style={styles.section}>
+    <h2 style={styles.sectionTitle}>
       <span style={{
         display: 'inline-block',
         width: '5px',
@@ -603,11 +515,10 @@ password: "my123"
         color: '#34495e',
         fontSize: '0.95rem'
       }}>
-        <span style={{ fontWeight: 600, color: '#1a2980' }}>全栈开发工程师</span>，拥有6年前端开发经验，专注于构建高性能Web应用。
-        热衷于开源社区贡献，主导3个开源项目，技术博客年均产出50+篇。
-        善于团队协作与跨部门沟通，追求编写优雅、可维护的代码，
-        持续关注前端技术演进趋势。
+        <span style={{ fontWeight: 600, color: '#1a2980' }}>软件工程师</span>{resumeData.selfEvaluation}
       </p>
     </div>
   </section>
-</div>
+    </div>
+  );
+})()}

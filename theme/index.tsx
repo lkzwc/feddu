@@ -313,13 +313,13 @@ const CustomLayout = (props: any) => {
   if (pagePassword) {
     return (
       <PasswordProtector password={pagePassword}>
-        <Theme.Layout {...props} beforeDocFooter={<div><Comment key={props.route.path} /></div>} />
+        <Theme.Layout {...props} beforeDocFooter={<div><Comment key={props?.route?.path} /></div>} />
       </PasswordProtector>
     );
   }
 
   // 普通页面
-  return <Theme.Layout {...props} beforeDocFooter={<div><Comment key={props.route.path}/></div>} />;
+  return <Theme.Layout {...props} beforeDocFooter={<div><Comment key={props?.route?.path}/></div>} />;
 };
 
 export default {

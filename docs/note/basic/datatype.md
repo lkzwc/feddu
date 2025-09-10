@@ -28,7 +28,7 @@ Object.prototype.toString.call('1')  // "[object String]"
 > ES5就已经出现，用于遍历对象的可枚举的属性，不含Symbol
 
 * for of
-> 遍历可迭代对象的属性，可以使用的范围包括数组、Set、Map、字符串等实现【Symbol.iterator】的对象
+> 遍历可迭代对象[可以使用 for...of 循环、展开运算符（...）、解构赋值遍历]的属性，可以使用的范围包括数组、Set、Map、字符串等实现【Symbol.iterator】的对象
 
 ## 存储位置
 ​

@@ -6,6 +6,14 @@
 
 由于基于nodejs运行，无法利用多核CPU的优势
 
+## Loader  Plugin
+
+> Loader: 负责把某种格式的文件“翻译”成 webpack 能识别的模块
+  链式调用、 最终输出JavaScript 代码（或 AST）
+
+> Plugin: 在 webpack 构建的整个生命周期中执行更广泛的任务（打包、优化、注入资源）
+
+
 
 ## HMR 原理
 Hot Module Replacement

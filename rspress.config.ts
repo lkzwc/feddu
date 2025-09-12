@@ -64,7 +64,8 @@ export default defineConfig({
                 '/note/chrome/architecture',
                 '/note/chrome/gc',
                 '/note/chrome/link',
-                '/note/chrome/repaint'
+                '/note/chrome/repaint',
+                '/note/chrome/router'
               ]
             },
             {

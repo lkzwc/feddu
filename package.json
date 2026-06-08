@@ -6,7 +6,8 @@
     "dev": "rspress dev",
     "build": "rspress build",
     "update": "rspress update",
-    "preview": "rspress preview"
+    "preview": "wrangler dev",
+    "deploy": "wrangler deploy"
   },
   "dependencies": {
     "@giscus/react": "^2.3.0",
@@ -14,6 +15,7 @@
     "tailwindcss": "^3.3.6"
   },
   "devDependencies": {
-    "@types/node": "^16"
+    "@types/node": "^16",
+    "wrangler": "^4.98.0"
   }
 }

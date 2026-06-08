@@ -39,7 +39,7 @@
       * 服务端响应 返回结果demo({"data":[]})
       * 客户端执行函数
 
-[同源策略](https://lkzwc.netlify.app/note/basic/post.html)
+[同源策略](/note/basic/post)
 
 ![image](https://user-images.githubusercontent.com/84896877/179012013-780903d8-604a-4381-be76-4c2b723906d9.png)
 

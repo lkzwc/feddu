@@ -3,14 +3,14 @@ import { defineConfig } from 'rspress/config';
 
 export default defineConfig({
   root: path.join(__dirname, 'docs'),
-  title: '博客网站｜流客',
-  description: '前端开发者流客的博客',
+  title: '博客网站｜LK',
+  description: '前端开发者LK的博客',
   icon: '/logo-new.svg',
   logo: {
     light: '/logo-new.svg',
     dark: '/logo-dark.svg',
   },
-  logoText: '流客博客',
+  logoText: 'LK博客',
   lang:'zh',
   head: [
     ['link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css' }],

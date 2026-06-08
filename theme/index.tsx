@@ -18,7 +18,7 @@ const HomeLayout = () => <div className="min-h-screen bg-gradient-to-br from-blu
   <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
     <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
       {/* Left Content */}
-      <div className="space-y-6 md:space-y-8 animate-pulse order-2 lg:order-1">
+      <div className="space-y-6 md:space-y-8 order-2 lg:order-1">
         <div className="relative">
           <i className="fa fa-quote-left text-2xl md:text-4xl text-blue-400 absolute -left-2 md:-left-4 -top-1 md:-top-2 opacity-50"></i>
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight ml-4 md:ml-8">
@@ -68,7 +68,7 @@ const HomeLayout = () => <div className="min-h-screen bg-gradient-to-br from-blu
             <i className="fa fa-book mr-2"></i>
             Start Learning
           </a>
-          <a href="/blog" className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-gray-100 text-gray-900 hover:bg-gray-200 focus:ring-gray-500 border border-gray-300 text-center">
+          <a href="/blog" className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-gray-100 text-gray-900 hover:bg-gray-200 focus:ring-gray-500 border border-gray-300 dark:bg-gray-700 dark:text-gray-100 dark:hover:bg-gray-600 dark:border-gray-600 text-center">
             <i className="fa fa-blog mr-2"></i>
             Read Blog
           </a>
@@ -76,7 +76,7 @@ const HomeLayout = () => <div className="min-h-screen bg-gradient-to-br from-blu
       </div>
 
       {/* Right Content - Image */}
-      <div className="relative animate-pulse order-1 lg:order-2" style={{animationDelay: '300ms'}}>
+      <div className="relative order-1 lg:order-2" style={{animationDelay: '300ms'}}>
         <div className="relative overflow-hidden rounded-2xl shadow-2xl max-w-md mx-auto lg:max-w-none">
           <img
             className="w-full h-auto object-cover"
@@ -87,17 +87,17 @@ const HomeLayout = () => <div className="min-h-screen bg-gradient-to-br from-blu
         </div>
 
         {/* Floating Cards - Hidden on mobile */}
-        <div className="hidden md:block absolute -top-4 -right-4 bg-white/80 backdrop-blur-md border border-white/20 rounded-xl shadow-lg p-3 md:p-4 animate-bounce">
+        <div className="hidden md:block absolute -top-4 -right-4 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border border-white/20 dark:border-gray-700/30 rounded-xl shadow-lg p-3 md:p-4 animate-bounce">
           <div className="flex items-center space-x-2">
             <div className="w-2 h-2 md:w-3 md:h-3 bg-green-400 rounded-full animate-pulse"></div>
-            <span className="text-xs md:text-sm font-medium">Available for work</span>
+            <span className="text-xs md:text-sm font-medium text-gray-700 dark:text-gray-200">Available for work</span>
           </div>
         </div>
 
-        <div className="hidden md:block absolute -bottom-4 -left-4 bg-white/80 backdrop-blur-md border border-white/20 rounded-xl shadow-lg p-3 md:p-4 animate-bounce" style={{animationDelay: '500ms'}}>
+        <div className="hidden md:block absolute -bottom-4 -left-4 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border border-white/20 dark:border-gray-700/30 rounded-xl shadow-lg p-3 md:p-4 animate-bounce" style={{animationDelay: '500ms'}}>
           <div className="flex items-center space-x-2">
             <i className="fa fa-code text-blue-500 text-sm md:text-base"></i>
-            <span className="text-xs md:text-sm font-medium">Full Stack Developer</span>
+            <span className="text-xs md:text-sm font-medium text-gray-700 dark:text-gray-200">Full Stack Developer</span>
           </div>
         </div>
       </div>
@@ -117,7 +117,7 @@ const HomeLayout = () => <div className="min-h-screen bg-gradient-to-br from-blu
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {/* FE-DDU Card */}
-          <div className="bg-white dark:bg-gray-700 rounded-xl shadow-lg border border-gray-100 dark:border-gray-600 overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group animate-pulse">
+          <div className="bg-white dark:bg-gray-700 rounded-xl shadow-lg border border-gray-100 dark:border-gray-600 overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group">
             <div className="p-8">
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 <i className="fa fa-calendar-check text-2xl text-white"></i>
@@ -135,7 +135,7 @@ const HomeLayout = () => <div className="min-h-screen bg-gradient-to-br from-blu
           </div>
 
           {/* Blog Card */}
-          <div className="bg-white dark:bg-gray-700 rounded-xl shadow-lg border border-gray-100 dark:border-gray-600 overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group animate-pulse" style={{animationDelay: '200ms'}}>
+          <div className="bg-white dark:bg-gray-700 rounded-xl shadow-lg border border-gray-100 dark:border-gray-600 overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group" style={{animationDelay: '200ms'}}>
             <div className="p-8">
               <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 <i className="fa fa-blog text-2xl text-white"></i>
@@ -153,7 +153,7 @@ const HomeLayout = () => <div className="min-h-screen bg-gradient-to-br from-blu
           </div>
 
           {/* Resources Card */}
-          <div className="bg-white dark:bg-gray-700 rounded-xl shadow-lg border border-gray-100 dark:border-gray-600 overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group animate-pulse" style={{animationDelay: '300ms'}}>
+          <div className="bg-white dark:bg-gray-700 rounded-xl shadow-lg border border-gray-100 dark:border-gray-600 overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group" style={{animationDelay: '300ms'}}>
             <div className="p-8">
               <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 <i className="fa fa-star text-2xl text-white"></i>
@@ -268,14 +268,6 @@ const HomeLayout = () => <div className="min-h-screen bg-gradient-to-br from-blu
                 </div>
               </div>
             </a>
-            <a href="https://www.netlify.com" target="_blank" rel="noreferrer" className="block group">
-              <div className="bg-gray-800 rounded-lg p-3 hover:bg-gray-700 transition-colors">
-                <div className="flex items-center space-x-3">
-                  <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Netlify" className="h-6 w-auto" />
-                  <span className="text-sm text-gray-300 group-hover:text-white">Netlify</span>
-                </div>
-              </div>
-            </a>
           </div>
         </div>
       </div>
@@ -294,7 +286,7 @@ const HomeLayout = () => <div className="min-h-screen bg-gradient-to-br from-blu
           </div>
 
           <div className="flex items-center space-x-6 text-sm text-gray-400">
-            <span>© {new Date().getFullYear()} 流客博客</span>
+            <span>© {new Date().getFullYear()} LK博客</span>
             <span className="hidden md:block">|</span>
             <span>Built with RSPress</span>
           </div>

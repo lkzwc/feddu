@@ -162,11 +162,6 @@ export default defineConfig({
         text: '在线简历',
         link: '/resume',
         activeMatch: '^/resume'
-      },
-      {
-        text: '系统发布',
-        link: '/system',
-        activeMatch: '^/system'
       }
     ],
     socialLinks: [

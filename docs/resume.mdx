@@ -1,18 +1,17 @@
 ---
 password: "zwc"
+sidebar: false
+outline: false
 ---
 
 {(() => {
   const resumeData = {
-    // 基本信息
     basicInfo: {
       name: "张文超",
       phone: "13149182182",
       email: "lkzwc@outlook.com",
       github: "github.com/lkzwc"
     },
-    
-    // 工作经历
     workExperience: [
       {
         company: "菜鸟网络",
@@ -39,22 +38,16 @@ password: "zwc"
         position: "前端开发工程师",
         duration: "2020.06-2021.06",
         tags: ["核心开发"],
-        achievements: [
-          "SASS定制",
-        ]
+        achievements: ["SASS定制"]
       },
       {
         company: "北京交大思诺科技股份有限公司",
         position: "软件开发工程师",
         duration: "2017.06-2020.06",
         tags: ["技术组长", "架构设计","全栈开发"],
-        achievements: [
-          "参与车控分析系统的前后端搭建开发",
-        ]
+        achievements: ["参与车控分析系统的前后端搭建开发"]
       }
     ],
-    
-    // 项目经验
     projects: [
       {
         name: "国际快递服务",
@@ -70,7 +63,7 @@ password: "zwc"
           "分析梳理源码通用组件、设计低码组件并完成基础配套开发，并沉淀通用规则以及文档，解决部分开发效能问题，提高产能效率近乎30%"
         ]
       },
-        {
+      {
         name: "ACS容器计算服务",
         type: "重点项目",
         tags: ["技术组长", "架构设计", "性能优化"],
@@ -78,54 +71,52 @@ password: "zwc"
         techStack: "React、TS、XConsole、Alfa、微服务",
         achievements: [
           "独立完成前端规范体系的搭建，解决CI/CD阻断问题，提高团队效率30%",
-          "合理拆分项目模块，使用Alfa微服务开发单独模块，支持多项目、多场景、定制化部署，保证后期其他的项目的正常上线",
+          "合理拆分项目模块，使用Alfa微服务开发单独模块，支持多项目、多场景、定制化部署",
           "合理抽离业务逻辑，设计前后端规范，编写统一校验逻辑，全场景覆盖业务需求，减少40%的代码量",
-          "开发并引入低代码组件，重构界面展示，解决产品上线后频繁修改的问题，增强项目的可维护性",
+          "开发并引入低代码组件，重构界面展示，解决产品上线后频繁修改的问题",
           "优化国际化以及状态管理方案，形成容错方案，保证多项目正常使用"
         ]
       },
-        {
+      {
         name: "ESP容器调度平台",
         type: "重点项目",
         tags: ["技术组长", "架构设计", "性能优化"],
         description: "基于ASI容器平台调度服务，重新调研，学习运维相关流程、沟通体验交互，设计开发内部容器调度平台",
         techStack: "React、TechUI、Ahook、Umi、Antd",
         achievements: [
-          "引入DOne、Swagger、CICD保证从设计开发无碍推进，开发效率提高100%结合外部调度规范，优化并开发整个调度流程，节省运维成本近50%",
+          "引入DOne、Swagger、CICD保证从设计开发无碍推进，开发效率提高100%",
           "设计开发TechUIHelper库，解决非其前端人员开发的问题，组内效率大幅提高",
-          "大规模React14到React18技术重构，优化项目体验，项目架构，缩短FCP从5s至1s，Lighthouse各项达到95左右",
-          "系统加入调度流程化模块，降低调度时延，保证大促双11无感迁移，正常运行封装通用组件hook，优化代码结构，提供多模块使用"
+          "大规模React14到React18技术重构，优化项目体验，项目架构，缩短FCP从5s至1s",
+          "系统加入调度流程化模块，降低调度时延，保证大促双11无感迁移"
         ]
       },
       {
         name: "LEU远程监测 & 机车信号通用平台",
         type: "重点项目",
         tags: ["全栈开发", "产品设计"],
-        techStack: "Linux 、Bugzilla、 Escript 、AutoTest、Java、Mysql",
+        techStack: "Linux、Bugzilla、Escript、AutoTest、Java、Mysql",
         description: "集成应答器硬件的系统，客户端通过s1服务登陆，通过can口采集通信，发送至s2服务器，s2推送至客户端显示。通用平台主要是对本地以及远程的数据采集分析，通过图形化的方式展现给用户！",
         achievements: [
           "主导制定严格的项目管理流程，规范各阶段的产出成果，保证最终的交付",
           "分析系统和数据的架构，完成对单元测试的方案制定，保证项目流程正常推进",
           "引入BugZilla等系统，赋能整个团队，完成流水化作业建设，团队效能提高100%",
-          "使用python，搭建部分测试环境，验证大数据问题，提高测试效率25%优化测试的方案和流程，提高团队效率"
+          "使用python搭建部分测试环境，验证大数据问题，提高测试效率25%"
         ]
       },
       {
         name: "MD2Writer",
         type: "个人项目",
         tags: ["全栈开发", "产品设计"],
-        techStack: "Nextjs 、Typescript 、Mysql",
+        techStack: "Nextjs、Typescript、Mysql",
         description: "微信公众号编辑器，通过Markdown快速实现微信公众号文章的编辑、发布",
         github: "https://github.com/MD2Writer",
-        achievements: [
-          "手动实现MDX样式的转化以及主题的映射"
-        ]
+        achievements: ["手动实现MDX样式的转化以及主题的映射"]
       },
       {
         name: "社区项目",
         type: "个人项目",
         tags: ["全栈开发", "产品设计","性能优化"],
-        techStack: "Nextjs 、Typescript 、PostgreSQL",
+        techStack: "Nextjs、Typescript、PostgreSQL",
         description: "完成一个精简版的社区系统开发",
         achievements: [
           "自主设计产品数据库服务以及数据库系统，比如核心评论、日志系统等",
@@ -145,401 +136,155 @@ password: "zwc"
         ]
       }
     ],
-    
-    // 技术能力
     skills: {
       "前端技术": ["JavaScript","React", "Vue3", "TypeScript", "Next.js","Uni-app","微服务","低代码"],
       "开发工具": ["Linux","Docker","K8S","Webpack","Vite","GoLang"],
       "专业认证": ["英语四级"]
     },
-    
-    // 教育背景
     education: {
       school: "咸阳师范学院",
       major: "软件工程",
       duration: "2013-2017",
-      details: " 主修课程：数据结构、算法分析、操作系统、计算机网络"
+      details: "主修课程：数据结构、算法分析、操作系统、计算机网络"
     },
-    
-    // 自我评价
     selfEvaluation: "GitHub的常客，开源贡献者，React的忠实粉丝，Vue3 的偏爱者， K8S的爱好者，Go的暗恋者！喜欢技术，热爱科技，畅享科技生活！前端数余年行业经验，从模型到框架到开发有丰富经验，All In AI大前端！使用行业先进技术，最大程度降低成本，优化用户体验，用技术赋能业务！实现产品价值增长，带来数据产值腾飞！"
   };
 
-  // 样式配置
-  const styles = {
-    container: {
-      maxWidth: '800px', 
-      margin: '0 auto', 
-      padding: '5px',
-      fontFamily: "'Segoe UI', 'Helvetica Neue', sans-serif",
-      backgroundColor: '#f8f9fa',
-      fontSize: '14px'
-    },
-    header: {
-      background: 'linear-gradient(135deg, #1a2980 0%, #26d0ce 100%)',
-      color: 'white',
-      padding: '20px 25px',
-      borderRadius: '6px',
-      marginBottom: '20px',
-      boxShadow: '0 3px 10px rgba(0,0,0,0.15)'
-    },
-    section: {
-      backgroundColor: '#ffffff',
-      padding: '18px 22px',
-      borderRadius: '6px',
-      marginBottom: '18px',
-      boxShadow: '0 2px 8px rgba(30, 60, 90, 0.1)',
-      borderLeft: '3px solid #1a2980'
-    },
-    sectionTitle: {
-      color: '#1a2980',
-      fontSize: '1.25rem',
-      paddingBottom: '6px',
-      marginTop: 0,
-      display: 'flex',
-      alignItems: 'center'
-    },
-    tag: {
-      padding: '2px 8px',
-      borderRadius: '12px',
-      fontSize: '0.8rem',
-      fontWeight: 500
-    }
-  };
+  const tagColorSets = [
+    { light: 'bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300', border: 'border-blue-200 dark:border-blue-800' },
+    { light: 'bg-green-50 text-green-700 dark:bg-green-900/30 dark:text-green-300', border: 'border-green-200 dark:border-green-800' },
+    { light: 'bg-purple-50 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300', border: 'border-purple-200 dark:border-purple-800' },
+    { light: 'bg-orange-50 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300', border: 'border-orange-200 dark:border-orange-800' },
+  ];
 
   return (
-    <div style={styles.container}>
-      {/* 头部基本信息 */}
-      <div style={styles.header}>
-        <h1 style={{ 
-          margin: '0 0 8px 0', 
-          fontSize: '1.8rem',
-          fontWeight: 600,
-          letterSpacing: '0.3px'
-        }}>{resumeData.basicInfo.name}</h1>
-        
-        <div style={{
-          display: 'flex',
-          flexWrap: 'wrap',
-          gap: '12px',
-          fontSize: '0.95rem'
-        }}>
-          <span style={{ display: 'flex', alignItems: 'center' }}>
-            📱 {resumeData.basicInfo.phone}
-          </span>
-          <span style={{ display: 'flex', alignItems: 'center' }}>
-            ✉️ {resumeData.basicInfo.email}
-          </span>
-          <span style={{ display: 'flex', alignItems: 'center' }}>
-            <svg width="14" height="14" viewBox="0 0 16 16" style={{ marginRight: '4px' }}>
-              <path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
-            </svg>
-            {resumeData.basicInfo.github}
-          </span>
+    <div className="max-w-[800px] mx-auto px-4 py-6 text-sm text-gray-800 dark:text-gray-200">
+      {/* 头部 */}
+      <div className="bg-gradient-to-br from-blue-700 to-cyan-500 dark:from-blue-900 dark:to-cyan-800 text-white rounded-lg p-5 mb-5 shadow-lg">
+        <h1 className="text-2xl font-semibold mb-2 tracking-wide">{resumeData.basicInfo.name}</h1>
+        <div className="flex flex-wrap gap-3 text-sm opacity-90">
+          <span>📱 {resumeData.basicInfo.phone}</span>
+          <span>✉️ {resumeData.basicInfo.email}</span>
+          <span>🐙 {resumeData.basicInfo.github}</span>
         </div>
       </div>
 
-  {/* 工作经历 */}
-  <section style={styles.section}>
-    <h2 style={styles.sectionTitle}>
-      <span style={{
-        display: 'inline-block',
-        width: '5px',
-        height: '20px',
-        backgroundColor: '#1a2980',
-        marginRight: '10px',
-        borderRadius: '2px'
-      }}></span>
-      工作经历
-    </h2>
-    
-    {resumeData.workExperience.map((work, index) => (
-      <div key={index} style={{ 
-        position: 'relative', 
-        paddingLeft: '18px', 
-        marginBottom: index < resumeData.workExperience.length - 1 ? '20px' : '0'
-      }}>
-        <div style={{
-          position: 'absolute',
-          left: 0,
-          top: '6px',
-          width: '9px',
-          height: '9px',
-          borderRadius: '50%',
-          backgroundColor: '#26d0ce'
-        }}></div>
-        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '5px' }}>
-          <strong style={{ fontSize: '1.05rem', color: '#1e3c72' }}>
-            {work.company} | {work.position}
-          </strong>
-          <span style={{ color: '#7f8c8d', fontWeight: 500, fontSize: '0.9rem' }}>
-            {work.duration}
-          </span>
-        </div>
-        <div style={{ display: 'flex', gap: '8px', marginBottom: '5px', flexWrap: 'wrap' }}>
-          {work.tags.map((tag, tagIndex) => (
-            <span key={tagIndex} style={{
-              ...styles.tag,
-              backgroundColor: tagIndex % 2 === 0 ? '#e3f7ff' : '#e6f9e6',
-              color: tagIndex % 2 === 0 ? '#1070a1' : '#0c7b3d'
-            }}>{tag}</span>
-          ))}
-        </div>
-        <ul style={{ 
-          paddingLeft: '18px', 
-          margin: '8px 0',
-          listStyleType: 'circle',
-          color: '#2c3e50',
-          fontSize: '0.95rem'
-        }}>
-          {work.achievements.map((achievement, achIndex) => (
-            <li key={achIndex}>{achievement}</li>
-          ))}
-        </ul>
-      </div>
-    ))}
-  </section>
-  {/* 项目经验 */}
-  <section style={styles.section}>
-    <h2 style={styles.sectionTitle}>
-      <span style={{
-        display: 'inline-block',
-        width: '5px',
-        height: '20px',
-        backgroundColor: '#1a2980',
-        marginRight: '10px',
-        borderRadius: '2px'
-      }}></span>
-      项目经验
-    </h2>
-    
-    {resumeData.projects.map((project, index) => (
-      <div key={index} style={{ 
-        marginBottom: index < resumeData.projects.length - 1 ? '25px' : '0',
-        paddingBottom: index < resumeData.projects.length - 1 ? '15px' : '0',
-        borderBottom: index < resumeData.projects.length - 1 ? '1px dashed #e0e6ed' : 'none'
-      }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap' }}>
-          <h3 style={{ 
-            margin: '0 10px 8px 0', 
-            color: '#1e3c72',
-            fontSize: '1.1rem'
-          }}>{project.name}</h3>
-          <span style={{
-            backgroundColor: project.type === '重点项目' ? '#1a2980' : '#26d0ce',
-            color: 'white',
-            padding: '3px 10px',
-            borderRadius: '4px',
-            fontSize: '0.85rem',
-            fontWeight: 500
-          }}>{project.type}</span>
-        </div>
-        
-        <div style={{ display: 'flex', gap: '8px', marginBottom: '8px', flexWrap: 'wrap' }}>
-          {project.tags.map((tag, tagIndex) => {
-            const tagStyles = [
-              { backgroundColor: '#e3f7ff', color: '#1070a1' },
-              { backgroundColor: '#f0e6ff', color: '#6c42f5' },
-              { backgroundColor: '#fff4e6', color: '#e67e22' },
-              { backgroundColor: '#e6f9e6', color: '#0c7b3d' }
-            ];
-            return (
-              <span key={tagIndex} style={{
-                ...styles.tag,
-                ...tagStyles[tagIndex % tagStyles.length]
-              }}>{tag}</span>
-            );
-          })}
-        </div>
-        
-        <div style={{ 
-          backgroundColor: '#f8fbfe',
-          padding: '10px 15px',
-          borderRadius: '6px',
-          marginBottom: '10px',
-          borderLeft: '3px solid #26d0ce'
-        }}>
-          <p style={{ 
-            margin: 0,
-            color: '#485e74',
-            fontSize: '0.92rem',
-            lineHeight: 1.5
-          }}>
-            {project.description}
-          </p>
-        </div>
-        
-        {project.techStack && (
-          <p style={{ 
-            margin: '8px 0',
-            color: '#1a2980',
-            fontWeight: 500,
-            fontSize: '0.9rem'
-          }}>
-            <span style={{ fontWeight: 600 }}>技术栈：</span>{project.techStack}
-          </p>
-        )}
-        
-        {project.github && (
-          <p style={{ 
-            margin: '0 0 8px 0',
-            color: '#1a2980',
-            fontWeight: 500,
-            fontSize: '0.9rem'
-          }}>
-            <span style={{ fontWeight: 600 }}>GitHub：</span> 
-            <a href={project.github} style={{ color: '#1a2980', textDecoration: 'underline' }}>
-              {project.github}
-            </a>
-          </p>
-        )}
-        
-        <ul style={{ 
-          paddingLeft: '18px', 
-          margin: '8px 0',
-          listStyleType: 'circle',
-          color: '#2c3e50',
-          fontSize: '0.95rem'
-        }}>
-          {project.achievements.map((achievement, achIndex) => (
-            <li key={achIndex}>{achievement}</li>
-          ))}
-        </ul>
-      </div>
-    ))}
-  </section>
-  {/* 技术能力 */}
-  <section style={styles.section}>
-    <h2 style={styles.sectionTitle}>
-      <span style={{
-        display: 'inline-block',
-        width: '5px',
-        height: '20px',
-        backgroundColor: '#1a2980',
-        marginRight: '10px',
-        borderRadius: '2px'
-      }}></span>
-      技术能力
-    </h2>
-    
-    <div style={{
-      display: 'grid',
-      gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))',
-      gap: '16px',
-      marginTop: '12px'
-    }}>
-      {Object.entries(resumeData.skills).map(([category, skills], index) => {
-        const skillStyles = [
-          { bg: 'linear-gradient(to right, #e3f7ff, #d1ecff)', color: '#1070a1', border: '#c2e3ff' },
-          { bg: 'linear-gradient(to right, #e6f9e6, #d4f3d4)', color: '#0c7b3d', border: '#c2e9c2' },
-          { bg: 'linear-gradient(to right, #fff4e6, #ffe8cc)', color: '#e67e22', border: '#ffd8a6' }
-        ];
-        const currentStyle = skillStyles[index % skillStyles.length];
-        
-        return (
-          <div key={category}>
-            <h3 style={{
-              color: '#1a2980',
-              margin: '0 0 8px 0',
-              paddingBottom: '4px',
-              borderBottom: '1px solid #e0e6ed',
-              fontSize: '1rem'
-            }}>{category}</h3>
-            <div style={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              gap: '6px'
-            }}>
-              {skills.map((skill, skillIndex) => (
-                <span key={skillIndex} style={{
-                  background: currentStyle.bg,
-                  color: currentStyle.color,
-                  padding: '4px 10px',
-                  borderRadius: '14px',
-                  fontSize: '0.85rem',
-                  fontWeight: 500,
-                  border: `1px solid ${currentStyle.border}`
-                }}>{skill}</span>
+      {/* 工作经历 */}
+      <Section title="工作经历">
+        {resumeData.workExperience.map((work, i) => (
+          <div key={i} className={`relative pl-4 ${i < resumeData.workExperience.length - 1 ? 'mb-5' : ''}`}>
+            <div className="absolute left-0 top-1.5 w-2 h-2 rounded-full bg-cyan-400 dark:bg-cyan-500" />
+            <div className="flex justify-between flex-wrap gap-1 mb-1">
+              <strong className="text-gray-900 dark:text-gray-100 font-semibold">{work.company} | {work.position}</strong>
+              <span className="text-gray-500 dark:text-gray-400 text-xs">{work.duration}</span>
+            </div>
+            <div className="flex flex-wrap gap-2 mb-1">
+              {work.tags.map((tag, ti) => (
+                <span key={ti} className={`px-2 py-0.5 rounded-full text-xs font-medium ${tagColorSets[ti % 2].light}`}>
+                  {tag}
+                </span>
               ))}
             </div>
+            <ul className="list-disc pl-4 text-gray-700 dark:text-gray-300 space-y-0.5 mt-1">
+              {work.achievements.map((a, ai) => <li key={ai}>{a}</li>)}
+            </ul>
           </div>
-        );
-      })}
-    </div>
-  </section>
-  {/* 教育背景 */}
-  <section style={styles.section}>
-    <h2 style={styles.sectionTitle}>
-      <span style={{
-        display: 'inline-block',
-        width: '5px',
-        height: '20px',
-        backgroundColor: '#1a2980',
-        marginRight: '10px',
-        borderRadius: '2px'
-      }}></span>
-      教育背景
-    </h2>
-    
-    <div style={{ position: 'relative', paddingLeft: '18px' }}>
-      <div style={{
-        position: 'absolute',
-        left: 0,
-        top: '6px',
-        width: '9px',
-        height: '9px',
-        borderRadius: '50%',
-        backgroundColor: '#26d0ce'
-      }}></div>
-      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-        <strong style={{ fontSize: '1.05rem', color: '#1e3c72' }}>
-          {resumeData.education.school} | {resumeData.education.major}
-        </strong>
-        <span style={{ color: '#7f8c8d', fontWeight: 500, fontSize: '0.9rem' }}>
-          {resumeData.education.duration}
-        </span>
-      </div>
-      <p style={{ 
-        margin: '6px 0 0 0', 
-        color: '#34495e',
-        fontSize: '0.95rem'
-      }}>
-        {resumeData.education.details}
-      </p>
-    </div>
-  </section>
+        ))}
+      </Section>
 
-  {/* 自我评价 */}
-  <section style={styles.section}>
-    <h2 style={styles.sectionTitle}>
-      <span style={{
-        display: 'inline-block',
-        width: '5px',
-        height: '20px',
-        backgroundColor: '#1a2980',
-        marginRight: '10px',
-        borderRadius: '2px'
-      }}></span>
-      自我评价
-    </h2>
-    
-    <div style={{
-      backgroundColor: '#f8fdff',
-      padding: '12px 15px',
-      margin: '12px 0',
-      borderRadius: '6px',
-      border: '1px solid #e0e6ed'
-    }}>
-      <p style={{ 
-        margin: 0,
-        lineHeight: 1.6,
-        color: '#34495e',
-        fontSize: '0.95rem'
-      }}>
-        <span style={{ fontWeight: 600, color: '#1a2980' }}>软件工程师</span>{resumeData.selfEvaluation}
-      </p>
-    </div>
-  </section>
+      {/* 项目经验 */}
+      <Section title="项目经验">
+        {resumeData.projects.map((project, i) => (
+          <div key={i} className={`${i < resumeData.projects.length - 1 ? 'mb-6 pb-4 border-b border-dashed border-gray-200 dark:border-gray-700' : ''}`}>
+            <div className="flex justify-between items-center flex-wrap gap-2 mb-2">
+              <h3 className="text-base font-semibold text-gray-900 dark:text-gray-100">{project.name}</h3>
+              <span className={`px-2.5 py-0.5 rounded text-xs font-medium ${
+                project.type === '重点项目'
+                  ? 'bg-blue-600 text-white dark:bg-blue-700'
+                  : 'bg-cyan-500 text-white dark:bg-cyan-600'
+              }`}>
+                {project.type}
+              </span>
+            </div>
+            <div className="flex flex-wrap gap-2 mb-2">
+              {project.tags.map((tag, ti) => (
+                <span key={ti} className={`px-2 py-0.5 rounded-full text-xs font-medium ${tagColorSets[ti % 4].light}`}>
+                  {tag}
+                </span>
+              ))}
+            </div>
+            <div className="bg-gray-50 dark:bg-gray-800/50 border-l-4 border-cyan-400 dark:border-cyan-600 rounded-r p-3 mb-2">
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{project.description}</p>
+            </div>
+            {project.techStack && (
+              <p className="text-sm text-blue-700 dark:text-blue-300 font-medium mb-1">
+                <span className="font-semibold text-gray-900 dark:text-gray-100">技术栈：</span>{project.techStack}
+              </p>
+            )}
+            {project.github && (
+              <p className="text-sm text-blue-700 dark:text-blue-300 font-medium mb-1">
+                <span className="font-semibold text-gray-900 dark:text-gray-100">GitHub：</span>
+                <a href={project.github} className="underline hover:text-blue-500 dark:hover:text-blue-400">{project.github}</a>
+              </p>
+            )}
+            <ul className="list-disc pl-4 text-gray-700 dark:text-gray-300 space-y-0.5">
+              {project.achievements.map((a, ai) => <li key={ai}>{a}</li>)}
+            </ul>
+          </div>
+        ))}
+      </Section>
+
+      {/* 技术能力 */}
+      <Section title="技术能力">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {Object.entries(resumeData.skills).map(([category, skills], ci) => (
+            <div key={category}>
+              <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100 border-b border-gray-200 dark:border-gray-700 pb-1 mb-2">{category}</h3>
+              <div className="flex flex-wrap gap-1.5">
+                {skills.map((skill, si) => (
+                  <span key={si} className={`px-2.5 py-1 rounded-full text-xs font-medium border ${tagColorSets[ci % 4].light} ${tagColorSets[ci % 4].border}`}>
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* 教育背景 */}
+      <Section title="教育背景">
+        <div className="relative pl-4">
+          <div className="absolute left-0 top-1.5 w-2 h-2 rounded-full bg-cyan-400 dark:bg-cyan-500" />
+          <div className="flex justify-between flex-wrap gap-1 mb-1">
+            <strong className="text-gray-900 dark:text-gray-100 font-semibold">{resumeData.education.school} | {resumeData.education.major}</strong>
+            <span className="text-gray-500 dark:text-gray-400 text-xs">{resumeData.education.duration}</span>
+          </div>
+          <p className="text-gray-700 dark:text-gray-300">{resumeData.education.details}</p>
+        </div>
+      </Section>
+
+      {/* 自我评价 */}
+      <Section title="自我评价">
+        <div className="bg-gray-50 dark:bg-gray-800/40 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
+          <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+            <span className="font-semibold text-gray-900 dark:text-gray-100">软件工程师</span>
+            {resumeData.selfEvaluation}
+          </p>
+        </div>
+      </Section>
     </div>
   );
+
+  function Section({ title, children }) {
+    return (
+      <div className="bg-white dark:bg-gray-900/50 rounded-lg p-5 mb-4 shadow-sm border border-gray-100 dark:border-gray-800 border-l-4 border-l-blue-700 dark:border-l-blue-600">
+        <h2 className="text-base font-bold text-gray-900 dark:text-gray-100 mb-3 flex items-center gap-2">
+          <span className="w-1 h-5 bg-blue-700 dark:bg-blue-500 rounded-sm" />
+          {title}
+        </h2>
+        {children}
+      </div>
+    );
+  }
 })()}

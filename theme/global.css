@@ -374,4 +374,101 @@
   .dark .rspress-doc-content i {
     color: rgb(209 213 219) !important;
   }
+
+  /* ========== Giscus 评论框暗黑模式适配 ========== */
+  .dark .giscus {
+    --color-canvas-default: rgb(17 24 39) !important;
+    --color-canvas-subtle: rgb(31 41 55) !important;
+    --color-border-default: rgb(75 85 99) !important;
+    --color-fg-default: rgb(243 244 246) !important;
+    --color-fg-muted: rgb(156 163 175) !important;
+    --color-btn-text: rgb(243 244 246) !important;
+    --color-btn-bg: rgb(31 41 55) !important;
+    --color-btn-border: rgb(75 85 99) !important;
+    --color-btn-hover-bg: rgb(55 65 81) !important;
+    --color-accent-fg: rgb(147 197 253) !important;
+    --color-accent-emphasis: rgb(59 130 246) !important;
+    --color-accent-muted: rgba(59, 130, 246, 0.2) !important;
+    --color-accent-subtle: rgba(59, 130, 246, 0.1) !important;
+    --color-success-fg: rgb(34 197 94) !important;
+    --color-attention-fg: rgb(251 191 36) !important;
+    --color-danger-fg: rgb(248 113 113) !important;
+    --color-primer-canvas-backdrop: rgba(0, 0, 0, 0.5) !important;
+  }
+
+  /* ========== 暗黑模式过渡动画 ========== */
+  html, body, .rspress-nav, .rspress-sidebar, .rspress-doc-content {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+
+  /* ========== 修复移动端菜单暗黑模式 ========== */
+  .dark .rspress-nav-menu {
+    background-color: rgba(17, 24, 39, 0.98) !important;
+    border-color: rgba(75, 85, 99, 0.3) !important;
+  }
+
+  .dark .rspress-nav-menu-item {
+    color: rgb(209 213 219) !important;
+  }
+
+  .dark .rspress-nav-menu-item:hover {
+    color: rgb(147 197 253) !important;
+    background-color: rgba(59, 130, 246, 0.1) !important;
+  }
+
+  /* ========== 修复搜索下拉暗黑模式 ========== */
+  .dark .rspress-search-drop {
+    background-color: rgb(31 41 55) !important;
+    border-color: rgba(75, 85, 99, 0.5) !important;
+  }
+
+  .dark .rspress-search-drop-item {
+    color: rgb(209 213 219) !important;
+  }
+
+  .dark .rspress-search-drop-item:hover {
+    background-color: rgba(59, 130, 246, 0.1) !important;
+    color: rgb(147 197 253) !important;
+  }
+
+  /* ========== 修复暗黑模式下的滚动条 ========== */
+  .dark ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .dark ::-webkit-scrollbar-track {
+    background: rgb(17 24 39);
+  }
+
+  .dark ::-webkit-scrollbar-thumb {
+    background: rgb(75 85 99);
+    border-radius: 4px;
+  }
+
+  .dark ::-webkit-scrollbar-thumb:hover {
+    background: rgb(107 114 128);
+  }
+
+  /* ========== 修复 outline 面板暗黑模式 ========== */
+  .dark .rspress-outline {
+    background-color: rgba(17, 24, 39, 0.8) !important;
+  }
+
+  .dark .rspress-outline-item {
+    color: rgb(156 163 175) !important;
+  }
+
+  .dark .rspress-outline-item:hover {
+    color: rgb(147 197 253) !important;
+  }
+
+  .dark .rspress-outline-item.active {
+    color: rgb(147 197 253) !important;
+  }
+
+  /* ========== 修复 lastUpdated 暗黑模式 ========== */
+  .dark .rspress-last-updated {
+    color: rgb(156 163 175) !important;
+  }
 }

@@ -1,5 +1,6 @@
 ---
 sidebar: false
+date: 2023-12-02
 ---
 # MutationObserver的应用
 

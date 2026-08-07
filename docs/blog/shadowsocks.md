@@ -1,5 +1,6 @@
 ---
 sidebar: false
+date: 2024-01-05
 ---
 # Shadowsocks搭建以及加速
 

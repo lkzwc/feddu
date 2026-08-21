@@ -30,7 +30,6 @@ export function BlogItem({ item, isLast, index = 0 }: BlogItemProps) {
 
   const { month, day } = parseDate(displayDate);
 
-  // 根据索引分配颜色
   const colors = [
     { dot: "bg-blue-500", glow: "shadow-blue-500/30", ring: "ring-blue-200 dark:ring-blue-900/50" },
     { dot: "bg-cyan-500", glow: "shadow-cyan-500/30", ring: "ring-cyan-200 dark:ring-cyan-900/50" },
@@ -42,28 +41,25 @@ export function BlogItem({ item, isLast, index = 0 }: BlogItemProps) {
   const color = colors[index % colors.length];
 
   return (
-    <a
-      href={`${routePath}.html`}
-      className="group flex items-stretch relative"
-    >
+    <a href={`${routePath}.html`} className="group flex items-stretch relative">
       {/* 左侧时间线区域 */}
       <div className="flex flex-col items-center shrink-0 w-20 relative">
-        {/* 日期 - 月和日分开显示 */}
-        <div className="flex flex-col items-center pt-2.5">
-          <span className="text-[10px] font-medium text-gray-400 dark:text-gray-500 uppercase tracking-wider">
-            {month}月
-          </span>
-          <span className="text-lg font-bold text-gray-700 dark:text-gray-300 leading-tight">
+        {/* 日期 - 日/月横向排列 */}
+        <div className="flex items-baseline gap-1 pt-3">
+          <span className="text-base font-bold text-gray-700 dark:text-gray-300">
             {day}
+          </span>
+          <span className="text-[10px] font-medium text-gray-400 dark:text-gray-500">
+            {month}月
           </span>
         </div>
 
-        {/* 时间点 - 带光环效果的立体圆点 */}
+        {/* 时间点 */}
         <div className="relative mt-1">
           <div className={`w-3 h-3 rounded-full ${color.dot} ring-2 ${color.ring} shadow-lg ${color.glow} group-hover:scale-125 transition-transform duration-300`} />
         </div>
 
-        {/* 向下连接线 - 渐变细线 */}
+        {/* 向下连接线 */}
         {!isLast && (
           <div className="flex-1 w-px mt-2 bg-gradient-to-b from-gray-300 dark:from-gray-600 to-gray-200 dark:to-gray-700/50" />
         )}
@@ -75,13 +71,8 @@ export function BlogItem({ item, isLast, index = 0 }: BlogItemProps) {
           <h3 className="text-[15px] font-medium text-gray-800 dark:text-gray-200 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
             {title}
           </h3>
-          <svg
-            className="shrink-0 w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-blue-500 dark:group-hover:text-blue-400 group-hover:translate-x-1 transition-all duration-200"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2}
-          >
+          <svg className="shrink-0 w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-blue-500 dark:group-hover:text-blue-400 group-hover:translate-x-1 transition-all duration-200"
+            fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
           </svg>
         </div>

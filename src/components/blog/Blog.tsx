@@ -30,7 +30,6 @@ export default function Blog() {
     return posts;
   }, [info?.siteData?.pages]);
 
-  // 按年份分组
   const groupedByYear = useMemo(() => {
     const groups: Record<string, typeof blogPosts> = {};
     blogPosts.forEach((post) => {
@@ -63,7 +62,6 @@ export default function Blog() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 sm:px-6 py-10">
-      {/* 头部 */}
       <div className="mb-10 text-center">
         <h1 className="text-2xl font-bold text-gray-900 dark:text-white">技术博客</h1>
         <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
@@ -71,13 +69,11 @@ export default function Blog() {
         </p>
       </div>
 
-      {/* 按年份分组的列表 */}
       <div className="space-y-10">
         {years.map((year) => {
           const posts = groupedByYear[year];
           return (
             <div key={year}>
-              {/* 年份标题 - 渐变色标签 */}
               <div className="flex items-center gap-3 mb-4 ml-20">
                 <span className="inline-flex items-center px-3 py-0.5 rounded-full text-xs font-bold bg-gradient-to-r from-blue-500 to-cyan-400 text-white shadow-sm">
                   {year}
@@ -88,14 +84,12 @@ export default function Blog() {
                 </span>
               </div>
 
-              {/* 文章列表 */}
               <div className="relative">
                 {posts.map((post, idx) => (
                   <BlogItem
                     item={post}
                     key={post.routePath}
                     isLast={idx === posts.length - 1}
-                    index={idx}
                   />
                 ))}
               </div>

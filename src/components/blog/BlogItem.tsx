@@ -9,10 +9,9 @@ interface BlogItemProps {
     displayDate?: string;
   };
   isLast?: boolean;
-  index?: number;
 }
 
-export function BlogItem({ item, isLast, index = 0 }: BlogItemProps) {
+export function BlogItem({ item, isLast }: BlogItemProps) {
   const { title, routePath, displayDate } = item;
 
   const parseDate = (dateStr?: string) => {
@@ -30,16 +29,6 @@ export function BlogItem({ item, isLast, index = 0 }: BlogItemProps) {
 
   const { month, day } = parseDate(displayDate);
 
-  const colors = [
-    { dot: "bg-blue-500", glow: "shadow-blue-500/30", ring: "ring-blue-200 dark:ring-blue-900/50" },
-    { dot: "bg-cyan-500", glow: "shadow-cyan-500/30", ring: "ring-cyan-200 dark:ring-cyan-900/50" },
-    { dot: "bg-purple-500", glow: "shadow-purple-500/30", ring: "ring-purple-200 dark:ring-purple-900/50" },
-    { dot: "bg-pink-500", glow: "shadow-pink-500/30", ring: "ring-pink-200 dark:ring-pink-900/50" },
-    { dot: "bg-emerald-500", glow: "shadow-emerald-500/30", ring: "ring-emerald-200 dark:ring-emerald-900/50" },
-    { dot: "bg-amber-500", glow: "shadow-amber-500/30", ring: "ring-amber-200 dark:ring-amber-900/50" },
-  ];
-  const color = colors[index % colors.length];
-
   return (
     <a href={`${routePath}.html`} className="group flex items-stretch relative">
       {/* 左侧时间线区域 */}
@@ -52,11 +41,6 @@ export function BlogItem({ item, isLast, index = 0 }: BlogItemProps) {
           <span className="text-[10px] font-medium text-gray-400 dark:text-gray-500">
             {month}月
           </span>
-        </div>
-
-        {/* 时间点 */}
-        <div className="relative mt-1">
-          <div className={`w-3 h-3 rounded-full ${color.dot} ring-2 ${color.ring} shadow-lg ${color.glow} group-hover:scale-125 transition-transform duration-300`} />
         </div>
 
         {/* 向下连接线 */}

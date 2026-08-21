@@ -74,28 +74,34 @@ export default function Blog() {
       </div>
 
       {/* 按年份分组的列表 */}
-      <div className="space-y-6">
-        {years.map((year) => (
-          <div key={year}>
-            {/* 年份标题 */}
-            <div className="flex items-center gap-3 mb-3">
-              <span className="text-lg font-bold text-gray-800 dark:text-gray-200">
-                {year}
-              </span>
-              <div className="flex-1 h-px bg-gray-200 dark:bg-gray-700" />
-              <span className="text-xs text-gray-400 dark:text-gray-500">
-                {groupedByYear[year].length} 篇
-              </span>
-            </div>
+      <div className="space-y-8">
+        {years.map((year) => {
+          const posts = groupedByYear[year];
+          return (
+            <div key={year}>
+              {/* 年份标题 */}
+              <div className="flex items-center gap-3 mb-2 ml-16">
+                <span className="text-base font-bold text-gray-800 dark:text-gray-200">
+                  {year}
+                </span>
+                <span className="text-xs text-gray-400 dark:text-gray-500">
+                  {posts.length} 篇
+                </span>
+              </div>
 
-            {/* 文章列表 */}
-            <div className="divide-y divide-gray-100 dark:divide-gray-800 border border-gray-100 dark:border-gray-800 rounded-xl overflow-hidden bg-white dark:bg-gray-900/50">
-              {groupedByYear[year].map((post) => (
-                <BlogItem item={post} key={post.routePath} />
-              ))}
+              {/* 文章列表 */}
+              <div>
+                {posts.map((post, idx) => (
+                  <BlogItem
+                    item={post}
+                    key={post.routePath}
+                    isLast={idx === posts.length - 1}
+                  />
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );

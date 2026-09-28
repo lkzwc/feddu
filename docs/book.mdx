@@ -1,0 +1,20 @@
+---
+pageType: custom
+---
+
+import { useEffect } from 'react';
+
+// 旧的 /book 入口保留，自动转到书架里的新地址
+export default function BookRedirect() {
+  useEffect(() => {
+    window.location.replace('/read/how-to-live-better/');
+  }, []);
+  return (
+    <div style={{ padding: '60px 24px', textAlign: 'center' }}>
+      <p>正在打开《高性价比人生指南》…</p>
+      <p>
+        如果没有自动跳转，<a href="/read/how-to-live-better/">点这里进入</a>
+      </p>
+    </div>
+  );
+}

@@ -159,6 +159,11 @@ export default defineConfig({
         activeMatch: '^/blog/'
       },
       {
+        text: '看看书',
+        link: '/read/',
+        activeMatch: '^/read'
+      },
+      {
         text: '在线简历',
         link: '/resume',
         activeMatch: '^/resume'

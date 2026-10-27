@@ -1,20 +1,21 @@
 ---
 pageType: custom
+title: 正在打开书架
 ---
 
-import { useEffect } from 'react';
+<meta httpEquiv="refresh" content="0; url=/read/how-to-live-better/" />
 
-// 旧的 /book 入口保留，自动转到书架里的新地址
-export default function BookRedirect() {
-  useEffect(() => {
-    window.location.replace('/read/how-to-live-better/');
-  }, []);
-  return (
-    <div style={{ padding: '60px 24px', textAlign: 'center' }}>
-      <p>正在打开《高性价比人生指南》…</p>
-      <p>
-        如果没有自动跳转，<a href="/read/how-to-live-better/">点这里进入</a>
-      </p>
-    </div>
-  );
-}
+<div className="lx-wrap" style={{ padding: "96px 24px", textAlign: "center" }}>
+  <div className="lx-kicker" style={{ justifyContent: "center" }}>
+    Redirect
+  </div>
+  <h1 className="lx-section-title" style={{ marginTop: 14 }}>
+    正在打开《高性价比人生指南》
+  </h1>
+  <p style={{ marginTop: 10, color: "var(--lx-ink-3)", fontSize: 13 }}>
+    如果没有自动跳转，
+    <a href="/read/how-to-live-better/" style={{ borderBottom: "1px solid currentColor" }}>
+      点这里进入
+    </a>
+  </p>
+</div>

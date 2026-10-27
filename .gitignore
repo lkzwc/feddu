@@ -24,3 +24,6 @@ dist-ssr
 *.sw?
 doc_build
 .wrangler/
+
+# WorkBuddy 本地数据
+.workbuddy-ai/

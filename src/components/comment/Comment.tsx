@@ -21,23 +21,24 @@ export default function Comment() {
   const giscusTheme = isDark ? "dark" : "light";
 
   return (
-    <div className="mt-16 pt-8 border-t border-gray-200 dark:border-gray-700">
-      <div className="flex items-center gap-3 mb-6">
-        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center shadow-lg">
-          <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-          </svg>
-        </div>
-        <div>
-          <h3 className="text-lg font-bold text-gray-900 dark:text-white">
-            发表评论
-          </h3>
-          <p className="text-sm text-gray-500 dark:text-gray-400">
-            使用 GitHub 账号登录后即可评论
-          </p>
-        </div>
+    <div style={{ marginTop: 56, paddingTop: 28, borderTop: "1px solid var(--lx-rule)" }}>
+      <div style={{ marginBottom: 18 }}>
+        <div className="lx-kicker">Comments / 讨论</div>
+        <h3
+          style={{
+            fontFamily: "var(--lx-serif)",
+            fontSize: 22,
+            margin: "10px 0 4px",
+            color: "var(--lx-ink)",
+          }}
+        >
+          说两句
+        </h3>
+        <p style={{ fontSize: 12.5, color: "var(--lx-ink-3)" }}>
+          用 GitHub 账号登录后即可评论
+        </p>
       </div>
-      <div className="rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700">
+      <div style={{ overflow: "hidden" }}>
         <Giscus
           key={`${currentPath}-${giscusTheme}`}
           id="comments"

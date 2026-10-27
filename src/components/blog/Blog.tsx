@@ -5,9 +5,9 @@ import { BlogItem } from "./BlogItem";
 export default function Blog() {
   const info = usePageData();
 
-  const blogPosts = useMemo(() => {
+  const posts = useMemo(() => {
     const pages = info?.siteData?.pages || [];
-    const posts = pages
+    return pages
       .filter(
         (item) =>
           item.routePath.startsWith("/blog/") &&
@@ -15,88 +15,66 @@ export default function Blog() {
           item.routePath !== "/blog"
       )
       .map((item) => {
-        const frontmatterDate = item.frontmatter?.date as string | undefined;
-        const lastUpdated = item.lastUpdatedTime;
-        const dateStr = frontmatterDate || lastUpdated || "";
-        const dateObj = dateStr ? new Date(dateStr) : new Date(0);
+        const dateStr =
+          (item.frontmatter?.date as string) || item.lastUpdatedTime || "";
         return {
           ...item,
-          sortDate: dateObj.getTime(),
+          sortDate: dateStr ? new Date(dateStr).getTime() : 0,
           displayDate: dateStr,
         };
       })
       .sort((a, b) => b.sortDate - a.sortDate);
-
-    return posts;
   }, [info?.siteData?.pages]);
 
-  const groupedByYear = useMemo(() => {
-    const groups: Record<string, typeof blogPosts> = {};
-    blogPosts.forEach((post) => {
-      const year = post.displayDate
-        ? new Date(post.displayDate).getFullYear().toString()
+  const groups = useMemo(() => {
+    const map: Record<string, typeof posts> = {};
+    posts.forEach((p) => {
+      const y = p.displayDate
+        ? new Date(p.displayDate).getFullYear().toString()
         : "其他";
-      if (!groups[year]) groups[year] = [];
-      groups[year].push(post);
+      (map[y] ||= []).push(p);
     });
-    return groups;
-  }, [blogPosts]);
-
-  const years = Object.keys(groupedByYear).sort((a, b) =>
-    b === "其他" ? -1 : a === "其他" ? 1 : Number(b) - Number(a)
-  );
-
-  if (blogPosts.length === 0) {
-    return (
-      <div className="max-w-3xl mx-auto px-4 py-20 text-center">
-        <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
-          <svg className="w-8 h-8 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
-          </svg>
-        </div>
-        <h3 className="text-lg font-bold text-gray-900 dark:text-white">暂无博客文章</h3>
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">敬请期待更多精彩内容...</p>
-      </div>
-    );
-  }
+    return Object.keys(map)
+      .sort((a, b) => (a === "其他" ? 1 : b === "其他" ? -1 : Number(b) - Number(a)))
+      .map((y) => ({ year: y, items: map[y] }));
+  }, [posts]);
 
   return (
-    <div className="max-w-2xl mx-auto px-4 sm:px-6 py-10">
-      <div className="mb-10 text-center">
-        <h1 className="text-2xl font-bold text-gray-900 dark:text-white">技术博客</h1>
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
-          共 {blogPosts.length} 篇文章
+    <div className="lx-blog">
+      <header className="lx-page-head">
+        <div className="lx-kicker">Writing / 技术博客</div>
+        <h1 className="lx-page-title">
+          写点<em>长</em>的
+        </h1>
+        <p className="lx-lede" style={{ marginTop: 18 }}>
+          短的在笔记里，长的放这里。都是些想清楚了才敢写下来的东西 ——
+          关于类型、渲染、微服务，以及那些绕不过去的坑。
         </p>
-      </div>
+        <div className="lx-kicker" style={{ marginTop: 24, letterSpacing: "0.16em" }}>
+          {posts.length} 篇文章 · 按时间倒序
+        </div>
+      </header>
 
-      <div className="space-y-10">
-        {years.map((year) => {
-          const posts = groupedByYear[year];
-          return (
-            <div key={year}>
-              <div className="flex items-center gap-3 mb-4 ml-20">
-                <span className="inline-flex items-center px-3 py-0.5 rounded-full text-xs font-bold bg-gradient-to-r from-blue-500 to-cyan-400 text-white shadow-sm">
-                  {year}
-                </span>
-                <div className="flex-1 h-px bg-gradient-to-r from-gray-200 dark:from-gray-700 to-transparent" />
-                <span className="text-xs text-gray-400 dark:text-gray-500">
-                  {posts.length} 篇
-                </span>
-              </div>
+      {posts.length === 0 && (
+        <p className="lx-lede" style={{ padding: "40px 0" }}>
+          还没有文章。再等等。
+        </p>
+      )}
 
-              <div className="relative">
-                {posts.map((post, idx) => (
-                  <BlogItem
-                    item={post}
-                    key={post.routePath}
-                    isLast={idx === posts.length - 1}
-                  />
-                ))}
-              </div>
-            </div>
-          );
-        })}
-      </div>
+      {groups.map(({ year, items }) => (
+        <section key={year} style={{ marginTop: 44 }}>
+          <div className="lx-year">
+            <span>{year}</span>
+            <i />
+            <em>{items.length} 篇</em>
+          </div>
+          <div className="lx-index">
+            {items.map((post, i) => (
+              <BlogItem item={post} index={i} key={post.routePath} />
+            ))}
+          </div>
+        </section>
+      ))}
     </div>
   );
 }

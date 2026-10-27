@@ -1,5 +1,9 @@
 [
-    "index",
+    {
+        "type": "file",
+        "name": "index",
+        "label": "学习笔记"
+    },
     {
         "type": "dir",
         "name": "basic",

@@ -3663,3 +3663,85 @@ html.dark .rspress-doc blockquote p,
 .rspress-doc blockquote p {
   color: var(--mem-indigo);
 }
+
+/* =========================================================================
+   11. 侧边栏 / 目录：去掉色块底，改成左侧竖条
+   ========================================================================= */
+
+/* 当前项：透明底 + 3px 竖条 + 强调色文字 */
+[class*="menuItemActive"],
+html.dark [class*="menuItemActive"] {
+  background: transparent !important;
+  box-shadow: inset 3px 0 0 var(--lx-accent);
+  border-radius: 0 6px 6px 0 !important;
+  color: var(--lx-accent) !important;
+  font-weight: 700;
+}
+
+/* hover：极淡的中性底，不再是黄色 */
+.rspress-sidebar-item:hover > a > [class*="menuItem_"] {
+  background: rgba(37, 33, 74, 0.06) !important;
+  color: var(--lx-accent) !important;
+}
+
+html.dark .rspress-sidebar-item:hover > a > [class*="menuItem_"] {
+  background: rgba(255, 251, 242, 0.07) !important;
+}
+
+/* 之前给侧边栏项加的黄色药丸底，撤销 */
+.rspress-sidebar-item:hover,
+.rspress-sidebar-item:hover > a > [class*="menuItem_"] {
+  border-color: transparent;
+}
+
+.rspress-sidebar-item.active,
+.rspress-sidebar-item[class*="active"] {
+  background: transparent !important;
+  border-color: transparent !important;
+}
+
+/* 目录（本页导航）：同样去掉底色，只留竖条 */
+.rspress-toc-link,
+.rspress-toc-link[class*="active"],
+.rspress-toc-link[class*="Active"] {
+  background: transparent !important;
+}
+
+.rspress-toc-link[class*="active"],
+.rspress-toc-link[class*="Active"] {
+  color: var(--lx-accent) !important;
+  font-weight: 700;
+  box-shadow: inset 3px 0 0 var(--lx-accent);
+  border-radius: 0 6px 6px 0;
+}
+
+.rspress-toc-link:hover {
+  background: rgba(37, 33, 74, 0.06) !important;
+  color: var(--lx-accent) !important;
+}
+
+html.dark .rspress-toc-link:hover {
+  background: rgba(255, 251, 242, 0.07) !important;
+}
+
+/* 桌面端目录用的是 .aside-link / .aside-active，同样去掉底色 */
+.aside-link,
+.aside-active {
+  background: transparent !important;
+}
+
+.aside-active {
+  color: var(--lx-accent) !important;
+  font-weight: 700;
+  box-shadow: inset 3px 0 0 var(--lx-accent);
+  border-radius: 0 6px 6px 0;
+}
+
+.aside-link:hover {
+  background: rgba(37, 33, 74, 0.06) !important;
+  color: var(--lx-accent) !important;
+}
+
+html.dark .aside-link:hover {
+  background: rgba(255, 251, 242, 0.07) !important;
+}

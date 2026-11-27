@@ -7,7 +7,6 @@ import GlobalChrome from "./components/GlobalChrome";
 import SiteFooter from "./components/SiteFooter";
 import "./global.css";
 
-// 自定义 Layout：注入全局装饰层、统一页脚、评论与密码保护
 const CustomLayout = (props: any) => {
   const { page } = usePageData();
   const pagePassword = page.frontmatter?.password as string | undefined;

@@ -4,12 +4,8 @@ import {
   Arrow,
   ArrowUpRight,
   Clock,
-  Marquee,
-  MemphisShapes,
   Reveal,
-  Seal,
   SectionHead,
-  Sticker,
 } from "./bits";
 
 const CATEGORIES: Record<string, string> = {
@@ -70,25 +66,21 @@ export default function Home() {
   }, [pages]);
 
   return (
-    <div className="lx-home" id="top">
+    <div className="lx-home">
       {/* ---------------------------------------------------------- HERO */}
       <section className="lx-hero">
         <div className="lx-wrap">
-          <MemphisShapes />
           <div className="lx-hero-grid">
             <div className="lx-hero-left">
-              <Sticker />
-              <div className="lx-kicker">
-                Frontend engineer · since 2017 · 中国
-              </div>
+              <p className="lx-prompt">
+                <span aria-hidden="true">$</span> ./feddu <span>--about</span>
+              </p>
 
-              <div className="lx-hero-head">
-                <h1 className="lx-display">
-                  相信代码
-                  <br />
-                  能<em className="lx-mark">改变</em>世界
-                </h1>
-              </div>
+              <h1 className="lx-display">
+                相信代码
+                <br />
+                能<em className="lx-mark">改变</em>世界
+              </h1>
 
               <p className="lx-lede">
                 我是 lkzwc，一名前端工程师。写代码，也读源码；做业务，也写笔记。
@@ -116,83 +108,61 @@ export default function Home() {
             </div>
 
             {/* -------------------------------------------------- status */}
-            <div className="lx-status-wrap">
-            <aside className="lx-card lx-card--status">
+            <aside className="lx-card lx-card--status" aria-label="站点状态">
               <div className="lx-status-top">
                 <span>
-                  <i className="lx-dot" />
-                  Now
+                  <i className="lx-dot" aria-hidden="true" />status.log
                 </span>
-                <span>Asia / Shanghai</span>
+                <span>Asia/Shanghai</span>
               </div>
 
-              <Clock withDate />
+              <div className="lx-status-body">
+                <Clock withDate />
 
-              <div className="lx-status-meta">
-                <div className="lx-status-row">
-                  <dt>正在</dt>
-                  <dd>整理《高性价比人生指南》</dd>
-                </div>
-                <div className="lx-status-row">
-                  <dt>收录</dt>
-                  <dd>
-                    {notes.length} 笔记 / {posts.length} 博客
-                  </dd>
-                </div>
-                <div className="lx-status-row">
-                  <dt>状态</dt>
-                  <dd>开放交流</dd>
-                </div>
-              </div>
+                <dl className="lx-status-meta">
+                  <div className="lx-status-row">
+                    <dt>focus</dt>
+                    <dd>整理《高性价比人生指南》</dd>
+                  </div>
+                  <div className="lx-status-row">
+                    <dt>archive</dt>
+                    <dd>{notes.length} 笔记 / {posts.length} 博客</dd>
+                  </div>
+                  <div className="lx-status-row">
+                    <dt>status</dt>
+                    <dd>开放交流</dd>
+                  </div>
+                </dl>
 
-              <div
-                style={{
-                  display: "flex",
-                  gap: 14,
-                  marginTop: 18,
-                  paddingTop: 14,
-                  borderTop: "1px solid var(--lx-rule)",
-                  fontFamily: "var(--lx-mono)",
-                  fontSize: 10.5,
-                  letterSpacing: "0.12em",
-                  textTransform: "uppercase",
-                  color: "var(--lx-ink-3)",
-                }}
-              >
-                <a href="https://github.com/lkzwc" target="_blank" rel="noreferrer">
-                  GitHub
-                </a>
-                <a href="/read/">书架</a>
-                <a href="/resume">简历</a>
-                <span style={{ marginLeft: "auto" }}>
-                  <Seal size={30} />
-                </span>
+                <div className="lx-status-links">
+                  <a href="https://github.com/lkzwc" target="_blank" rel="noreferrer">
+                    GitHub ↗
+                  </a>
+                  <a href="/read/">书架</a>
+                  <a href="/resume">简历</a>
+                </div>
               </div>
             </aside>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* -------------------------------------------------------- MARQUEE */}
-      <Marquee
-        items={[
-          <b key="a">学习笔记</b>,
-          "JavaScript / 浏览器 / 设计模式",
-          <b key="b">技术博客</b>,
-          "React / Vue / 源码",
-          <b key="c">书架</b>,
-          "Docker / K8s / 工程化",
-          <b key="d">一页简历</b>,
-          "Write · Build · Repeat",
-        ]}
-      />
+      <div className="lx-topic-strip">
+        <div className="lx-wrap">
+          <span>主题 / topics</span>
+          <ul aria-label="站点主题">
+            <li>JavaScript</li>
+            <li>浏览器</li>
+            <li>React / Vue</li>
+            <li>源码阅读</li>
+            <li>Docker / K8s</li>
+          </ul>
+        </div>
+      </div>
 
       {/* ---------------------------------------------------------- INDEX */}
       <section className="lx-section">
         <div className="lx-wrap">
-          <span className="lx-ghost" aria-hidden="true">01</span>
-          <span className="lx-rail" aria-hidden="true">Index — 目录</span>
           <Reveal>
             <SectionHead
               label="Index / 目录"
@@ -250,8 +220,7 @@ export default function Home() {
                   style={{
                     fontFamily: "var(--lx-mono)",
                     fontSize: 10.5,
-                    color: "var(--mem-indigo)",
-                    opacity: 0.7,
+                    color: "var(--lx-ink-3)",
                     letterSpacing: "0.08em",
                   }}
                 >
@@ -312,8 +281,6 @@ export default function Home() {
       {latest.length > 0 && (
         <section className="lx-section" style={{ paddingTop: 0 }}>
           <div className="lx-wrap">
-            <span className="lx-ghost" aria-hidden="true">02</span>
-            <span className="lx-rail" aria-hidden="true">Writing — 写作</span>
             <Reveal>
               <SectionHead
                 label="Writing / 最近在写"
@@ -347,7 +314,6 @@ export default function Home() {
       {/* ---------------------------------------------------------- ABOUT */}
       <section className="lx-section" style={{ paddingTop: 0 }}>
         <div className="lx-wrap">
-          <span className="lx-rail" aria-hidden="true">About — 关于</span>
           <Reveal>
             <div className="lx-about">
               <div>
